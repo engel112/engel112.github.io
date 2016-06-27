@@ -1,0 +1,92 @@
+@charset "UTF-8";
+#header > div { width: 93.75vw; max-width: 960px; margin: 0 auto; }
+#header > div > nav { width: 100%; height: 100%; }
+#header > div > nav > h1 { height: 100%; float: left; }
+#header > div > nav > h1 > a { padding: 0 10px; font-size: 3rem; font-family: 'Patrick Hand', cursive; color: #333; line-height: 40px; font-weight: bold; transition: all 0.3s; }
+#header > div > nav > h1 > a:hover { letter-spacing: 2px; }
+#header > div > nav > ul { width: auto; height: 100%; float: right; }
+#header > div > nav > ul > li { width: auto; height: 100%; margin-right: 4px; float: left; }
+#header > div > nav > ul > li:last-of-type { margin-right: 0; }
+#header > div > nav > ul > li > a { font-size: 1.25rem; text-align: center; line-height: 40px; padding: 0 10px; }
+#header.scroll { position: fixed; top: 0; }
+
+#footer { width: 100%; height: 80px; background-color: #333; padding: 20px 0; float: left; }
+
+#footer > div { width: 93.75vw; max-width: 960px; margin: 0 auto; height: 100%; }
+#footer > div ul .top { height: 100%; }
+#footer > div ul { width: 200px; float: left; }
+#footer > div ul > li { width: 100%; height: 20px; line-height: 20px; color: #ccc; }
+#footer > div ul > li > a { color: #ccc; }
+#footer > div ul > li > a:hover { color: #fd2; }
+#footer > div .top { width: 80px; float: right; background-color: #666; }
+#footer > div .top > a { line-height: 80px; text-align: center; color: #fff; }
+#footer > div .top > a:hover { color: #fd2; }
+
+html, body { position: relative; height: 100%; }
+
+/* 공통 */
+.w960 { width: 93.75vw; height: auto; margin: 0 auto; }
+
+.m_title, .m_section { height: 100%; float: left; }
+
+.m_title { width: 35%; background-size: 100%; background-repeat: no-repeat; }
+.m_title > strong { width: 100%; height: auto; color: #333; font-weight: bold; font-size: 4rem; text-align: center; display: block; font-family: 'Patrick Hand', cursive; }
+
+.m_section { width: 65%; background-color: #fff; }
+.m_section > dl { width: 60%; height: auto; padding: 0 20%; margin-top: 30vh; }
+.m_section > dl > dt, .m_section > dl dd { height: auto; padding: 10px; float: left; font-size: 0.875rem; line-height: 1.2rem; }
+.m_section > dl > dt { width: 10%; min-width: 110px; background-color: #333; color: #fff; text-align: center; }
+.m_section > dl > dd { width: 80%; margin-bottom: 10px; border: 1px solid #ccc; transition: all 0.3s; padding: 16px 14px; }
+.m_section > dl > dd:hover { background-color: #fd2; }
+.m_section > dl > dd > span { width: 100%; height: 1.2rem; line-height: 1.2rem; display: block; float: left; margin-bottom: 6px; }
+.m_section > dl > dd > span:last-child { margin-bottom: 0; }
+.m_section > dl > dd > span > strong { color: #fff; width: 60px; height: 100%; margin-right: 10px; padding: 2px; display: inline-block; text-align: center; line-height: 1.2rem; }
+.m_section > dl > dd > span > .maincolor { background-color: #009900; }
+.m_section > dl > dd > span > .main2color { background-color: #ED4400; }
+
+.more > a { background-color: #333; color: #fff; width: 50px; display: block; padding: 0.5rem; text-align: center; float: right; }
+
+a { width: auto; height: 100%; display: block; }
+
+a:hover { color: #fd2; }
+
+small { font-size: 0.75rem; color: #ccc; }
+
+/* 본문 */
+#container { width: 100%; padding-top: 60px; height: auto; }
+
+#header { width: 100%; height: 40px; padding: 10px 0; background-color: #fff; position: fixed; top: 0; left: 0; z-index: 200; }
+
+#section { width: 100%; height: auto; }
+#section > article { width: 100%; height: calc(100vh - 60px); }
+
+.pftop, .link { position: relative; background-image: url(../img/port2/tourbg.jpg); background-repeat: no-repeat; background-position: top center; background-size: 100%; }
+.pftop > a, .link > a { display: block; background-color: rgba(51, 51, 51, 0.9); width: 320px; height: auto; padding: 10px 10px; position: absolute; z-index: 100; left: calc(50% - 170px); top: 45%; transition: all 0.3s; }
+.pftop > a:hover > .link_more, .link > a:hover > .link_more { color: #333; background-color: #fd2; font-weight: bold; }
+.pftop > a > span, .link > a > span { width: 100%; height: auto; margin-bottom: 4px; text-align: center; color: #fff; font-size: 1rem; display: block; }
+.pftop > a > .link_t, .link > a > .link_t { font-size: 1.5rem; font-weight: bold; color: #fff; }
+.pftop > a > .link_more, .link > a > .link_more { width: 50%; padding: 4px 0; margin: 0 25%; color: #fff; border: 1px solid #fd2; transition: all 0.3s; box-sizing: border-box; }
+
+.sketch { font-size: 0; }
+.sketch .m_title { background-image: url(../img/port2/sketch.jpg); background-size: 110%; }
+
+.mockup { font-size: 0; }
+.mockup .m_title { background-image: url(../img/port2/mockup.jpg); background-size: 100%; background-repeat: no-repeat; background-position: top; }
+
+.codding > div { width: 33.333333%; height: 100%; float: left; background-repeat: no-repeat; border-right: 1px dashed #ccc; box-sizing: border-box; transition: all 0.4s; position: relative; }
+.codding > div:last-child { border-right: none; }
+.codding > div:hover > span { background-color: #fd2; color: #333; }
+.codding > div:nth-of-type(1) { background-image: url(../img/port2/tour_h_x.jpg); }
+.codding > div:nth-of-type(1):hover { background-image: url(../img/port2/tour_h.jpg); }
+.codding > div:nth-of-type(2) { background-image: url(../img/port2/tour_c_x.jpg); }
+.codding > div:nth-of-type(2):hover { background-image: url(../img/port2/tour_c.jpg); }
+.codding > div:nth-of-type(3) { background-image: url(../img/port2/tour_j_x.jpg); }
+.codding > div:nth-of-type(3):hover { background-image: url(../img/port2/tour_j.jpg); }
+.codding > div > span { background-color: #333; color: #fff; width: auto; height: auto; padding: 4px 10px; position: absolute; top: 0; left: 0; display: block; font-size: 1.2rem; font-weight: bold; }
+
+.link > a { width: 100px; padding: 20px 0; left: calc(50% - 50px); border: 1px solid #fd2; }
+.link > a:hover { background-color: #fd2; }
+.link > a:hover > .link_more { background-color: transparent; }
+.link > a > .link_more { color: #fff; border: none; }
+
+/*# sourceMappingURL=portfolio2.css.map */

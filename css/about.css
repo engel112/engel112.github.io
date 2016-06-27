@@ -1,0 +1,53 @@
+@charset "UTF-8";
+#header > div { width: 93.75vw; max-width: 960px; margin: 0 auto; }
+#header > div > nav { width: 100%; height: 100%; }
+#header > div > nav > h1 { height: 100%; float: left; }
+#header > div > nav > h1 > a { padding: 0 10px; font-size: 3rem; font-family: 'Patrick Hand', cursive; color: #333; line-height: 40px; font-weight: bold; transition: all 0.3s; }
+#header > div > nav > h1 > a:hover { letter-spacing: 2px; }
+#header > div > nav > ul { width: auto; height: 100%; float: right; }
+#header > div > nav > ul > li { width: auto; height: 100%; margin-right: 4px; float: left; }
+#header > div > nav > ul > li:last-of-type { margin-right: 0; }
+#header > div > nav > ul > li > a { font-size: 1.25rem; text-align: center; line-height: 40px; padding: 0 10px; }
+#header.scroll { position: fixed; top: 0; }
+
+#footer { width: 100%; height: 80px; background-color: #333; padding: 20px 0; float: left; }
+
+#footer > div { width: 93.75vw; max-width: 960px; margin: 0 auto; height: 100%; }
+#footer > div ul .top { height: 100%; }
+#footer > div ul { width: 200px; float: left; }
+#footer > div ul > li { width: 100%; height: 20px; line-height: 20px; color: #ccc; }
+#footer > div ul > li > a { color: #ccc; }
+#footer > div ul > li > a:hover { color: #fd2; }
+#footer > div .top { width: 80px; float: right; background-color: #666; }
+#footer > div .top > a { line-height: 80px; text-align: center; color: #fff; }
+#footer > div .top > a:hover { color: #fd2; }
+
+html, body { position: relative; height: 100%; }
+
+/* 공통 */
+.w960 { width: 93.75vw; height: auto; margin: 0 auto; }
+
+.m_title, .m_section { height: 100%; float: left; }
+
+.m_title { width: 35%; background-color: #fd2; }
+.m_title > strong { width: 100%; height: auto; color: #333; font-weight: bold; font-size: 4rem; text-align: center; display: block; font-family: 'Patrick Hand', cursive; }
+
+.m_section { width: 65%; background-color: #fff; }
+
+.more > a { background-color: #333; color: #fff; width: 50px; display: block; padding: 0.5rem; text-align: center; float: right; }
+
+a { width: auto; height: 100%; display: block; }
+
+a:hover { color: #fd2; }
+
+small { font-size: 0.75rem; color: #ccc; }
+
+/* 본문 */
+#container { width: 100%; height: auto; }
+
+#header { width: 100%; height: 40px; padding: 10px 0; background-color: #fff; position: fixed; top: 0; left: 0; z-index: 200; }
+
+#section { width: 960px; height: 1700px; padding: 60px 0; margin: 0 auto; }
+#section > div { width: 70%; margin: 0 15%; height: 100%; background-image: url(../img/resume.jpg); background-repeat: no-repeat; background-size: 100%; }
+
+/*# sourceMappingURL=about.css.map */

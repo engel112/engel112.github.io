@@ -1,0 +1,92 @@
+@charset "UTF-8";
+#header > div { width: 93.75vw; max-width: 960px; margin: 0 auto; }
+#header > div > nav { width: 100%; height: 100%; }
+#header > div > nav > h1 { height: 100%; float: left; }
+#header > div > nav > h1 > a { padding: 0 10px; font-size: 3rem; font-family: 'Patrick Hand', cursive; color: #333; line-height: 40px; font-weight: bold; transition: all 0.3s; }
+#header > div > nav > h1 > a:hover { letter-spacing: 2px; }
+#header > div > nav > ul { width: auto; height: 100%; float: right; }
+#header > div > nav > ul > li { width: auto; height: 100%; margin-right: 4px; float: left; }
+#header > div > nav > ul > li:last-of-type { margin-right: 0; }
+#header > div > nav > ul > li > a { font-size: 1.25rem; text-align: center; line-height: 40px; padding: 0 10px; }
+#header.scroll { position: fixed; top: 0; }
+
+#footer { width: 100%; height: 80px; background-color: #333; padding: 20px 0; float: left; }
+
+#footer > div { width: 93.75vw; max-width: 960px; margin: 0 auto; height: 100%; }
+#footer > div ul .top { height: 100%; }
+#footer > div ul { width: 200px; float: left; }
+#footer > div ul > li { width: 100%; height: 20px; line-height: 20px; color: #ccc; }
+#footer > div ul > li > a { color: #ccc; }
+#footer > div ul > li > a:hover { color: #fd2; }
+#footer > div .top { width: 80px; float: right; background-color: #666; }
+#footer > div .top > a { line-height: 80px; text-align: center; color: #fff; }
+#footer > div .top > a:hover { color: #fd2; }
+
+html, body { position: relative; height: 100%; }
+
+/* 공통 */
+.w960 { width: 93.75vw; height: auto; margin: 0 auto; }
+
+.m_title, .m_section { height: 100%; float: left; }
+
+.m_title { width: 35%; background-image: url(../img/bg.jpg); }
+.m_title > strong { width: 100%; height: auto; color: #333; font-weight: bold; font-size: 4rem; text-align: center; display: block; font-family: 'Patrick Hand', cursive; }
+
+.m_section { width: 65%; background-color: #fff; }
+
+.more > a { background-color: #333; color: #fff; width: 50px; display: block; padding: 0.5rem; text-align: center; float: right; }
+
+a { width: auto; height: 100%; display: block; }
+
+a:hover { color: #fd2; }
+
+small { font-size: 0.75rem; color: #ccc; }
+
+/* 본문 */
+#container { width: 100%; height: auto; overflow: hidden; }
+
+#header { width: 100%; height: 40px; padding: 10px 0; background-color: #fff; position: absolute; bottom: 0; left: 0; z-index: 200; }
+
+#section { width: 100%; height: auto; }
+#section > article { width: 100%; height: calc(100vh - 60px); }
+
+/* ---------- 맨 위 ---------- */
+.main { width: 100vw; height: 100vh; background-image: url(../img/mainbg.jpg); background-repeat: no-repeat; position: fixed; top: 0; left: 0; z-index: -100; background-color: #ffa; background-position: center center; }
+
+/* ---------- me ---------- */
+.me { position: relative; }
+.me > span { width: 100%; font-size: 8rem; text-align: center; font-family: 'Patrick Hand', cursive; color: #333; letter-spacing: 0.5rem; text-shadow: 10px 10px #fd2; display: block; position: absolute; top: 30%; }
+.me > ul { float: right; width: 200px; height: auto; padding: 10px 20px; text-align: center; background-color: rgba(51, 51, 51, 0.9); position: absolute; bottom: calc(50% - 120px); right: calc(50% - 100px); transition: all 0.3s; }
+.me > ul:hover { background-color: #000; }
+.me > ul > li { width: 100%; color: #fff; }
+
+/* ---------- 이력서 ---------- */
+.resume { padding-top: 60px; }
+.resume .m_section > ul { width: 60%; margin-left: 20%; }
+.resume .m_section > ul > li { width: 100%; height: auto; }
+.resume .m_section > ul > .resume_txt { width: calc(100% - 2rem); padding: 1rem; background-color: #666; transition: all 0.3s; color: #fff; margin-bottom: 10px; font-size: 0.875rem; line-height: 1.4rem; }
+.resume .m_section > ul > .resume_txt:hover { background-color: #333; }
+.resume > .m_title { background-position: -200px -300px; }
+
+/* ---------- 포트폴리오 ---------- */
+.portfolio > div { width: 48%; height: 96%; padding: 2% 1%; float: left; overflow: hidden; background-color: #fff; }
+.portfolio > div > .p_img { width: 100%; height: 60%; background-size: 100%; background-repeat: no-repeat; background-position: top center; transition: all 0.3s; }
+.portfolio > div > .p_img:hover { transform: scale(1.05); }
+.portfolio > div > ul { width: 70%; height: calc(40% - 4rem); background-color: #fff; padding: 2rem 15%; }
+.portfolio > div > ul:after { content: ""; display: block; clear: both; }
+.portfolio > div > ul > li { float: left; width: 100%; height: auto; padding: 2px 0; }
+.portfolio .port1 > .p_img { background-image: url(../img/port1/changbg.jpg); }
+.portfolio .port2 > .p_img { background-image: url(../img/port2/tourbg.jpg); }
+.portfolio .pf_title { font-weight: bold; text-align: center; font-size: 1.5rem; }
+.portfolio .pf_bar { width: 8%; margin: 10px 46%; border-bottom: 3px solid #ccc; }
+.portfolio .pf_txt { margin-left: 120px; }
+
+/* ---------- 연락처 ---------- */
+#contact { background-color: #ffa; }
+#contact .m_section > dl { width: 60%; height: auto; padding: 0 20%; }
+#contact .m_section > dl > dt, #contact .m_section > dl dd { height: auto; padding: 6px 0; float: left; text-indent: 1rem; }
+#contact .m_section > dl > dt { width: 20%; min-width: 110px; background-color: #333; color: #fff; }
+#contact .m_section > dl > dd { width: 80%; }
+#contact > .m_title { background-position: -1400px 1250px; }
+
+/*# sourceMappingURL=index.css.map */
