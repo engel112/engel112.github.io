@@ -53,7 +53,7 @@ header, section { margin: 0 auto; }
 #gnbWrap > ul > li:nth-of-type(7) i { color: #fff; }
 
 h1 { width: 152px; height: 100%; float: left; }
-h1 > a { background-image: url(../img/header/logo.png); background-size: 152px; display: block; background-position: center center; }
+h1 > a { background-image: url(../img/header/logo.png); background-size: 152px; display: block; background-position: center center; font-size: 0; }
 
 #gnb_nav { width: 748px; height: auto; background-color: rgba(255, 255, 255, 0.95); position: absolute; left: calc(50% - 298px); z-index: 500; border: 1px solid #ececec; box-sizing: border-box; display: none; }
 #gnb_nav > ul { height: 100%; float: left; }
