@@ -1,0 +1,56 @@
+/* section */
+
+
+section{width: 100%; height: auto; float: left;}
+section>article{width: 100%; height: 620px; padding: 80px 0;}
+section>article>div{width: 960px; height: 100%; margin: 0 auto;}
+section>#article01Wrap{background-image:url(../img/section/mainbg.JPG); background-repeat: no-repeat; background-position: center 78%; background-size: 100%;}
+section>#article02Wrap{background-color: #335161; background-image: url(../img/pattern2.jpg); background-blend-mode: color-burn;}
+section>#article03Wrap{background-color: #f4f4f2; background-image: url(../img/pattern2.jpg); background-blend-mode: darken;}
+section>#article04Wrap{background-color: #fff; background-image: url(../img/pattern2.jpg); background-blend-mode: color-burn;}
+
+
+div>.subject{width: 100%; font-size: 2rem; font-weight: bold; line-height: 2rem; color: #333; letter-spacing: -0.125rem; text-align: center; display: block;}
+div>.bar{width: 50px; height: 3px; background-color: #c5c5c5; margin: 28px calc(50% - 25px); display: block;}
+
+/* 창덕궁 */
+    #article01{width: 100%; overflow: hidden; position: relative;}
+    #article01>span{width: 100%; position: absolute; top: 40%; z-index:100; text-align: center; font-size:1.2rem; letter-spacing: 5px; color:#fff;}
+    #article01>span>em{width: 100%; font-size: 5.625rem; color:#fff;}
+
+/* 창덕궁소개 */
+#article02{width: 960px; overflow: hidden;}
+#article02>div {height: calc(100% - 64px); float: left; padding: 32px 0; position: relative;}
+#article02>.art02_left {width: 60%; background-image: url(../img/section/img.png); background-position: center center; background-repeat: no-repeat; background-size: auto calc(100% - 64px);}
+#article02>.art02_left>span {padding:2px 10px; color:#f4f4f2; position:absolute; z-index: 100; left: 0; bottom: 32px; background-color: rgba(0,0,0,.8); display: block; font: normal 0.875rem 'nanumGothic'; line-height: 30px; text-align: center;}
+    #article02>.art02_right{width: 40%;}
+    #article02>.art02_right>.art02_right_inbox {width: calc(100% - 80px); height: calc(100% - 80px); background-color: #fff; padding: 40px;}
+    #article02>.art02_right>.art02_right_inbox>.text {width: 100%; height: 80%; font-size: 0.875rem; line-height: 1.5rem; overflow-y: scroll; text-indent: 4px; padding-right: 50%;}
+
+/* 찾아오시는 길 */
+#article03{height: calc(100% - 32px); padding: 0 32px;}
+#article03>.subject{margin-top: 32px;}
+#article03>.map{width: 100%; height: 320px; margin-bottom: 20px; border: 1px solid #c5c5c5;}
+#article03>.map_info{width:660px; margin:0 160px;}
+    #article03>.map_info>li{width: 100%; float: left; line-height: 1.25rem}
+    #article03>.map_info>.info_icon{margin-right: 10px; color: #666; font-size: 1rem;}
+    #article03>.map_info>.info_txt{margin-right: 50%;margin-bottom: 10px;}
+    #article03>.map_info>.info_etc {font-size:0.875rem; margin-top: 10px;}
+
+/* 관람 시간 및 요금 */
+#article04{height: calc(100% - 32px); padding: 0 32px;}
+#article04>.subject{margin-top: 32px;}
+#article04>.btn_box{width: 256px; height: 40px; margin-left: 370px; margin-bottom: 20px;}
+    #article04>.btn_box button {background-color: transparent; width: 108px; height: 40px; color: #333; line-height: 1.25rem; background-image: url(../img/section/viewbtn.png); background-repeat: no-repeat; cursor: pointer; margin-right: 5px; float: left;}
+    #article04>.btn_box button:hover {color: #f4f4f2; background-image: url(../img/section/viewbtn_on.png);}
+#article04>dl{width: 717px; text-indent: 10px; text-align: center; margin-left: 120px; border-top: 1px solid #c5c5c5; border-left: 1px solid #c5c5c5;}
+    #article04>dl>dt{height: 32px; background-color: #335161; color:#f4f4f2; border-right: 1px solid #c5c5c5; border-bottom: 1px solid #c5c5c5; float: left; line-height:32px;}
+    #article04>dl>dd{height: 32px; background-color: #f4f4f2; color:#333; border-right: 1px solid #c5c5c5; border-bottom: 1px solid #c5c5c5; float: left;  line-height: 32px;}
+#article04>.timetable{height:131px; margin-bottom: 20px;}
+        #article04>.timetable>dt{width: 238px;}
+        #article04>.timetable>dd{width: 238px;}
+#article04>.price{height:131px; margin-bottom: 30px;}
+        #article04>.price>dt{width: 200px;}
+        #article04>.price>dd{width: 515px; text-align: left; text-indent: 20px;}
+.art04_btn_more{width: 130px; height: 34px; background-color: #933637; text-align: center; line-height: 2.125rem;; float: right; margin-right:122px; cursor: pointer; color:#f4f4f2;}
+.art04_btn_more>i{color:#f4f4f2; font-size:1.25rem; line-height: 2.125rem; margin-left: 10px;}

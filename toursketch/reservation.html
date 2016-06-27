@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>여행스케치 :: </title>
+    <!--[if lte IE 9]>
+        <script src="./js/dist/html5shiv.min.js"></script>
+        <script src="./js/dist/ie9.min.js"></script>
+        <script src="./js/dist/PIE.js"></script>
+        <script src="./js/dist/responsive.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="./css/lib/reset.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/reservation.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <script src="./js/jquery/jquery-1.12.3.min.js"></script>
+    <script src="./js/jquery/jquery-migrate-1.3.0.min.js"></script>
+    <script src="./js/jquery/jquery-ui.min.js"></script>
+    <script src="./js/indi.js"></script>
+    <script src="./js/slidebanner.js"></script>
+    <script src="./js/autoslide.js"></script>
+    <style></style>
+    <script>
+      $(document).ready(function(){
+        var gnb = $('#gnb'),
+            gnbNav = $('#gnbWrap').find('li');
+        var navMenu = $('#gnb_nav');
+        gnbNav.on('mouseenter',function(){
+          navMenu.stop().slideDown();
+          });
+        gnb.on('mouseleave',function(){
+          navMenu.stop().slideUp();
+        });
+          var $info_btn = $('#timetable').find('li');
+              $info_btn.on('click', function(e){
+                e.preventDefault();
+                var $this = $(this),
+                    index_i = $(this).index();
+                    $this.addClass('select_menu').siblings().removeClass('select_menu');
+                
+                var $menu = $('#timetableWrap').children('div');
+                  $menu.eq(index_i).css({'display':'block'}).siblings().css({'display':'none'});
+          });
+         var sch_img = $('.sch_img').find('li'),
+             sch_pic = $('#sch_pic').find('div');
+sch_img.eq(0).on('mouseenter', function(){
+   sch_pic.css({'background-image':'url(./img/reservation/sch02.jpg)'})
+});
+sch_img.eq(1).on('mouseenter', function(){
+   sch_pic.css({'background-image':'url(./img/reservation/sch03.jpg)'})
+});
+sch_img.eq(2).on('mouseenter', function(){
+   sch_pic.css({'background-image':'url(./img/reservation/sch04.jpg)'})
+});
+sch_img.on('mouseleave', function(){
+   sch_pic.css({'background-image':'url(./img/reservation/sch01.jpg)'})
+});
+      });
+    </script>
+</head>
+<body>
+    <header id="header">
+      <div id="h_top_wrap">
+        <div id="h_menu">
+        <div id="h_menuWrap">
+            <h3>좌측메뉴</h3>
+            <ul id="h_menu_left" class="me_link">
+                <li class="h_menu01"><a href="./index.html" ><i class="fa fa-home" aria-hidden="true"></i>메인으로</a></li>
+                <li class="h_menu_bar"><span><!--메뉴구분바--></span></li>
+                <li class="h_menu02"><a href="#"><i class="fa fa-comments" aria-hidden="true"></i>커뮤니티</a></li>
+                <li class="h_menu_bar"><span><!--메뉴구분바--></span></li>
+                <li class="h_menu03"><a href="#"><i class="fa fa-camera-retro" aria-hidden="true"></i>기획전모음</a></li>
+            </ul>
+            <h3>우측메뉴</h3>
+            <ul id="h_menu_right" class="me_link">
+                <li class="h_menu04"><a href="#">로그인</a></li>
+                <li class="h_menu_bar"><span><!--메뉴구분바--></span></li>
+                <li class="h_menu05"><a href="./join1.html">회원가입</a></li>
+                <li class="h_menu_bar"><span><!--메뉴구분바--></span></li>
+                <li class="h_menu06"><a href="#">예약결제</a></li>
+                <li class="h_menu_bar"><span><!--메뉴구분바--></span></li>
+                <li class="h_menu07 lastbox"><a href="#">고객센터</a></li>
+            </ul>
+        </div><!--// #h_menuWrap-->
+        </div><!--// #h_menu-->
+        <div id="gnb">
+           <h2>메인메뉴</h2>
+           <div id="gnbWrap">
+            <h1 id="logo" class="me_link"><a href="index.html" title="메인으로">로고</a></h1>
+            <ul id="gnb_menu" class="me_link">
+                <li class="menu_01"><a href="#" title="지자체지원">지자체지원</a></li>
+                <li class="menu_02"><a href="#" title="시즌여행">시즌여행</a></li>
+                <li class="menu_03"><a href="#" title="버스여행">버스여행</a></li>
+                <li class="menu_04"><a href="#" title="기차여행">기차여행</a></li>
+                <li class="menu_05"><a href="#" title="섬여행">섬여행</a></li>
+                <li class="menu_06"><a href="#" title="지방출발">지방출발</a></li>
+                <li class="menu_07"><a href="#" title="제주도여행"><i class="fa fa-heart" aria-hidden="true"></i>제주도여행</a></li>
+            </ul>        
+            </div><!--// #gnbWrap-->
+            <div id="gnb_nav">
+              <ul class="nav01"><!--지자체 지원-->
+                <li><a href="./sublist.html">강원권 지원</a></li>
+                <li><a href="./sublist.html">충청권 지원</a></li>
+                <li><a href="./sublist.html">경상권 지원</a></li>
+                <li><a href="./sublist.html">전라권 지원</a></li>
+                <li><a href="./sublist.html">수도권 지원</a></li>
+              </ul>
+              <ul class="nav02"><!-- 시즌여행 -->
+                <li><a href="./sublist.html">강원권 여행</a></li>
+                <li><a href="./sublist.html">충청권 여행</a></li>
+                <li><a href="./sublist.html">경상권 여행</a></li>
+                <li><a href="./sublist.html">전라권 여행</a></li>
+                <li><a href="./sublist.html">수도권 여행</a></li>
+              </ul>
+              <ul class="nav03"><!-- 버스여행 -->
+                <li><a href="#">이달의 베스트</a></li>
+                <li><a href="#">축제여행</a></li>
+                <li><a href="#">연중 출발(스테디셀러)</a></li>
+                <li><a href="#">주중출발</a></li>
+              </ul>
+             <ul class="nav04"><!--기차여행 -->
+                <li><a href="#">당일 기차여행</a></li>
+                <li><a href="#">무박 기차여행</a></li>
+                <li><a href="#">숙박 기차여행</a></li>
+                <li><a href="#">O/V/S TRAIN</a></li>
+              </ul>
+              <ul class="nav05"><!-- 섬여행 -->
+                <li><a href="#">울릉도/독도</a></li>
+                <li><a href="#">홍도/흑산도</a></li>
+                <li><a href="#">거문도/백도</a></li>
+                <li><a href="#">백령도/대청도</a></li>
+              </ul>
+              <ul class="nav06"><!-- 지방출발 -->
+                <li><a href="#">부산/울산 출발</a></li>
+                <li><a href="#">광주/전주 출발</a></li>
+                <li><a href="#">대전 출발</a></li>
+                <li><a href="#">대구 출발</a></li>
+              </ul>
+            </div>
+            </div><!--// #gnb-->
+          </div><!--// #h_top_wrap-->
+   <nav id="sidenav">
+      <ul class="me_link">
+         <li><a href="#"><span>호텔예약</span></a></li>
+         <li><a href="#"><span>펜션예약</span></a></li>
+         <li><a href="#"><span>할인티켓</span></a></li>
+         <li><a href="#"><span>맨 위로 가기</span></a></li>
+      </ul>
+   </nav>
+        </header><!--// #header-->
+    
+<!--    본문   -->
+<section id="sub_main">
+   <article id="schedule">
+     <h2>스케쥴</h2>
+      <div class="sch_title"><span>YS27</span>삼척~동해로 떠나는 즐거운 여름 바캉스여행 (1박2일 숙박)</div>
+       <ul class="sch_icon">
+           <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a><!--즐겨찾기--></li>
+           <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a><!--문의--></li>
+           <li><a href="#"><i class="fa fa-print" aria-hidden="true"></i></a><!--인쇄--></li>
+       </ul>
+       <div id="sch_pic">
+           <div>대표그림</div>
+           <ul class="sch_img">
+               <li>그림1</li>
+               <li>그림2</li>
+               <li>그림3</li>
+           </ul>
+       </div>
+        <form action="*" method="get" id="sch_form1">
+            <fieldset class="schedule_table">
+                <legend>여행설명</legend>
+                <dl>
+                    <dt>출발일</dt>
+                    <dd>2016.07.02(토)</dd>
+                    <dt>도착일</dt>
+                    <dd>2016.07.03(일)</dd>
+                    <dt>탑승지</dt>
+                    <dd>서울 시청역 8번 출구, 서울 교대역 9번 출구</dd>
+                    <dt><label for="item">가격</label></dt>
+                    <dd>
+                        <select name="item" id="item">
+                            <option>상품 구성을 선택해주세요. (ex.모텔급/2인 1실)</option>
+                            <option value="모텔급 2인 1실 (대인 109,000원)">모텔급 2인 1실 (대인 109,000원)</option>
+                            <option value="모텔급 2인 1실 (소인 99,000원)">모텔급 2인 1실 (소인 99,000원)</option>
+                            <option value="모텔급 3인 1실 (대인 104,000원)">모텔급 3인 1실 (대인 104,000원)</option>
+                            <option value="모텔급 3인 1실 (소인 94,000원)">모텔급 3인 1실 (소인 94,000원)</option>
+                            <option value="모텔급 4인 1실 (소인 99,000원)">모텔급 4인 1실 (소인 99,000원)</option>
+                            <option value="모텔급 4인 1실 (소인 89,000원)">모텔급 4인 1실 (소인 89,000원)</option>
+                            <option value="호텔급 2인 1실 (대인 129,000원)">호텔급 2인 1실 (대인 129,000원)</option>
+                            <option value="호텔급 2인 1실 (소인 119,000원)">호텔급 2인 1실 (소인 119,000원)</option>
+                            <option value="호텔급 3인 1실 (대인 124,000원)">호텔급 3인 1실 (대인 124,000원)</option>
+                            <option value="호텔급 3인 1실 (소인 114,000원)">호텔급 3인 1실 (소인 114,000원)</option>
+                        </select>
+                    </dd>
+                    <dt><label for="adult">인원</label></dt>
+                    <dd>
+                       <label for="adult">성인</label>
+                        <select name="adult" id="adult">
+                            <option value="1명">1명</option>
+                            <option value="2명">2명</option>
+                            <option value="3명">3명</option>
+                            <option value="4명">4명</option>
+                            <option value="5명">5명</option>
+                            <option value="6명">6명</option>
+                            <option value="7명">7명</option>
+                            <option value="8명">8명</option>
+                            <option value="9명">9명</option>
+                            <option value="10명">10명</option>
+                        </select>
+                       <label for="child">소인</label>
+                        <select name="child" id="child">
+                            <option value="1명">1명</option>
+                            <option value="2명">2명</option>
+                            <option value="3명">3명</option>
+                            <option value="4명">4명</option>
+                            <option value="5명">5명</option>
+                            <option value="6명">6명</option>
+                            <option value="7명">7명</option>
+                            <option value="8명">8명</option>
+                            <option value="9명">9명</option>
+                            <option value="10명">10명</option>
+                        </select>
+                    </dd>
+                    <dt>포함내역</dt>
+                    <dd>왕복교통비, 가이드, 차량보험, 도로비, 봉사료</dd>
+                    <dt>준비물</dt>
+                    <dd>편한 복장, 편한 신발, 카메라, 간식 등</dd>
+                    <dt>적립포인트</dt>
+                    <dd><strong class="red">3% 적립</strong></dd>
+                </dl>
+            </fieldset>
+            <fieldset class="res_btn">
+                <button type="submit" id="ok" name="ok">예약하기</button>
+                <button type="button" id="table_go" name="table_go">일정표</button>
+                <button type="button" id="qna_go" name="qna_go">문의하기</button>
+            </fieldset>
+        </form>
+   </article><!--// #schedule-->
+   
+   <article id="cal">
+      <div id="calWrap">
+       <span class="subtitle"><strong class="green">출발일</strong> 선택하기</span>
+       <div class="circle_box">
+          <ul class="circle">
+           <li><span class="ok_circle"><!--원모양--></span>출발확정</li>
+           <li><span class="rsv_circle"><!--원모양--></span>예약가능</li>
+           <li><span class="fin_circle"><!--원모양--></span>예약마감</li>
+           </ul>
+       </div>
+       <table>
+           <caption>2016.05</caption>
+           <thead>
+               <tr>
+                   <th>일</th>
+                   <th>월</th>
+                   <th>화</th>
+                   <th>수</th>
+                   <th>목</th>
+                   <th>금</th>
+                   <th>토</th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr>
+                   <td></td><td></td><td>1</td><td>2</td><td>3</td><td><a href="#" title="좌석:42"><strong class="green">4</strong></a></td><td><a href="#" title="좌석:42"><strong class="green">5</strong></a></td>
+               </tr>
+               <tr>
+                   <td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td><a href="#" title="좌석:42"><strong class="green">11</strong></a></td><td><a href="#" title="좌석:42"><strong class="green">12</strong></a></td>
+               </tr>
+               <tr>
+                   <td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td><a href="#" title="좌석:42"><strong class="green">18</strong></a></td><td><a href="#" title="좌석:42"><strong class="green">19</strong></a></td>
+               </tr>
+               <tr>
+                   <td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td><a href="#" title="좌석:42"><strong class="green">25</strong></a></td><td><a href="#" title="좌석:42"><strong class="green">26</strong></a></td>
+               </tr>
+               <tr>
+                   <td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td><td></td>
+               </tr>
+           </tbody>
+       </table>
+       <table>
+           <caption>2016.06</caption>
+           <thead>
+               <tr>
+                   <th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr>
+                   <td></td><td></td><td>1</td><td>2</td><td>3</td><td><a href="#" title="좌석:42"><strong class="green">4</strong></a></td><td><a href="#" title="좌석:42"><strong class="green">5</strong></a></td>
+               </tr>
+               <tr>
+                   <td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td><a href="#" title="좌석:22"><strong class="red">11</strong></a></td><td><a href="#" title="좌석:19"><strong class="red">12</strong></a></td>
+               </tr>
+               <tr>
+                   <td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td><a href="#" title="좌석:42"><strong class="green">18</strong></a></td><td><a href="#" title="좌석:42"><strong class="green">19</strong></a></td>
+               </tr>
+               <tr>
+                   <td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td><a href="#" title="좌석:42"><strong class="green">25</strong></a></td><td><a href="#" title="좌석:42"><strong class="green">26</strong></a></td>
+               </tr>
+               <tr>
+                   <td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td><td></td>
+               </tr>
+           </tbody>
+       </table>
+       <table>
+           <caption>2016.07</caption>
+           <thead>
+               <tr>
+                   <th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr>
+                   <td></td><td></td><td>1</td><td>2</td><td>3</td><td><a href="#" title="좌석:42"><strong class="green">4</strong></a></td><td><a href="#" title="좌석:42"><strong class="green">5</strong></a></td>
+               </tr>
+               <tr>
+                   <td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td><a href="#" title="좌석:42"><strong class="green">11</strong></a></td><td><a href="#" title="좌석:42"><strong class="green">12</strong></a></td>
+               </tr>
+               <tr>
+                   <td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td><a href="#" title="좌석:42"><strong class="green">18</strong></a></td><td><a href="#" title="좌석:42"><strong class="green">19</strong></a></td>
+               </tr>
+               <tr>
+                   <td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td><a href="#" title="좌석:13"><strong class="red">25</strong></a></td><td><a href="#" title="좌석:13"><strong class="red">26</strong></a></td>
+               </tr>
+               <tr>
+                   <td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td><td></td>
+               </tr>
+           </tbody>
+       </table>
+       <span class="cap">* 예약 전 유의사항 및 취소규정 필히 확인 부탁드립니다.</span>
+       <form action="*" method="get">
+           <fieldset>
+               <legend>예약 진행</legend>
+               <button type="submit" name="reservation"><i class="fa fa-check-square-o" aria-hidden="true"></i>예약 진행</button>
+           </fieldset>
+       </form>
+       </div><!--// #calWrap-->
+   </article><!--// #cal-->
+   
+   <article id="timetable">
+       <img src="./img/article/img_kto.gif" alt="대한민국 구석구석 공식여행사는 국내관광 활성화를 위하여 구석구석 국내관광 캠페인과 연계하여 한국관광공사에서 심사를 거쳐 선정된 국내관광 공식여행사를 말합니다. 한국관광공사에서 지정한 5개여행사 중 1개인 여행스케치는 신뢰있는 국내여행 전문 여행사입니다." />       
+      <ul>
+       <li class="select_menu"><a href="#info_t1">여행일정표</a></li>
+       <li><a href="#info_t2">유의사항</a></li>
+       <li><a href="#info_t3">여행지 풍경</a></li>
+       <li><a href="#info_t4">취소 및 기타사항</a></li>
+      </ul>
+     <div id="timetableWrap">
+         <div id="info_t1" class="info_table1">
+           <table class="sch_table">
+               <caption>1일차</caption>
+               <thead>
+                   <tr>
+                       <th>지역</th>
+                       <th>교통</th>
+                       <th>세부일정</th>
+                       <th>비고</th>
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr>
+                       <td>강원도</td>
+                       <td>관광버스</td>
+                       <td>
+                       <dl>
+                           <dt>06:30</dt>
+                           <dd><strong>서울 시청역 8번 출구 앞 출발 (가이드 'STAFF' 신분증 착용하고 안내)</strong></dd>
+                           <dt>07:00</dt>
+                           <dd><strong>서울 교대역 9번 출구 앞 경유 (가이드 'STAFF' 신분증 착용하고 안내)</strong>
+                           <br />
+                            -출발 하루 전 탑승차량 및 가이드의 연락처를 문자로 보내드립니다.
+                           <br />
+            -버스탑승시 차량 문에 부착된 좌석표대로 앉아주세요. (좌석지정 안됨)
+                           </dd>
+                           <dt>11:30</dt>
+                           <dd>
+                              <strong class="green">삼척 도착 - 중식제공 후 장호마을에서 즐거운 바다체험, 어촌체험 즐기기</strong><br />
+       <strong class="red">※와우~ 신나는 바다 속 체험! 장호마을 스노클링 바다체험 즐기기 </strong><br />
+                          -스노클링은 간단한 장비로 수중 관광을 즐길 수 있는 안전한 레포츠에요<br />
+                          -수영 못하시는 분들도 걱정 마세요~ 구명조끼도 준비되어 있어요!<br />
+                          -해외여행에서 주로 즐길 수 있었던 스노클링 이제 우리나라에서 즐겨요
+                          <br /><br />
+                      <strong class="red">※숨겨놓은 보석처럼 빛나는 해변.. 장호해변 물놀이 즐기기</strong><br />
+                       -한여름에 더욱 시원한 장호항 여름바다에 풍덩~ 바다 해수욕 즐기기<br />
+                       -사랑하는 사람과 함께 한여름의 시원함도 만끽하고 예쁜 추억도 만들어보세요.<br />
+                <br />
+                      <strong class="red">※장호마을에서 즐길 수 있는 또 하나의 어촌체험~ 해변 트레킹</strong><br />
+                       -해안도로를 따라 걷는 즐거운 트레킹~ 바다감상과 트레킹을 한번에~<br />
+                       -연인, 친구, 가족과 함께 아름다운 바다 풍경을 바라보며 예쁜 사진 한 장 찰칵!<br />
+                           </dd>
+                           <dt>16:00</dt>
+                           <dd>촛대바위로 이동</dd>
+                           <dt>16:30</dt>
+                           <dd>
+                        <strong class="green">추암애국가에 나오는 명장면과 겨울연가 촬영지인 멋진 풍경! 추암 촛대바위 산책</strong><br />
+                                -멋진 촛대바위, 출렁이는 파도, 끼룩끼룩 갈매기 떼, 말리는 오징어들 풍경 <br />
+                                -사랑하는 가족, 친구, 연인과 함께 촛대바위와 해변가 산책하기, 사진 찍기~<br />
+                           </dd>
+                           <dt>17:30</dt>
+                           <dd><strong>숙소로 이동 - 숙소 체크인 - 개별 자유시간 및 저녁식사 </strong></dd>
+                       </dl>
+                       </td>
+                       <td></td>
+                   </tr>
+               </tbody>
+           </table>
+           <table class="sch_table">
+               <caption>2일차</caption>
+               <thead>
+                   <tr>
+                       <th>지역</th>
+                       <th>교통</th>
+                       <th>세부일정</th>
+                       <th>비고</th>
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr>
+                       <td>강원도</td>
+                       <td>관광버스</td>
+                       <td>
+                       <dl>
+                           <dt>08:00</dt>
+                           <dd>조식제공(현지식)</dd>
+                           <dt>09:00</dt>
+                           <dd><strong class="green">신선이 노닐다 간 무릉도원~ 수많은 전설의 두타산 무릉계곡 산책하기</strong><br />
+        -일명 무릉도원이라 불리며 경관이 단연 빼어나서 국민관광지 1호로 선정된 곳<br />
+        -온갖 기암괴석이 즐비하고 삼화사, 학소대, 선녀탕, 쌍폭포, 용추폭포 등이 유명해요.<br />
+        -무릉계곡 입궁 위치한 유서깊은 삼화사는 신라 선덕여왕때 지어진 명찰이에요.
+                           </dd>
+                           <dt>10:30</dt>
+                           <dd>묵호항으로 이동</dd>
+                           <dt>11:00</dt>
+                           <dd>
+<strong class="green">예쁜 논골담길, 출렁다리, 묵호등대 데이트 즐기기 &amp; 활기찬 묵호항 둘러보기</strong><br /><br />
+       <strong class="red">※테마가 있는 논골담길</strong><br />
+        -명태와 오징어를 가득 실어 나르는 묵호항을 배경으로 한 예쁜 벽화마을<br />
+        -묵호항을 배경으로 살아온 사람들의 인생 스토리가 재밌게 그려져 있어요.<br /><br />
+<strong class="red">※묵호등대 및 출렁다리</strong><br />
+        -시원스런 동해바다가 한 눈에 들어오는 절경을 자랑하는 묵호등대 둘러보기<br />
+        -드라마 ‘찬란한 유산’ 촬영지~ 묵호등대와 흔들다리에서 예쁘게 사진 한 장 찰칵!!<br /><br />
+<strong class="red">※1941년 개항한 묵호항</strong><br />
+-묵호~어달회타운은 도시풍 카페와 2km 가량 횟집들이 즐비하게 자리하고 있어요.<br />
+-싱싱한 활어를 즉석에서 맛볼 수 있으며, 다양한 먹거리가 많습니다.(개별중식)
+                      </dd>
+                      <dt>13:30</dt>
+                      <dd>농촌마을로 이동</dd>
+                      <dt>14:00</dt>
+                      <dd>
+<strong class="green">동해시의 지정 휴양지인 만우솔밭과 계곡이 아름다운 만우마을 농촌체험 즐기기</strong><br />
+        -만우솔밭을 비롯 고등골, 상계골 등 많은 계곡과 마상천 등 멋진 풍광을 자랑하는 마을<br />
+        -깨끗한 농촌마을에서 즐거운 농촌체험과 따뜻한 고향의 정을 느껴보세요.<br />
+        -시기별로 계절과일/ 감자/ 옥수수/ 고구마/ 김장/ 압화체험 (5천원상당의 체험진행)<br />
+       <strong>* 농촌체험은 각 계절에 맞춰서 진행되며, 현지사정에 의해 체험내용이 바뀔 수도 있습니다.</strong><br />
+                      </dd>
+                      <dt>15:00</dt>
+                      <dd>서울로 출발</dd>
+                      <dt>19:30</dt>
+                      <dd>서울 도착 예정~ 안녕히 돌아가세요. </dd>
+                      <dd><strong class="red">* 여행일정은 현지사정 및 기상상태에 따라서 다소 변경 될 수도 있습니다.</strong></dd>
+                       </dl>
+                       </td>
+                       <td>-</td>
+                   </tr>
+               </tbody>
+           </table>
+        
+        </div>
+         <div id="info_t2" class="info_table2">
+             <dl class="notice_table">
+                  <dt>최소행사인원</dt>
+                  <dd>※최소인원(25名) 미달시 행사가 취소될 수 있습니다</dd>
+                  <dt>참고사항</dt>
+                  <dd>
+※상기 일정은 현지 기상 및 도로교통 여건에 의하여 약간의 변동이 있을 수도 있습니다.<br />
+<strong>※연합상품으로 출발 전일, 진행 여행사에서 집결장소 및 가이드 연락처를 문자로 보내드립니다.</strong><br />
+소인요금은 만3세(36개월)~만12세까지적용됩니다. (중학생이상 대인경비로 적용)<br />
+만24개월이 안된 유아는 요금적용과 좌석지정이 없습니다.<br />
+좌석배치는 예약순으로, 동행인들과 함께 배정해 드립니다.<br />
+애완동물은 차량에 탑승할 수 없으니, 유의하시기 바랍니다.<br />
+<strong class="green">출발 예정시간까지 못 나오실 경우 가이드가 별도의 확인전화 없이 지정된 시간에 출발합니다. (각 출발지 정시출발 / 시간엄수)</strong>
+                  </dd>
+                  <dt>비고</dt>
+                  <dd>
+※준비물 : 편한 복장, 편한 신발, 카메라, 간식 등<br />
+※상기의 일정은 현지의 기상사정 및 도로교통 여건에 의하여 약간의 변동이 있을 수도 있습니다.
+                  </dd>
+                  <dt>여행자보험</dt>
+                  <dd>
+ <strong>[국내여행자보험 서비스 제공 중지에 따른 안내]</strong><br />
+2009년 10월부터 금융감독원 지시로 국내여행자보험은 의료실비 보험적용이 안되고 사망 및 후유장애에 한하여 보장되었습니다.<br />
+그 동안 국내여행자보험은 여행사에서 서비스차원으로 제공되어 왔습니다.<br />
+그러나 2012년 8월18일부로 시행된 "개인정보통신법"은 국내포털사이트를 포함한 인터넷상에서 개인정보(주민등록번호) 유출을 방지하고자 개인정보 수집을 금지토록 하고 있어 여행자보험가입이 안됨을 알려 드립니다.<br />
+이에따라 2012년 8월20일 이후 출발하는 국내여행상품의 여행자보험 가입을 원하시는 고객님은 별도로 개별가입하시기 바랍니다.<br />
+단, 여행일정 중에 이용되는 교통수단(철도, 선박, 전용차량 등)은 각각 손해배상보험이 가입되어 있음을 알려 드립니다.
+                  </dd>
+                  <dt>근무시간</dt>
+                  <dd>
+근무일 안내: 평일 09:00 ~ 18:00<br />
+휴무일 안내: 토, 일요일 및 공휴일
+                  </dd>
+            </dl>
+         </div>
+         <div id="info_t3" class="info_table3">
+             <ul class="img_table">
+                <li><!--이미지--></li>
+                <li><!--이미지--></li>
+                <li><!--이미지--></li>
+                <li><!--이미지--></li>
+             </ul>
+         </div>
+         <div id="info_t4" class="info_table4">
+            <h2>취소 및 기타사항</h2>
+             <dl class="notice_table">
+               <dt>주의</dt>
+                <dd>
+<strong class="red">-여행출발 3일전 : 전액 환불<br /></strong>
+<strong class="red">-여행출발 2일전 : 여행경비의 70% 환불<br /></strong>
+<strong class="red">-여행출발 1일전 : 여행경비의 50% 환불<br /></strong>
+<strong class="red">-여행출발 당일 : 취소/변경/환불 절대 불가 (출발시간 內 미도착시 당일 취소로 간주됨)</strong>
+                </dd>
+                <dd>
+-날짜 변경도 취소로 접수되어 수수료가 부과됩니다. <br />
+-업무시간(월-금 09:00~18:00) 이외에는 취소처리 되지 않습니다. <br />
+-출발시간 내 미도착시 당일 취소로 간주됩니다.<br />
+-최소인원 미달, 천재지변 등에 의한 행사취소시에는 전액 환불됩니다.<br />
+-토/일/공휴일은 취소(변경)신청이 되지 않으며, 취소일수에서 제외됩니다.<br />
+-근무시간 內 취소(변경)를 하셔야 규정에 따른 환불이 가능합니다.<br />
+-근무시간 外 담당자 및 가이드등과의 휴대폰 등으로 취소(변경)가 불가합니다.
+                </dd>
+             </dl>
+         </div>
+      </div>
+  
+   </article><!--// #timetable-->
+   
+      <article id="qna">
+       <span class="subtitle"><strong class="green">문의</strong> 하기</span>
+       <table class="qna_table">
+           <caption>문의하기</caption>
+           <thead>
+               <tr>
+                   <th>번호</th>
+                   <th>제목</th>
+                   <th>작성</th>
+                   <th>작성일</th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr>
+                   <td>38</td>
+                   <td><a href="#">예약날짜 변경하려고합니다</a></td>
+                   <td>김현순</td>
+                   <td>2016.06.19</td>
+               </tr>
+               <tr>
+                   <td>37</td>
+                   <td><a href="#">문의드립니다 (1)</a></td>
+                   <td>김현순</td>
+                   <td>2016.06.17</td>
+               </tr>
+               <tr>
+                   <td>36</td>
+                   <td><a href="#">예약취소합니다 (1)</a></td>
+                   <td>김현순</td>
+                   <td>2016.06.12</td>
+               </tr>
+               <tr>
+                   <td>35</td>
+                   <td><a href="#">여행인원 변경 합니다. (1)</a></td>
+                   <td>방영춘</td>
+                   <td>2016.06.07</td>
+               </tr>
+               <tr>
+                   <td>34</td>
+                   <td><a href="#">조진우 가이드 칭찬 (1)</a></td>
+                   <td>장홍수</td>
+                   <td>2016.06.03</td>
+               </tr>
+           </tbody>
+       </table>
+   </article><!--// #qna-->
+   
+   <article id="fin">
+       <span class="subtitle">이 여행을 본 고객이 많이 보신<strong class="red"> 다른 상품</strong></span>
+       <ul>
+           <li><a href="#"><span>신비의 돌탑 마이산 탑사와...<br /><strong class="price">24,900원</strong></span></a></li>
+           <li><a href="#"><span>아름다운 전주와 익산...<br /><strong class="price">19,900원</strong></span></a></li>
+           <li><a href="#"><span>탱글탱글 영동 블루베리...<br /><strong class="price">19,900원</strong></span></a></li>
+           <li><a href="#"><span>갈매기 섬! 석모도 유람선...<br /><strong class="price">29,900원</strong></span></a></li>
+       </ul>
+   </article>
+</section>
+
+<!--    푸터   -->
+<footer id="footer">
+        <h3>회사정보</h3>
+    <div id="ftWrapBar">
+        <div id="ftBar">
+            <ul id="ftmenu">
+                <li class="ftmenu_01"><a href="#">회사소개</a></li>
+                <li class="ftmenu_bar"><span><!--구분바--></span></li>
+                <li class="ftmenu_02"><a href="#">찾아오시는길</a></li>
+                <li class="ftmenu_bar"><span><!--구분바--></span></li>
+                <li class="ftmenu_03"><a href="#">출발장소</a></li>
+                <li class="ftmenu_bar"><span><!--구분바--></span></li>
+                <li class="ftmenu_04"><a href="#">여행약관</a></li>
+                <li class="ftmenu_bar"><span><!--구분바--></span></li>
+                <li class="ftmenu_05"><a href="#">개인정보취급방침</a></li>
+                <li class="ftmenu_bar"><span><!--구분바--></span></li>
+                <li class="ftmenu_06 lastbox"><a href="#">이용약관</a></li>
+            </ul>
+            <span><a href="#">사업자정보확인</a></span>
+        </div>
+        </div><!--// #ftWrapBar-->
+            <div id="ftFooterWrap">
+                <ul id="ft_footer">
+                    <li class="ft_add">
+                    <address>서울특별시 용산구 원효로 259-1 (원효로1가,화일빌딩4층) <strong>(주)여행스케치여행사</strong><br />
+대표전화 : (02)701-2506 , 팩스번호 : (02)701-2508 , E-mail : tourno1@toursketch.co.kr , 대표이사 : 박영규<br />
+사업자등록번호 : 106-86-83583 , 법인등록번호 : 110111-4760636 , 통신판매업신고 : 제 2012-서울용산-0042호<br />
+                        개인정보책임담당자 : 지근종</address>
+                    </li>
+                    <li class="copy">
+                    Copyrightⓒ2005-2010 (주)여행스케치여행사. All rights Reserved.
+                    </li>
+                </ul>
+                <ul id="ft_sns">
+                    <li class="blog"><a href="http://blog.naver.com/toursketch__" target="_blank" title="네이버 블로그"><span>네이버 블로그</span></a></li>
+                    <li class="kakao"><a href="http://www.toursketch.co.kr/comty01.html?bmode=read&bid=notice&id_no=108974&l=1" target="_blank" title="카카오톡"><span>카카오톡</span></a></li>
+                    <li class="kas"><a href="https://story.kakao.com/ch/toursketch" target="_blank" title="카카오스토리"><span>카카오스토리</span></a></li>
+                </ul>
+            </div>
+    </footer><!--// #footer-->
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,kBAAkB;AAClB,2DAA2D,GAC3D,YAAY,GAAC,OAAO,EAAE,IAAI",
+"sources": ["../../scss/src/story_tab.scss"],
+"names": [],
+"file": "story_tab.css"
+}

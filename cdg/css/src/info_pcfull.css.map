@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIA,qCAAqC;EAEjC,OAAO;IAAC,KAAK,EAAE,IAAI;IAAE,MAAM,EAAE,IAAI;IAC7B,iBAAQ;MAAC,KAAK,EAAE,KAAK;MAAE,MAAM,EAAE,MAAM",
+"sources": ["../../scss/src/info_pcfull.scss"],
+"names": [],
+"file": "info_pcfull.css"
+}

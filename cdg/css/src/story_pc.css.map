@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,iBAAiB",
+"sources": ["../../scss/src/story_pc.scss"],
+"names": [],
+"file": "story_pc.css"
+}

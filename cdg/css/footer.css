@@ -1,0 +1,168 @@
+/* footer */
+
+@media screen and (max-width: 480px){
+  
+#footerWrap{width: 100%; height: auto; background-color: #f4f4f2; float: left;}
+#footer>#footerMenubarWrap {width: 100%; height: 3rem; background-color: #336171; font-size: 1rem;}
+
+
+.footer_menubar{width: 100% ; height: 100%; margin: 0 auto;}
+    .footer_menubar>.footer_menu {width: 300px; height: 100%; margin-left:10px; float: left;}
+    .footer_menubar>.footer_menu>li>a {float: left; line-height: 3rem; color: #f4f4f2;}
+    .footer_menubar>.footer_menu>li>a:hover {color: #c5c5c5;}
+    .footer_menubar>.footer_menu>li>.menu_sidebar {display: block; float: left; width: 5px; height: 20px; border-right: 1px solid #f4f4f2; margin: 14px 10px;}
+    .footer_menubar>form {width:150px; height: 100%; float: right; display: none;}
+
+.footer_etc {width: 100% ; height: auto; background-color: #f4f4f2; background-image: url(../img/footer/cloud.png); background-repeat: no-repeat; background-position: bottom right; padding: 1rem 0 3rem;}
+  .footer_etc::after{content:""; display: block; clear: both; width: 0; height: 0;}
+    .footer_etc>ul {height: auto; float: left; font-size: 0.9rem; padding: 1rem 0;}
+    .footer_etc>.footer_logo {width: 80%; margin-left: 10%;}
+        .footer_etc>.footer_logo>li {width: 50%; height: 38px; float: left; background-repeat: no-repeat; background-position: center;}
+            .footer_etc>.footer_logo>li.cdg_logo{background-image: url(../img/footer/footerlogo_2.png);}
+            .footer_etc>.footer_logo>li.unesco{background-image: url(../img/footer/unesco.png);}
+
+.footer_etc>.address {width: 100%; height: 100%;}
+        .footer_etc>.address>li {width: 100%; line-height:1.25rem; text-align: center;}
+        .footer_etc>.address>.add {margin-bottom: 12px;}
+  
+  .foot_link{width:10rem; height: auto; margin-left:calc(50% - 5rem);}
+    .foot_link>.link_btn {width: 100%; height: 2rem; margin-bottom: 1rem; float: left;}
+        .foot_link>.link_btn>li {width: 50%; height: 100%; float: left; cursor: pointer;}
+        .foot_link>.link_btn>li>a{width: 100%; height: 100%; display: block; text-align: center;}
+        .foot_link>.link_btn>li>a>i{font-size:2rem; line-height: 2rem; color:#336171; height: 100%;}
+        .foot_link>.link_btn>li>a>i:hover {color:#933637;}
+    .foot_link .language {width: 100%; height: 2rem; float: left;}
+    .foot_link .language select{width: 80%; height: 100%; float: left; border:1px solid #c5c5c5; box-sizing: border-box;}
+    .foot_link .language button {width: 20%; height: 100%; float: left;} 
+  
+  
+}/*mobile*/
+
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+  
+#footerWrap{width: 100%; height: auto; background-color: #f4f4f2; float: left;}
+#footer>#footerMenubarWrap {width: 100%; height: 3rem; background-color: #336171; font-size: 1rem;}
+
+
+.footer_menubar{width: 100% ; height: 100%; margin: 0 auto;}
+    .footer_menubar>.footer_menu {width: 300px; height: 100%; margin-left:10px; float: left;}
+    .footer_menubar>.footer_menu>li>a {float: left; line-height: 3rem; color: #f4f4f2;}
+    .footer_menubar>.footer_menu>li>a:hover {color: #c5c5c5;}
+    .footer_menubar>.footer_menu>li>.menu_sidebar {display: block; float: left; width: 5px; height: 20px; border-right: 1px solid #f4f4f2; margin: 14px 10px;}
+    .footer_menubar>form {width:150px; height: 100%; float: right; }
+    .footer_menubar>form>fieldset {width: 100%; height: 100%;}
+    .footer_menubar>form>fieldset>select {width: 120px; height: 100%; background: #f4f4f2; color:#336171; float: left; text-indent: 5px; border: 1px solid #c5c5c5; box-sizing: border-box;}
+    .footer_menubar>form>fieldset>button {width: 30px; height: 100%; float: left; cursor: pointer;}
+
+.footer_etc {width: 100% ; height: auto; background-color: #f4f4f2; background-image: url(../img/footer/cloud.png); background-repeat: no-repeat; background-position: bottom right; padding-bottom: 5rem;}
+  .footer_etc::after{content:""; display: block; clear: both; width: 0; height: 0;}
+    .footer_etc>ul {height: auto; float: left; font-size: 0.9rem; padding: 1rem 0;}
+    .footer_etc>.footer_logo {width: 80%; margin-left: 10%;}
+        .footer_etc>.footer_logo>li {width: 50%; height: 38px; float: left; background-repeat: no-repeat; background-position: center;}
+            .footer_etc>.footer_logo>li.cdg_logo{background-image: url(../img/footer/footerlogo_2.png);}
+            .footer_etc>.footer_logo>li.unesco{background-image: url(../img/footer/unesco.png);}
+
+.footer_etc>.address {width: 100%; height: 100%;}
+        .footer_etc>.address>li {width: 100%; line-height:1.25rem; text-align: center;}
+        .footer_etc>.address>.add {margin-bottom: 12px;}
+  
+  .foot_link{width:352px; height: 2rem; margin-left: calc(50% - 126px);}
+    .foot_link>.link_btn {width: 126px; height: 100%; float: left;}
+        .foot_link>.link_btn>li {width: 2rem; height: 100%; float: left; margin-right: 20px; cursor: pointer;}
+        .foot_link>.link_btn>li>a{width: 100%; height: 100%; display: block; text-align: center;}
+        .foot_link>.link_btn>li>a>i{font-size:2rem; line-height: 2rem; color:#336171; height: 100%;}
+        .foot_link>.link_btn>li>a>i:hover {color:#933637;}
+    .foot_link .language {width: 126px; height: 32px; float: left;}
+    .foot_link .language select{width: 94px; height: 100%; float: left; border:1px solid #c5c5c5; box-sizing: border-box;}
+    .foot_link .language button {width: 30px; height: 100%; float: left;} 
+  
+  
+}/*tablet*/
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+
+  
+#footerWrap{width: 100%; height: auto; background-color: #f4f4f2; float: left;}
+#footer>#footerMenubarWrap {width: 100%; height: 38px; background-color: #336171; font-size: 0.9rem;}
+
+
+.footer_menubar{width: 93.75vw /* 960px /1024 * 100 */; height: 100%; margin: 0 auto;}
+    .footer_menubar>.footer_menu {width: 300px; height: 100%; margin-left:10px; float: left;}
+    .footer_menubar>.footer_menu>li>a {float: left; line-height: 2.375rem; color: #f4f4f2;}
+    .footer_menubar>.footer_menu>li>a:hover {color: #c5c5c5;}
+    .footer_menubar>.footer_menu>li>.menu_sidebar {display: block; float: left; width: 5px; height: 20px; border-right: 1px solid #f4f4f2; margin: 10px;}
+    .footer_menubar>form {width:150px; height: 100%; float: right; }
+    .footer_menubar>form>fieldset {width: 100%; height: 100%;}
+    .footer_menubar>form>fieldset>select {width: 120px; height: 100%; background: #f4f4f2; color:#336171; float: left; text-indent: 5px; border: 1px solid #c5c5c5; box-sizing: border-box;}
+    .footer_menubar>form>fieldset>button {width: 30px; height: 100%; float: left; cursor: pointer;}
+
+.footer_etc {width: 93.75vw /* 960px /1024 * 100 */; height: 126px; background-color: #f4f4f2; padding-top: 30px; margin: 0 auto; background-image: url(../img/footer/cloud.png); background-repeat: no-repeat; background-position: top right;}
+    .footer_etc>ul {height: 100%; float: left; font-size: 0.9rem;}
+    .footer_etc>.footer_logo {width: 29.296875vw /*300px*/;}
+        .footer_etc>.footer_logo>li {height: 38px; float: left; margin-right: 10px; background-repeat: no-repeat;}
+        .footer_etc>.footer_logo>li:last-child {margin-right: 0;}
+            .footer_etc>.footer_logo>li.cdg_logo{width: 145px; background-image: url(../img/footer/footerlogo_2.png);}
+            .footer_etc>.footer_logo>li.unesco{width: 118px; background-image: url(../img/footer/unesco.png);}
+
+.footer_etc>.address {width: 46.484375vw /*476px*/; height: 100%;}
+        .footer_etc>.address>li {width: 100%; float: left; line-height:1.25rem;}
+        .footer_etc>.address>.add {height: 40px; margin-bottom: 12px;}
+        .footer_etc>.address>.copy {height: 32px;}
+  
+  .foot_link{width:126px; height: 100%; float: right;}
+    .foot_link>.link_btn {width: 126px; height: 16px; margin-bottom: 20px;}
+        .foot_link>.link_btn>li {width: 30px; height: 100%; float: left; margin-right: 20px; cursor: pointer;}
+        .foot_link>.link_btn>li>a{width: 100%; height: 100%; display: block;}
+        .foot_link>.link_btn>li>a>i{font-size:1.5rem; line-height: 1rem; color:#336171; height: 100%;}
+        .foot_link>.link_btn>li>a>i:hover {color:#933637;}
+    .foot_link .language {width: 126px; height: 32px;}
+    .foot_link .language select{width: 94px; height: 100%; float: left; border:1px solid #c5c5c5; box-sizing: border-box;}
+    .foot_link .language button {width: 30px; height: 100%; float: left;} 
+  
+}
+/* PC */
+
+
+ 
+@media screen and (min-width: 1025px){
+
+#footerWrap{width: 100%; height: auto; background-color: #f4f4f2; float: left;}
+#footer>#footerMenubarWrap {width: 100%; height: 38px; background-color: #336171; font-size: 0.9rem;}
+
+
+.footer_menubar{width: 960px; height: 100%; margin: 0 auto;}
+    .footer_menubar>.footer_menu {width: 300px; height: 100%; margin-left:10px; float: left;}
+    .footer_menubar>.footer_menu>li>a {float: left; line-height: 2.375rem; color: #f4f4f2;}
+    .footer_menubar>.footer_menu>li>a:hover {color: #c5c5c5;}
+    .footer_menubar>.footer_menu>li>.menu_sidebar {display: block; float: left; width: 5px; height: 20px; border-right: 1px solid #f4f4f2; margin: 10px;}
+    .footer_menubar>form {width:150px; height: 100%; float: right; }
+    .footer_menubar>form>fieldset {width: 100%; height: 100%;}
+    .footer_menubar>form>fieldset>label>select {width: 120px; height: 100%; background: #f4f4f2; color:#336171; float: left; text-indent: 5px; border: 1px solid #c5c5c5; box-sizing: border-box;}
+    .footer_menubar>form>fieldset>button {width: 30px; height: 100%; float: left; cursor: pointer;}
+
+.footer_etc {width: 960px; height: 126px; background-color: #f4f4f2; padding-top: 30px; margin: 0 auto; background-image: url(../img/footer/cloud.png); background-repeat: no-repeat; background-position: top right;}
+    .footer_etc>ul {height: 100%; float: left; font-size: 0.9rem;}
+    .footer_etc>.footer_logo {width: 300px; margin-left: 10px;}
+        .footer_etc>.footer_logo>li {height: 38px; float: left; margin-right: 10px; background-repeat: no-repeat;}
+        .footer_etc>.footer_logo>li:last-child {margin-right: 0;}
+            .footer_etc>.footer_logo>li.cdg_logo{width: 145px; background-image: url(../img/footer/footerlogo_2.png);}
+            .footer_etc>.footer_logo>li.unesco{width: 118px; background-image: url(../img/footer/unesco.png);}
+
+.footer_etc>.address {width: 476px; height: 100%;}
+        .footer_etc>.address>li {width: 100%; float: left; line-height:1.25rem;}
+        .footer_etc>.address>.add {height: 40px; margin-bottom: 12px;}
+        .footer_etc>.address>.copy {height: 32px;}
+
+.foot_link{width:126px; height: 100%; float: right;}
+    .foot_link>.link_btn {width: 126px; height: 16px; float: right; margin-bottom: 20px;}
+        .foot_link>.link_btn>li {width: 30px; height: 100%; float: left; margin-right: 20px; cursor: pointer;}
+        .foot_link>.link_btn>li>a{width: 100%; height: 100%; display: block;}
+        .foot_link>.link_btn>li>a>i{font-size:1.5rem; line-height: 1rem; color:#336171;}
+        .foot_link>.link_btn>li>a>i:hover {color:#933637;}
+    .foot_link .language {width: 126px; height: 32px; float: right;  }
+    .foot_link .language select{width: 94px; height: 100%; float: left; border:1px solid #c5c5c5; box-sizing: border-box;}
+  .foot_link .language button {width: 30px; height: 100%; float: left;}
+   label{width: auto; height: auto;}
+}/*pcFull*/

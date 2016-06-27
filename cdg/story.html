@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="favicon.png" />
+    <link rel="stylesheet" href="./css/lib/reset.css" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css" />
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/story_all.css" />
+    <link rel="stylesheet" href="./css/s_nav.css" />
+    
+    <!--[if lte IE 9]>
+    <script src="./js/dist/html5shiv.min.js"></script>
+    <script src="./js/dist/ie9.min.js"></script>
+    <script src="./js/dist/PIE.js"></script>
+    <script src="./js/dist/responsive.min.js"></script>
+        <![endif]-->
+
+    <script src="./js/jquery/jquery-1.12.3.min.js"></script>
+    <script src="./js/jquery/jquery-migrate-1.3.0.min.js"></script>
+    <script src="./js/jquery/jquery-ui.min.js"></script>
+    <script src="./js/sidenav.js"></script>
+
+    <title>창덕궁 - 세계문화유산</title>
+    <style>
+        @import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+    </style>
+        <script>
+        $(function(){
+          sidenav();
+            var $menu = $('#menu');
+            var $submenu = $('#submenuWrap');
+            
+            $submenu.hide();
+            $menu.on('click', function(e){
+                e.preventDefault();
+                $submenu.stop().fadeToggle(300);
+            });
+            $submenu.on('click', function(){
+                $submenu.stop().fadeOut(300);
+            });
+
+          
+        });
+    </script>
+</head>
+<body>
+    <div id="container">
+<!--        header ------------------------------------------------------------------->
+    
+    
+     <div id="headerWrap">
+        <header id="header">
+        <h1 class="me_link"><a href="index.html" title="창덕궁"><span>문화재청 창덕궁</span></a></h1>
+        <nav id="gnb">
+           <h2>메인 메뉴</h2>
+            <ul>
+                <li><a href="story.html" target="_self">창덕궁 이야기</a></li>
+                <li><a href="info.html" target="_self">관람 안내</a></li>
+                <li><a href="reservation.html" target="_self">관람 예약</a></li>
+                <li><a href="community.html" target="_self">참여 공간</a></li>
+                <li><a href="data.html" target="_self">자료실</a></li>
+            </ul>
+        </nav>
+            <div id="menu"><a href="#" class="fa fa-bars" aria-hidden="true"><span>메뉴버튼</span></a></div>
+        </header>
+<!--클릭시 나오는 메뉴-->
+            <div id="submenuWrap">
+               <div id="submenu">
+                <dl>
+                   <dt>창덕궁 이야기</dt>
+                    <dd><span><!--구분바--></span></dd>
+                    <dd><a href="story.html#article01Wrap">창덕궁 인사말</a></dd>
+                    <dd><a href="story.html#article02Wrap">세계유산 창덕궁</a></dd>
+                    <dd><a href="story.html#article03Wrap">창덕궁 소개</a></dd>
+                    <dd><a href="story.html#article04Wrap">창덕궁 역사</a></dd>
+                    <dd><a href="story.html#article05Wrap">창덕궁 위치</a></dd>
+                </dl>
+                <dl>
+                   <dt>관람 안내</dt>
+                    <dd><span><!--구분바--></span></dd>
+                    <dd><a href="info.html#article01Wrap" target="_self">관람 코스</a></dd>
+                    <dd><a href="info.html#article02Wrap">창덕궁 사계</a></dd>
+                    <dd><a href="info.html#article03Wrap">관람 시간 및 요금</a></dd>
+                    <dd><a href="info.html#article04Wrap">관람객 권리·협조사항</a></dd>
+                    <dd><a href="info.html#article05Wrap">편의시설 안내</a></dd>
+                </dl>
+                <dl>
+                   <dt>관람 예약</dt>
+                    <dd><span><!--구분바--></span></dd>
+                    <dd><a href="reservation.html">후원관람예약</a></dd>
+                    <dd><a href="reservation.html">청소년 단체관람 신청</a></dd>
+                    <dd><a href="reservation.html">장소사용 및 촬영허가</a></dd>
+                    <dd><a href="reservation.html">청소년 문화학교</a></dd>
+                    <dd><a href="reservation.html">달빛기행</a></dd>
+                </dl>
+                <dl>
+                   <dt>참여 공간</dt>
+                    <dd><span><!--구분바--></span></dd>
+                    <dd><a href="community.html">공지사항</a></dd>
+                    <dd><a href="community.html">자주묻는 질문</a></dd>
+                    <dd><a href="community.html">교육행사 이모저모</a></dd>
+                    <dd><a href="community.html">전자민원</a></dd>
+                </dl>
+                <dl>
+                   <dt>자료실</dt>
+                    <dd><span><!--구분바--></span></dd>
+                    <dd><a href="data.html#article01Wrap">궁궐소개</a></dd>
+                    <dd><a href="data.html#article02Wrap">사진 및 동영상</a></dd>
+                    <dd><a href="data.html#article03Wrap">가이드북 다운로드</a></dd>
+                    <dd><a href="data.html#article03Wrap">발간자료</a></dd>
+                    <dd><a href="data.html#article04Wrap">행정정보</a></dd>
+                    <dd><a href="data.html#article05Wrap">조직 및 연락처</a></dd>
+                </dl>
+                </div><!--// #submenu-->
+            </div><!--// #submenuWrap-->
+        </div><!--// #headerWrap-->
+        
+<!--        section ------------------------------------------------------------------->
+         <div id="side_button">
+        <ul>
+        </ul>
+    </div><!--// #side_button-->
+       <!--창덕궁 인사말-->
+       
+        <section id="sectionWrap">
+            <article id="article01Wrap">
+            <div id="article01">
+                <h2>창덕궁 인사말</h2>
+                <span class="subject">인사말</span>
+                <span class="bar"></span>
+        <h3>창덕궁을 사랑하는 고객님께/</h3>
+        <p>창덕궁은 1405년 건립된 이래 1926년 마지막 순종황제의 승하시까지 약 500년 동안 조선 왕조의 역사와 함께 했던 궁궐이었으며, 세종대왕께서 문종에게 이르신 말씀에서도 나타나듯 조선조 역대 왕의 사랑을 받으며 왕조와 명운을 함께 함으로써 국운의 흥망에 따른 영광과 아픔을 간직했던 궁궐입니다.
+        </p>
+        <div>
+            <ul class="sejong clearfix">
+                <li><img src="./img/section/sejong.png" alt="세종대왕"><!--세종사진--></li>
+                <li>
+                세종께서 문종에게 이르시기를<br />
+                    <span><i>“</i>경복궁은 비록 장려하나 이 도성의 바른 명당은 바로 창덕궁이다<i>”</i></span><br />
+                <small>- 성종실록, 성종15년 10월 11일</small>
+                </li>
+            </ul>
+        </div>
+        <p>북악의 지맥인 매봉에서 남향한 산의 능선에 자리를 잡은 창덕궁은 각각의 건물이 지면 지세에 따라 축을 변화시켜 아늑한 골짜기에 안기도록 배치하여 자연과 하나가 되도록 조화를 이루고 있으며, 아름다운 후원은 다양한 정자, 연못, 수목, 괴석이 잘 어우러져 있어 세계적으로 독창성을 인정받고 있습니다.<br /><br />
+        창덕궁은 인간이 자연에 동화하고 자연이 인간에 동화되는 완벽한 조화의 아름다움을 지님으로써 인간이 자연 위에 군림하는 존재가 아니라 자연과 조화를 이루며 살아가야 한다는 우리 민족의 자연친화적 성정이 그대로 투영되어 있으며 현존하는 조선의 궁궐 중 그 원형이 가장 잘 보존되어 있는 점 등이 인정되어 <strong class="red">1997년 12월 유네스코(UNESCO) 세계문화유산으로 등록</strong>되었습니다.<br /><br />
+        창덕궁 관리소 직원들은 조선왕조 역사 현장이며, 독창적 아름다움이 잘 표현된 창덕궁이 세계문화유산으로서 영구히 보존될 수 있도록 최선을 다하여 노력하겠습니다.<br /><br />
+        감사합니다.<br /><br /> <small>- 창덕궁 관리소 일동 -</small></p>
+            </div><!--// #article01-->
+            </article>            
+                        
+                                                
+<!--세계유산 창덕궁-->
+            <article id="article02Wrap">
+            <div id="article02">
+            <h2>세계유산 창덕궁</h2>
+                <span class="subject">세계유산 창덕궁</span>
+                    <span class="bar"></span>
+                    <iframe class="youtube" title="youtube" width="853" height="480" src="https://www.youtube.com/embed/QZzhB6Fj9tg?rel=0&amp;showinfo=0" allowfullscreen></iframe>
+                <div class="heritage_text">
+                        <span class="subtitle"><i class="bullet"><!--bullet--></i><strong class="red">왕이 사랑한 창덕궁</strong></span>
+                    <span class="text">
+                       <p>
+                        창덕궁은 조선왕조 제3대 태종 5년(1405) 경복궁의 이궁으로 지어진 궁궐이며 창건시 창덕궁의 정전인 인정전, 편전인 선정전, 침전인 희정당, 대조전 등 중요 전각이 완성되었다. 그 뒤 태종 12년(1412)에는 돈화문이 건립 되었고 세조 9년(1463)에는 약 6만2천 평이던 후원을 넓혀 15만여 평의 규모로 궁의 경역을 크게 확장하였다.</p>
+<p>임진왜란 때 소실된 것을 선조 40년(1607)에 중건하기 시작하여 광해군 5년(1613)에 공사가 끝났으나 다시 1623년의 인조반정때 인정전을 제외한 대부분의 전각이 소실되었다가 인조 25년(1647)에 복구되었다. 그 후에도 여러 번 화재가 있었으며, 1917년에 대조전 과 희정당 일곽이 소실되어 1920년에 경복궁의 교태전·강녕전 등 많은 건물을 철거하여 창덕궁으로 이건하였다.</p>
+<p>창덕궁은 1610년 광해군 때 정궁으로 사용한 후 부터 1868년 고종이 경복궁을 중건할 때까지 258년 동안 역대 제왕이 정사를 보살펴 온 법궁이었다. 창덕궁 안에는 가장 오래된 궁궐 정문인 돈화문, 신하들의 하례식이나 외국사신의 접견장소로 쓰이던 인정전, 국가의 정사를 논하던 선정전 등의 치조공간이 있으며, 왕과 왕후 및 왕가 일족이 거처하는 희정당, 대조전 등의 침전공간 외에 연회, 산책, 학문을 할 수 있는 매우 넓은 공간을 후원으로 조성하였다.</p>
+<p>정전 공간의 건축은 왕의 권위를 상징하여 높게 하였고, 침전건축은 정전보다 낮고 간결하며, 위락공간인 후원에는 자연지형을 위압하지 않도록 작은 정자각을 많이 세웠다.</p>
+<p>건물배치에 있어 정궁인 경복궁, 행궁인 창경궁과 경희궁에서는 정문으로부터 정전, 편전, 침전 등이 일직선상에 대칭으로 배치되어 궁궐의 위엄성이 강조된 데 반하여, 창덕궁에서는 정문인 돈화문은 정남향이고, 궁 안에 들어 금천교가 동향으로 진입되어 있으며 다시 북쪽으로 인정전, 선정전 등 정전이 자리하고 있다. 그리고 편전과 침전은 모두 정전의 동쪽에 전개되는 등 건물배치가 여러 개의 축으로 이루어져 있다.</p>
+<p>오늘날 자연스런 산세에 따라 자연지형을 크게 변형시키지 않고 산세에 의지하여 인위적인 건물이 자연의 수림 속에 포근히 자리를 잡도록 한 배치는 자연과 인간이 만들어낸 완전한 건축의 표상이다. 또한, 왕들의 휴식처로 사용되던 후원은 300년이 넘은 거목과 연못, 정자 등 조원시설이 자연과 조화를 이루도록 함으로써 건축사적으로 또 조경사적 측면에서 빼놓을 수 없는 귀중한 가치를 지니고 있다. 후원은 태종 5년(1405) 창덕궁을 창건할 때 후원으로 조성하였으며, 창경궁과도 통하도록 하였다.</p>
+<p>창덕궁 후원은 우리나라의 대표적인 전통 조원 시설로서 자연적인 지형에다 꽃과 나무를 심고 못을 파서 아름답고 조화 있게 건물을 배치하였다.</p>
+<span class="text_img"><!--창덕궁 후원 이미지--></span>
+<p>대부분의 정자는 임진왜란 때 소실되었고 지금 남아 있는 정자와 전각들은 인조 원년(1623)이후 개수·증축된 것이다. 이곳에는 각종 희귀한 수목이 우거져 있으며, 많은 건물과 연못 등이 있어 왕과 왕비들은 이곳에서 여가를 즐기고 심신을 수양하거나 학문을 닦고 연회를 베풀었다.
+  창덕궁은 조선시대의 전통건축으로 자연경관을 배경으로 한 건축과 조경이 고도의 조화를 표출하고 있으며, 후원은 동양조경의 정수를 감상할 수 있는 세계적인 조형의 한 단면을 보여주고 있는 특징이 있다.</p>
+<p>창덕궁의 역사에 대한 기록은 「조선왕조실록」, 「궁궐지」, 「창덕궁조영의궤」, 「동궐도」 등에 기록되어 있다. 특히 1830년경에 그린 「동궐도(국보 제249호)」가 창덕궁의 건물배치와 건물형태를 그림으로 전하고 있으며, 궁궐사와 궁궐건축을 연구 고증하는데 귀중한 자료가 되고 있다.</p>
+<p>창덕궁은 사적 제122호로 지정 관리되고 있으며 돈화문(보물 제383호), 인정문(보물 제813호), 인정전(국보 제225호), 대조전(보물 제816호), 구선원전(보물 제817호), 선정전(보물 제814호), 희정당(보물 제815호), 향나무(천연기념물 제194호), 다래나무(천연기념물 제251호)등이 지정되었다. 창덕궁은 1997년 12월 유네스코 세계문화유산으로 등재되었다.</p>
+                    </span>
+                </div>
+                <div class="heritage_text">
+                        <span class="subtitle"><i class="bullet"><!--bullet--></i><strong class="red">문화유산적 가치</strong></span>
+                    <span class="text">
+                        <p>동아시아 궁전 건축사에 있어 비정형적 조형미를 간직한 대표적 궁으로 주변 자연환경과의 완벽한 조화와 배치가 탁월하다.</p>
+
+<p><strong class="red">* 등재기준 : 세계문화유산기준(Ⅱ), (Ⅲ), (Ⅳ)</strong><br />
+  <strong>(Ⅱ)</strong> 일정한 시간에 걸쳐 혹은 세계의 한 문화권내에서 건축, 기념물조각, 정원 및 조경디자인, 관련예술 또는 인간정주 등의 결과로서 일어난 발전사항들에 상당한 영향력을 행사한 유산<br />
+  <strong>(Ⅲ)</strong> 독특하거나 지극히 희귀하거나 혹은 아주 오래된 유산<br />
+  <strong>(Ⅳ)</strong> 가장 특징적인 사례의 건축양식으로서 중요한 문화적, 사회적, 예술적, 과학적, 기술적 혹은 산업의 발전을 대표하는 양식</p>
+                    </span>
+                </div>
+            </div><!--// #article02-->
+            </article>
+            
+<!--창덕궁 소개-->
+
+            <article id="article03Wrap">
+            <div id="article03">
+            <h2>창덕궁 소개</h2>
+                <div class="art03_left"><span>동궐도</span></div>
+                <div class="art03_right">
+                   <div class="art03_right_inbox">
+                    <span class="subject">창덕궁 소개</span>
+                    <span class="bar"></span>
+                    <p class="text">
+                창덕궁은 1405년 (태종 5년) 조선왕조의 이궁으로 지은 궁궐이다. 경복궁의 동쪽에 위치한다 하여 이웃한 창경궁과 더불어 동궐이라 불렀다 임진왜란으로 모든 궁궐이 불에 타자 광해군 때에 다시 짓고 고종이 경복궁을 중건하기까지 정궁 역할을 하였다.
+조선의 궁궐 중 <strong class="red">가장 오랜 기간 동안 임금들이 거처했던 궁궐</strong>이다. 경복궁의 주요 건물이 좌우대칭의 일직선상에 놓여 있다면 창덕궁은 산자락을 따라 건물들을 골짜기에 안기도록 배치하여 <strong class="red">한국 궁궐건축의 비정형적 조형미를 대표</strong>하고 있다. 또한 비원으로 잘 알려진 창덕궁 후원은 다양한 정자, 연못, 수목, 괴석이 어우러진 아름다운 곳이다. 현재 남아있는 조선의 궁궐 중 그 원형이 가장 잘 보존된 창덕궁은 자연과의 조화로운 배치가 탁월한 점에서 1997년 유네스코 세계유산으로 등록되었다. 
+                    </p>
+                </div>
+                </div>
+            </div><!--// #article03-->
+            </article>
+
+
+
+
+<!--창덕궁 역사-->
+            
+            <article id="article04Wrap">
+            <div id="article04_bg"></div>
+            <div id="article04">
+                <h2>창덕궁 역사</h2>
+                <span class="subject">창덕궁 역사</span>                
+                <div class="history_bar"><!--바--></div>
+                <div class="history_box">
+                  <span>1900/</span>
+                    <dl class="history">
+                        <dt>1997년</dt>
+                        <dd>유네스코 세계문화유산으로 등록</dd>
+                        <dt>1990년~1999년</dt>
+                        <dd>대규모 복원 사업(돈화문 월대, 낙선재 일대, 진선문, 숙장문 등)</dd>
+                        <dt>1926년(순종20)</dt>
+                        <dd>마지막 황제 순종 창덕궁 대조전에서 승하</dd>
+                        <dt>1920년(순종14)</dt>
+                        <dd>경복궁 일부건물을 옮겨 창덕궁 건물 재건</dd>
+                        <dt>1917년(순종11)</dt>
+                        <dd>대 화재로 침전 건물 소실</dd>
+                        <dt>1910년</dt>
+                        <dd>경술국치</dd>
+                    </dl>
+                </div>
+                <div class="history_box">
+                  <span>1800/</span>
+                    <dl class="history">
+                        <dt>1884년(고종22)</dt>
+                        <dd>창덕궁 관물헌에서 갑신정변이 일어남</dd>
+                        <dt>1882년(고종20)</dt>
+                        <dd>창덕궁에서 임오군란이 일어남</dd>
+                        <dt>1863년(고종 즉)</dt>
+                        <dd>창덕궁 인정문에서 즉위</dd>
+                        <dt>1849년(철종 즉)</dt>
+                        <dd>창덕궁 인정문에서 즉위</dd>
+                        <dt>1833년(순조 33)</dt>
+                        <dd>대조전, 희정당 등 소실, 1834년 재건</dd>
+                        <dt>1803년(순조 3)</dt>
+                        <dd>인정전 소실, 1804년에 재건</dd>
+                        <dt>1800년(순조 즉)</dt>
+                        <dd>창덕궁 인정문에서 즉위</dd>
+                    </dl>
+                </div>
+                <div class="history_box">
+                  <span>1700/</span>
+                    <dl class="history">
+                        <dt>1776년(정조 즉)</dt>
+                        <dd>2층 누각을 세워 위층에는 주합루, 아래층에는 규장각이라 함</dd>
+                        <dt>1749년(영조 25)</dt>
+                        <dd>대보단 중수</dd>
+                        <dt>1724년(영조 즉)</dt>
+                        <dd>창덕궁 인정문에서 즉위</dd>
+                        <dt>1704년(숙종 30)</dt>
+                        <dd>후원에 대보단 건설</dd>
+                    </dl>
+                </div>
+                <div class="history_box">
+                  <span>1600/</span>
+                    <dl class="history">
+                        <dt>1674년(숙종 즉)</dt>
+                        <dd>창덕궁 인정문에서 즉위</dd>
+                        <dt>1659년(현종 즉)</dt>
+                        <dd>창덕궁 인정문에서 즉위</dd>
+                        <dt>1649년(효종 즉)</dt>
+                        <dd>창덕궁 인정문에서 즉위</dd>
+                        <dt>1647년(인조 25)</dt>
+                        <dd>인조반정으로 소실된 건물 중건(선정전, 대조전, 희정당, 정광루 등)</dd>
+                        <dt>1636년(인조 14)</dt>
+                        <dd>옥류천 주변에 소요정, 청의정, 태극정 건설</dd>
+                        <dt>1623년(광해군 15)</dt>
+                        <dd>인조반정으로 창덕궁의 대부분 전각들이 소실됨</dd>
+                        <dt>1610년(광해군 2)</dt>
+                        <dd>창덕궁 중건을 완료하여 법궁으로 삼음</dd>
+                    </dl>
+                </div>
+                <div class="history_box">
+                  <span>1500/</span>
+                    <dl class="history">
+                        <dt>1592년(선조 25)</dt>
+                        <dd>임진왜란으로 창덕궁에서 피난길을 떠나 의주로 파천,<br />경복궁과 창덕궁 등 모든 궁궐이 소실됨</dd>
+                    </dl>
+                </div>
+                <div class="history_box">
+                  <span>1400/</span>
+                    <dl class="history">
+                        <dt>1494년(연산군 즉)</dt>
+                        <dd>창덕궁 인정문에서 즉위, 후원을 꾸밈</dd>
+                        <dt>1468년(예종 즉)</dt>
+                        <dd>창덕궁 수강궁 중문에서 즉위</dd>
+                        <dt>1462년(세조 8)</dt>
+                        <dd>민가 73가구를 철거하여 후원 확장</dd>
+                        <dt>1461년(세조 7)</dt>
+                        <dd>각 전당들에 이름을 지어 붙임</dd>
+                        <dt>1456년(세조 2)</dt>
+                        <dd>사육신 사건</dd>
+                        <dt>1412년(태종 12)</dt>
+                        <dd>돈화문 건립</dd>
+                        <dt>1411년(태종 11)</dt>
+                        <dd>금천교 건립</dd>
+                        <dt>1406년(태종 6)</dt>
+                        <dd>후원 조성</dd>
+                        <dt>1405년(태종 5)</dt>
+                        <dd>조선의 이궁으로 건설</dd>
+                    </dl>
+                </div>
+                <div class="history_box">
+                  <span>1300/</span>
+                    <dl class="history">
+                        <dt>1392년</dt>
+                        <dd>조선건국</dd>
+                    </dl>
+                </div>
+            </div><!--// #article04-->
+            </article>          
+            
+<!--창덕궁 위치-->
+            <article id="article05Wrap">
+            <div id="article05">
+                <h2>찾아 오시는 길</h2>
+                <span class="subject">찾아 오시는 길</span>
+                <span class="bar"></span>
+                <iframe class="map" title="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12647.86185996442!2d126.9910426!3d37.5794309!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xff296b97da565068!2z7LC9642V6raB!5e0!3m2!1sko!2skr!4v1463492679458" allowfullscreen></iframe>
+                <ul class="map_info">
+                    <li class="info_icon fa fa-subway" aria-hidden="true"> <span>지하철로 오시는 길</span></li>
+                    <li class="info_txt"><strong class="red">종로 3가 역 (1, 3, 5호선)</strong> 6번 출구에서 도보로 10분, <strong class="red">안국 역 (3호선)</strong> 3번 출구에서 도보로 5분</li>
+                    <li class="info_icon fa fa-bus" aria-hidden="true"> <span>버스로 오시는 길</span></li>
+                    <li class="info_txt"><strong class="red">간선</strong> : 109, 151, 162, 171, 172, 272번 /  <strong class="red">지선</strong> : 7025</li>
+                    <li class="info_etc">
+                    * 주차장은 무료이나 혼잡하므로 가급적 대중교통 수단을 이용하시기 바랍니다.<br />
+                    * 주차장 이용은 관람시간 동안만 가능합니다.
+                    </li>
+                </ul>
+            </div><!--// #article05-->
+            </article>
+            
+            
+        </section>
+      
+<!--      footer ------------------------------------------------------------------->
+      <div id="footerWrap">
+        <footer id="footer">
+            <h2>창덕궁 정보</h2>
+            <div id="footerMenubarWrap">
+            <div class="footer_menubar">
+            <h3>개인정보처리방침 및 침해신고센터</h3>
+            <ul class="footer_menu">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><span class="menu_sidebar"><!-- sidebar --></span></li>
+                <li><a href="#">개인정보침해신고센터</a></li>
+            </ul>
+            <form action="" method="get">
+                <fieldset class="family">
+                    <legend>패밀리사이트</legend>
+                    <select name="familysite" value="패밀리사이트">
+                        <option value="http://www.cha.go.kr/">문화재청</option>
+                        <option value="http://m.epeople.go.kr/main/main.jsp">국민신문고</option>
+                        <option value="http://www.heritagechannel.tv/">문화유산채널</option>
+                    </select>
+                    <button type="button" name="go" value="go">GO</button>
+                </fieldset>
+            </form>
+            </div>
+            </div>
+            <div class="footer_etc">
+            <h3>창덕궁 위치</h3>
+            <ul class="footer_logo">
+                <li class="cdg_logo"><span class="me_hidden">문화재청 창덕궁</span></li>
+                <li class="unesco"><span class="me_hidden">세계문화유산</span></li>
+            </ul>
+            <ul class="address">
+                <li class="add">
+                (우)03072 서울특별시 종로구 율곡로 99번지<br />
+                TEL. 02-3668-2300	FAX. 02-762-2070</li>
+                <li class="copy">COPYRIGHT 2004-2016 문화재청 창덕궁 관리소. ALL RIGHTS RESERVED.</li>
+            </ul>
+              <div class="foot_link">
+              <ul class="link_btn">
+                  <li><a href="https://www.e-minwon.go.kr/webs/menu.jsp?menu_id=civl02" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i><span class="me_hidden">mail</span></a></li>
+                  <li><a href="https://twitter.com/changdeok11" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><span class="me_hidden">twitter</span></a></li>
+              </ul>
+              <form action="" method="get">
+                  <fieldset class="language">
+                      <legend>language</legend>
+                          <select class="language_select">
+                              <option value="Language">Language</option>
+                              <option value="English">English</option>
+                              <option value="한국어">한국어</option>
+                              <option value="일본어">日本語</option>
+                          </select>
+                          <button type="button" name="go" value="go">GO</button>
+                  </fieldset>
+              </form>
+              </div>
+            </div>            
+        </footer>
+      </div><!--// #footerWrap-->
+    </div><!--// #container-->
+
+</body>
+</html>

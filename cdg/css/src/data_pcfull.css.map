@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,oBAAoB",
+"sources": ["../../scss/src/data_pcfull.scss"],
+"names": [],
+"file": "data_pcfull.css"
+}

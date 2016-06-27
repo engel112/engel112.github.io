@@ -1,0 +1,252 @@
+@charset "UTF-8";
+@media screen and (min-width: 1025px) { #containter { width: 100%; height: auto; }
+  section { width: 100%; height: auto; float: left; }
+  section > article { width: 100%; height: 620px; padding: 80px 0; }
+  section > article > div { width: 60rem; height: 100%; margin: 0 auto; }
+  section > #article01Wrap { background-image: url(../img/section/insamal.jpg); background-position: center; height: auto; }
+  section > #article02Wrap { background-image: url(../img/pattern_w.jpg); height: auto; }
+  section > #article03Wrap { background-image: url(../img/pattern_b.jpg); }
+  section > #article04Wrap { height: auto; position: relative; }
+  section > #article05Wrap { background-image: url(../img/pattern_w.jpg); }
+  .subject { width: 100%; font-size: 2rem; font-weight: bold; line-height: 2rem; color: #333; letter-spacing: -0.125rem; text-align: center; display: block; }
+  .bar { width: 50px; height: 3px; background-color: #c5c5c5; margin: 28px calc(50% - 25px); display: block; }
+  /* 창덕궁 인사말 */
+  #article01 { width: 880px; height: auto; background-color: rgba(255, 255, 255, 0.95); margin-top: 80px; padding: 40px; }
+  #article01 > h3 { width: 100%; height: 2rem; display: block; font-size: 1.25rem; line-height: 2rem; margin-bottom: 10px; color: #336171; }
+  #article01 > p { width: 100%; font-size: 0.9rem; line-height: 1.4rem; text-indent: 10px; }
+  #article01 ul { width: 90%; height: 90px; padding: 30px 5%; }
+  #article01 ul > li { float: left; color: #933637; font-weight: bold; }
+  #article01 ul > li:first-child { width: 100px; }
+  #article01 ul > li:last-child { width: calc(100% - 100px); }
+  #article01 ul > li > span { font-weight: bold; font-size: 1.25rem; color: #933637; margin-left: 40px; text-align: center; }
+  #article01 ul > li > span > i { font-size: 2rem; font-family: 'georgia'; color: #933637; }
+  #article01 ul > li > small { font-size: 0.8rem; float: right; font-family: 'nanumGothic'; color: #336171; line-height: 1.25rem; margin-top: 14px; }
+  #article01 small { font-size: 0.8rem; }
+  /* 세계유산 창덕궁 */
+  #article02 { height: auto; }
+  #article02 > .youtube { width: 100%; height: 480px; margin-bottom: 3rem; }
+  #article02 > .heritage_text { width: 100%; height: auto; }
+  #article02 > .heritage_text:first-of-type { margin-bottom: 3rem; }
+  #article02 .subtitle { width: 100%; height: 30px; display: block; }
+  #article02 .subtitle .bullet { width: 20px; height: 100%; margin-right: 5px; background-image: url(../img/bullet.png); display: block; float: left; background-repeat: no-repeat; }
+  #article02 .text { width: 100%; height: auto; columns: auto 2; column-rule: 1px dotted #c5c5c5; column-gap: 3rem; display: block; }
+  #article02 .text > .text_img { width: 100%; height: 300px; background-image: url(../img/section/chang_p2.jpg); background-size: 100%; display: block; background-repeat: no-repeat; margin-bottom: 10px; }
+  #article02 .text > p { font-size: 0.9rem; line-height: 1.4rem; text-indent: 10px; margin-bottom: 10px; }
+  /* 창덕궁소개 */
+  #article03 { width: 60rem; overflow: hidden; }
+  #article03 > div { height: calc(100% - 64px); float: left; padding: 2rem 0; position: relative; }
+  #article03 > .art03_left { width: 60%; background-image: url(../img/section/img.png); background-position: center center; background-repeat: no-repeat; background-size: auto calc(100% - 64px); }
+  #article03 > .art03_left > span { padding: 2px 10px; color: #f4f4f2; position: absolute; z-index: 100; left: 0; bottom: 2rem; background-color: rgba(0, 0, 0, 0.8); display: block; font: normal 0.875rem 'nanumGothic'; line-height: 1.875rem; text-align: center; }
+  #article03 .art03_right { width: 40%; }
+  #article03 .art03_right > .art03_right_inbox { width: calc(100% - 80px); height: calc(100% - 80px); background-color: #fff; padding: 40px; }
+  #article03 .art03_right > .art03_right_inbox > .text { width: 100%; height: 80%; font-size: 0.9rem; line-height: 1.4rem; overflow-y: scroll; text-indent: 0.25rem; padding-right: 50%; }
+  /* 창덕궁 역사 */
+  #article04_bg { width: calc(50% - 400px); height: 100%; position: absolute; z-index: -100; top: 0; left: 0; border-right: 3px solid #c5c5c5; background-image: url(../img/section/history.jpg); background-repeat: no-repeat; background-size: 3900px; }
+  #article04 { height: auto; }
+  #article04:after { content: ""; display: block; width: 0; height: 0; clear: both; }
+  #article04 > .subject { width: 5rem; height: auto; font-size: 3rem; line-height: 5rem; color: #fff; text-align: left; float: left; background-color: rgba(0, 0, 0, 0.6); padding: 20px 0; -webkit-writing-mode: vertical-rl; -moz-writing-mode: vertical-rl; -ms-writing-mode: tb-rl; -ms-writing-mode: vertical-rl; writing-mode: vertical-rl; }
+  #article04 > .history_box { width: 80%; height: auto; float: right; }
+  #article04 > .history_box > span { width: 15%; height: 100%; display: block; float: left; font-size: 2rem; color: #933637; }
+  #article04 > .history_box > .history { width: 80%; height: 100%; float: left; margin-bottom: 30px; }
+  #article04 > .history_box > .history > dt, #article04 > .history_box > .history dd { float: left; line-height: 1.7rem; font-size: 0.9rem; }
+  #article04 > .history_box > .history > dt { width: 120px; font-weight: bold; color: #336171; }
+  #article04 > .history_box > .history > dd { width: 70%; padding-left: 10px; border-left: 1px solid #c5c5c5; box-sizing: border-box; }
+  /* 찾아오시는 길 */
+  #article05 { height: calc(100% - 2rem); padding: 0 2rem; }
+  #article05 > .subject { margin-top: 2rem; }
+  #article05 > .map { width: 100%; height: 320px; margin-bottom: 20px; border: 1px solid #c5c5c5; }
+  #article05 > .map_info { width: 660px; margin: 0 160px; }
+  #article05 > .map_info > li { width: 100%; float: left; line-height: 1.25rem; }
+  #article05 > .map_info > .info_icon { margin-right: 10px; color: #666; font-size: 1rem; }
+  #article05 > .map_info > .info_txt { margin-right: 50%; margin-bottom: 10px; }
+  #article05 > .map_info > .info_etc { font-size: 0.875rem; margin-top: 10px; } }
+@media screen and (min-width: 769px) and (max-width: 1024px) { #side_button { display: none; }
+  #containter { width: 100%; height: auto; }
+  section { width: 100%; height: auto; float: left; }
+  section > article { width: 100%; height: 620px; padding: 80px 0; }
+  section > article > div { width: 93.75vw; height: 100%; margin: 0 auto; }
+  section > #article01Wrap { background-image: url(../img/section/insamal.jpg); background-position: center; height: auto; }
+  section > #article02Wrap { background-image: url(../img/pattern_w.jpg); height: auto; }
+  section > #article03Wrap { background-image: url(../img/pattern_b.jpg); }
+  section > #article04Wrap { height: auto; position: relative; }
+  section > #article05Wrap { background-image: url(../img/pattern_w.jpg); }
+  .subject { width: 100%; font-size: 2rem; font-weight: bold; line-height: 2rem; color: #333; letter-spacing: -0.125rem; text-align: center; display: block; }
+  .bar { width: 50px; height: 3px; background-color: #c5c5c5; margin: 28px calc(50% - 25px); display: block; }
+  /* 창덕궁 인사말 */
+  #article01 { width: 85.9375vw; height: auto; background-color: rgba(255, 255, 255, 0.95); margin-top: 80px; padding: 40px; }
+  #article01 > h3 { width: 100%; height: 2rem; display: block; font-size: 1.25rem; line-height: 2rem; margin-bottom: 10px; color: #336171; }
+  #article01 > p { width: 100%; font-size: 0.9rem; line-height: 1.4rem; text-indent: 10px; }
+  #article01 ul { width: 96%; height: auto; padding: 30px 2%; }
+  #article01 ul > li { float: left; color: #933637; font-weight: bold; }
+  #article01 ul > li:first-child { width: 90px; }
+  #article01 ul > li:last-child { width: calc(100% - 90px); }
+  #article01 ul > li > span { font-weight: bold; font-size: 1.25rem; color: #933637; margin-left: 2.92969vw; text-align: center; }
+  #article01 ul > li > span > i { font-size: 2rem; font-family: 'georgia'; color: #933637; }
+  #article01 ul > li > small { font-size: 0.8rem; float: right; font-family: 'nanumGothic'; color: #336171; line-height: 1.25rem; margin-top: 14px; }
+  #article01 small { font-size: 0.8rem; }
+  /* 세계유산 창덕궁 */
+  #article02 { height: auto; }
+  #article02 > .youtube { width: 100%; height: 30rem; margin-bottom: 3rem; }
+  #article02 > .heritage_text { width: 100%; height: auto; }
+  #article02 > .heritage_text:first-of-type { margin-bottom: 3rem; }
+  #article02 .subtitle { width: 100%; height: 30px; display: block; }
+  #article02 .subtitle .bullet { width: 20px; height: 100%; margin-right: 5px; background-image: url(../img/bullet.png); display: block; float: left; background-repeat: no-repeat; }
+  #article02 .text { width: 100%; height: auto; columns: auto 2; column-rule: 1px dotted #c5c5c5; column-gap: 2rem; display: block; }
+  #article02 .text > .text_img { width: 100%; height: 29.29688vw; background-image: url(../img/section/chang_p2.jpg); background-size: 100%; display: block; background-repeat: no-repeat; margin-bottom: 10px; }
+  #article02 .text > p { font-size: 0.9rem; line-height: 1.4rem; text-indent: 10px; margin-bottom: 10px; }
+  /* 창덕궁소개 */
+  #article03 { width: 93.75vw; overflow: hidden; }
+  #article03 > div { height: calc(100% - 64px); float: left; padding: 32px 0; position: relative; }
+  #article03 > .art03_left { width: 60%; background-image: url(../img/section/img.png); background-position: center center; background-repeat: no-repeat; background-size: auto calc(100% - 64px); }
+  #article03 > .art03_left > span { padding: 2px 10px; color: #f4f4f2; position: absolute; z-index: 100; left: 0; bottom: 2rem; background-color: rgba(0, 0, 0, 0.8); display: block; font: normal 0.875rem 'nanumGothic'; line-height: 1.875rem; text-align: center; }
+  #article03 .art03_right { width: 40%; }
+  #article03 .art03_right > .art03_right_inbox { width: calc(100% - 80px); height: calc(100% - 80px); background-color: #fff; padding: 40px; }
+  #article03 .art03_right > .art03_right_inbox > .text { width: 100%; height: 80%; font-size: 0.9rem; line-height: 1.4rem; overflow-y: scroll; text-indent: 0.25rem; padding-right: 50%; }
+  /* 창덕궁 역사 */
+  #article04_bg { width: calc(50% - 400px); height: 100%; position: absolute; z-index: -100; top: 0; left: 0; border-right: 3px solid #c5c5c5; background-image: url(../img/section/history.jpg); background-repeat: no-repeat; background-size: 3900px; }
+  #article04 { height: auto; }
+  #article04:after { content: ""; display: block; width: 0; height: 0; clear: both; }
+  #article04 > .subject { width: 5rem; height: auto; font-size: 3rem; line-height: 5rem; color: #fff; text-align: left; float: left; background-color: rgba(0, 0, 0, 0.6); padding: 20px 0; -webkit-writing-mode: vertical-rl; -moz-writing-mode: vertical-rl; -ms-writing-mode: tb-rl; -ms-writing-mode: vertical-rl; writing-mode: vertical-rl; }
+  #article04 > .history_box { width: 82vw; height: auto; float: right; }
+  #article04 > .history_box > span { width: 16%; height: 100%; display: block; float: left; font-size: 2rem; color: #933637; }
+  #article04 > .history_box > .history { width: 84%; height: 100%; float: left; margin-bottom: 30px; }
+  #article04 > .history_box > .history > dt, #article04 > .history_box > .history dd { float: left; line-height: 1.7rem; font-size: 0.9rem; }
+  #article04 > .history_box > .history > dt { width: 120px; font-weight: bold; color: #336171; }
+  #article04 > .history_box > .history > dd { width: 70%; padding-left: 10px; border-left: 1px solid #c5c5c5; box-sizing: border-box; }
+  /* 찾아오시는 길 */
+  #article05 { width: 93.75vw; height: calc(100% - 32px); }
+  #article05:after { content: ""; display: block; clear: both; width: 0; height: 0; }
+  #article05 > .subject { margin-top: 2rem; }
+  #article05 > .map { width: 93.75vw; height: 320px; margin-bottom: 20px; border: 1px solid #c5c5c5; }
+  #article05 > .map_info { width: 64.45312vw; height: auto; margin: 0 15.625vw; }
+  #article05 > .map_info > li { width: 100%; float: left; line-height: 1.25rem; }
+  #article05 > .map_info > .info_icon { margin-right: 10px; color: #666; font-size: 1rem; }
+  #article05 > .map_info > .info_txt { margin-right: 50%; margin-bottom: 10px; }
+  #article05 > .map_info > .info_etc { font-size: 0.875rem; margin-top: 10px; } }
+@media screen and (min-width: 481px) and (max-width: 768px) { #side_button { display: none; }
+  #containter { width: 100%; height: auto; }
+  section { width: 100%; height: auto; float: left; }
+  section > article { width: 100%; height: 620px; padding: 80px 0; }
+  section > article > div { width: 93.75vw; height: 100%; margin: 0 auto; }
+  section > #article01Wrap { background-image: url(../img/section/insamal.jpg); background-position: center; height: auto; }
+  section > #article02Wrap { background-image: url(../img/pattern_w.jpg); height: auto; }
+  section > #article03Wrap { background-image: url(../img/pattern_b.jpg); height: auto; }
+  section > #article04Wrap { height: auto; position: relative; }
+  section > #article05Wrap { background-image: url(../img/pattern_w.jpg); }
+  .subject { width: 100%; font-size: 2rem; font-weight: bold; line-height: 2rem; color: #333; letter-spacing: -0.125rem; text-align: center; display: block; }
+  .bar { width: 50px; height: 3px; background-color: #c5c5c5; margin: 28px calc(50% - 25px); display: block; }
+  /* 창덕궁 인사말 */
+  #article01 { width: calc(90% - 60px); height: auto; background-color: rgba(255, 255, 255, 0.95); margin-top: 80px; padding: 30px; }
+  #article01 > h3 { width: 100%; height: 2rem; display: block; font-size: 1.25rem; line-height: 2rem; margin-bottom: 10px; color: #336171; }
+  #article01 > p { width: 100%; font-size: 0.9rem; line-height: 1.4rem; text-indent: 10px; }
+  #article01 ul { width: 100%; height: auto; padding: 30px 0; }
+  #article01 ul > li { float: left; color: #933637; font-weight: bold; }
+  #article01 ul > li:first-child { display: none; }
+  #article01 ul > li:last-child { width: 100%; }
+  #article01 ul > li > span { font-weight: bold; font-size: 1.25rem; color: #933637; margin-left: 40px; text-align: center; }
+  #article01 ul > li > span > i { font-size: 2rem; font-family: 'georgia'; color: #933637; }
+  #article01 ul > li > small { font-size: 0.8rem; float: right; font-family: 'nanumGothic'; color: #336171; line-height: 1.25rem; margin-top: 14px; }
+  #article01 small { font-size: 0.8rem; }
+  /* 세계유산 창덕궁 */
+  #article02 { height: auto; }
+  #article02 > .youtube { width: 100%; height: 30rem; margin-bottom: 3rem; }
+  #article02 > .heritage_text { width: 100%; height: auto; }
+  #article02 > .heritage_text:first-of-type { margin-bottom: 3rem; }
+  #article02 .subtitle { width: 100%; height: 30px; display: block; }
+  #article02 .subtitle .bullet { width: 20px; height: 100%; margin-right: 5px; background-image: url(../img/bullet.png); display: block; float: left; background-repeat: no-repeat; }
+  #article02 .text { width: 100%; height: auto; display: block; }
+  #article02 .text > .text_img { width: 100%; height: 60vw; background-image: url(../img/section/chang_p2.jpg); background-size: 100%; display: block; background-repeat: no-repeat; margin-bottom: 10px; }
+  #article02 .text > p { font-size: 0.9rem; line-height: 1.4rem; text-indent: 10px; margin-bottom: 10px; }
+  /* 창덕궁소개 */
+  #article03 { width: 93.75vw; height: auto; overflow: hidden; }
+  #article03 > div { height: 100%; position: relative; }
+  #article03 > .art03_left { display: none; }
+  #article03 .art03_right { width: 100%; height: 100%; background-image: url(../img/section/img.png); background-position: center center; background-repeat: no-repeat; }
+  #article03 .art03_right > .art03_right_inbox { width: calc(100% - 80px); height: calc(100% - 80px); padding: 40px; background-color: rgba(255, 255, 255, 0.93); }
+  #article03 .art03_right > .art03_right_inbox > .text { width: 100%; height: 80%; font-size: 0.9rem; line-height: 1.4rem; overflow-y: scroll; text-indent: 0.25rem; padding-right: 50%; }
+  /* 창덕궁 역사 */
+  #article04_bg { display: none; }
+  #article04 { width: calc(90% - 60px); height: auto; }
+  #article04:after { content: ""; display: block; width: 0; height: 0; clear: both; }
+  #article04 > .subject { width: 100%; font-size: 2rem; font-weight: bold; line-height: 2rem; color: #333; letter-spacing: -0.125rem; text-align: center; display: block; }
+  #article04 > .history_bar { width: 50px; height: 3px; background-color: #c5c5c5; margin: 28px calc(50% - 25px); display: block; }
+  #article04 > .history_box { width: 100%; height: auto; }
+  #article04 > .history_box > span { width: 100%; height: 100%; display: block; float: left; font-size: 2rem; color: #933637; margin-bottom: 1rem; }
+  #article04 > .history_box > .history { width: 100%; height: 100%; float: left; margin-bottom: 30px; }
+  #article04 > .history_box > .history > dt, #article04 > .history_box > .history dd { line-height: 1.7rem; font-size: 0.9rem; float: left; }
+  #article04 > .history_box > .history > dt { width: 110px; font-weight: bold; color: #336171; }
+  #article04 > .history_box > .history > dd { width: 70%; padding-left: 10px; border-left: 1px solid #c5c5c5; box-sizing: border-box; }
+  /* 찾아오시는 길 */
+  #article05 { width: 93.75vw; height: calc(100% - 32px); }
+  #article05:after { content: ""; display: block; clear: both; width: 0; height: 0; }
+  #article05 > .map { width: 93.75vw; height: 320px; margin-bottom: 20px; border: 1px solid #c5c5c5; }
+  #article05 > .map_info { width: 90%; height: auto; margin-left: 5%; }
+  #article05 > .map_info > li { width: 100%; float: left; line-height: 1.25rem; }
+  #article05 > .map_info > .info_icon { margin-right: 10px; color: #666; font-size: 1rem; }
+  #article05 > .map_info > .info_txt { margin-right: 50%; margin-bottom: 10px; }
+  #article05 > .map_info > .info_etc { font-size: 0.875rem; margin-top: 10px; } }
+@media screen and (max-width: 480px) { #side_button { display: none; }
+  #containter { width: 100%; height: auto; }
+  section { width: 100%; height: auto; float: left; }
+  section > article { width: 100%; height: 620px; padding: 60px 0; }
+  section > article > div { width: 93.75vw; height: 100%; margin: 0 auto; }
+  section > #article01Wrap { background-image: url(../img/section/insamal.jpg); background-position: center; height: auto; }
+  section > #article02Wrap { background-image: url(../img/pattern_w.jpg); height: auto; }
+  section > #article03Wrap { background-image: url(../img/pattern_b.jpg); height: auto; }
+  section > #article04Wrap { height: auto; position: relative; }
+  section > #article05Wrap { background-image: url(../img/pattern_w.jpg); }
+  .subject { width: 100%; font-size: 2rem; font-weight: bold; line-height: 2rem; color: #333; letter-spacing: -0.125rem; text-align: center; display: block; }
+  .bar { width: 50px; height: 3px; background-color: #c5c5c5; margin: 28px calc(50% - 25px); display: block; }
+  /* 창덕궁 인사말 */
+  #article01 { width: calc(90% - 40px); height: auto; background-color: rgba(255, 255, 255, 0.95); margin-top: 80px; padding: 20px; }
+  #article01 > h3 { width: 100%; height: 2rem; display: block; font-size: 1.25rem; line-height: 2rem; margin-bottom: 10px; color: #336171; }
+  #article01 > p { width: 100%; font-size: 0.9rem; line-height: 1.4rem; text-indent: 10px; }
+  #article01 ul { width: 100%; height: auto; padding: 30px 0; }
+  #article01 ul > li { float: left; color: #933637; font-weight: bold; }
+  #article01 ul > li:first-child { display: none; }
+  #article01 ul > li:last-child { width: 100%; }
+  #article01 ul > li > span { font-weight: bold; font-size: 1.25rem; color: #933637; text-align: center; }
+  #article01 ul > li > span > i { font-size: 2rem; font-family: 'georgia'; color: #933637; }
+  #article01 ul > li > small { font-size: 0.8rem; float: right; font-family: 'nanumGothic'; color: #336171; line-height: 1.25rem; }
+  #article01 small { font-size: 0.8rem; }
+  /* 세계유산 창덕궁 */
+  #article02 { height: auto; }
+  #article02 > .youtube { display: none; }
+  #article02 > .heritage_text { width: 100%; height: auto; }
+  #article02 > .heritage_text:first-of-type { margin-bottom: 3rem; }
+  #article02 .subtitle { width: 100%; height: 30px; display: block; }
+  #article02 .subtitle .bullet { width: 20px; height: 100%; margin-right: 5px; background-image: url(../img/bullet.png); display: block; float: left; background-repeat: no-repeat; }
+  #article02 .text { width: 100%; height: auto; display: block; }
+  #article02 .text > .text_img { width: 100%; height: 60vw; background-image: url(../img/section/chang_p2.jpg); background-size: 100%; display: block; background-repeat: no-repeat; margin-bottom: 10px; }
+  #article02 .text > p { font-size: 0.9rem; line-height: 1.4rem; text-indent: 10px; margin-bottom: 10px; }
+  /* 창덕궁소개 */
+  #article03 { width: 93.75vw; height: auto; overflow: hidden; }
+  #article03 > div { height: 100%; position: relative; }
+  #article03 > .art03_left { display: none; }
+  #article03 .art03_right { width: 100%; height: 100%; }
+  #article03 .art03_right > .art03_right_inbox { width: calc(100% - 80px); height: calc(100% - 80px); padding: 40px; background-color: rgba(255, 255, 255, 0.93); }
+  #article03 .art03_right > .art03_right_inbox > .text { width: 100%; height: 80%; font-size: 0.9rem; line-height: 1.4rem; overflow-y: scroll; text-indent: 0.25rem; padding-right: 50%; }
+  /* 창덕궁 역사 */
+  #article04_bg { display: none; }
+  #article04 { width: calc(90% - 60px); height: auto; }
+  #article04:after { content: ""; display: block; width: 0; height: 0; clear: both; }
+  #article04 > .subject { width: 100%; font-size: 2rem; font-weight: bold; line-height: 2rem; color: #333; letter-spacing: -0.125rem; text-align: center; display: block; }
+  #article04 > .history_bar { width: 50px; height: 3px; background-color: #c5c5c5; margin: 28px calc(50% - 25px); display: block; }
+  #article04 > .history_box { width: 100%; height: auto; }
+  #article04 > .history_box > span { width: 100%; height: 100%; display: block; float: left; font-size: 2rem; color: #933637; margin-bottom: 1rem; }
+  #article04 > .history_box > .history { width: 100%; height: 100%; float: left; margin-bottom: 30px; }
+  #article04 > .history_box > .history > dt, #article04 > .history_box > .history dd { width: 100%; line-height: 1.7rem; font-size: 0.9rem; float: left; }
+  #article04 > .history_box > .history > dt { font-weight: bold; color: #336171; font-size: 1rem; }
+  #article04 > .history_box > .history > dd { margin-left: 10px; padding-left: 10px; border-left: 1px solid #c5c5c5; box-sizing: border-box; line-height: 1.5rem; margin-bottom: 10px; }
+  /* 찾아오시는 길 */
+  #article05 { width: 93.75vw; height: calc(100% - 32px); }
+  #article05:after { content: ""; display: block; clear: both; width: 0; height: 0; }
+  #article05 > .map { width: 93.75vw; height: 320px; margin-bottom: 20px; border: 1px solid #c5c5c5; }
+  #article05 > .map_info { width: 90%; height: auto; margin-left: 5%; }
+  #article05 > .map_info > li { width: 100%; float: left; line-height: 1.25rem; }
+  #article05 > .map_info > .info_icon { margin-right: 10px; color: #666; font-size: 1rem; }
+  #article05 > .map_info > .info_txt { margin-right: 50%; margin-bottom: 10px; }
+  #article05 > .map_info > .info_etc { font-size: 0.875rem; margin-top: 10px; } }
+/* story.css */
+
+/*# sourceMappingURL=story.css.map */

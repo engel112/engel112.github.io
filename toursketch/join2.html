@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>여행스케치 :: </title>
+    <!--[if lte IE 9]>
+        
+    <![endif]-->
+    <link rel="stylesheet" href="./css/lib/reset.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/join2.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <script src="./js/jquery/jquery-1.12.3.min.js"></script>
+    <script src="./js/jquery/jquery-migrate-1.3.0.min.js"></script>
+    <script src="./js/jquery/jquery-ui.min.js"></script>
+    <style></style>
+    <script>
+      $(document).ready(function(){
+
+        var gnb = $('#gnb'),
+            gnbNav = $('#gnbWrap').find('li');
+        var navMenu = $('#gnb_nav');
+        gnbNav.on('mouseenter',function(){
+          navMenu.stop().slideDown();
+          });
+        gnb.on('mouseleave',function(){
+          navMenu.stop().slideUp();
+        });
+         var add_h = $('.address').height();
+         $('.address').prev('dt').css({'height':add_h});
+      });
+    </script>
+  </head>
+  <body>
+    <header id="header">
+      <div id="h_top_wrap">
+        <div id="h_menu">
+        <div id="h_menuWrap">
+            <h3>좌측메뉴</h3>
+            <ul id="h_menu_left" class="me_link">
+                <li class="h_menu01"><a href="./index.html" ><i class="fa fa-home" aria-hidden="true"></i>메인으로</a></li>
+                <li class="h_menu_bar"><span><!--메뉴구분바--></span></li>
+                <li class="h_menu02"><a href="#"><i class="fa fa-comments" aria-hidden="true"></i>커뮤니티</a></li>
+                <li class="h_menu_bar"><span><!--메뉴구분바--></span></li>
+                <li class="h_menu03"><a href="#"><i class="fa fa-camera-retro" aria-hidden="true"></i>기획전모음</a></li>
+            </ul>
+            <h3>우측메뉴</h3>
+            <ul id="h_menu_right" class="me_link">
+                <li class="h_menu04"><a href="#">로그인</a></li>
+                <li class="h_menu_bar"><span><!--메뉴구분바--></span></li>
+                <li class="h_menu05"><a href="./join1.html">회원가입</a></li>
+                <li class="h_menu_bar"><span><!--메뉴구분바--></span></li>
+                <li class="h_menu06"><a href="#">예약결제</a></li>
+                <li class="h_menu_bar"><span><!--메뉴구분바--></span></li>
+                <li class="h_menu07 lastbox"><a href="#">고객센터</a></li>
+            </ul>
+        </div><!--// #h_menuWrap-->
+        </div><!--// #h_menu-->
+        <div id="gnb">
+           <h2>메인메뉴</h2>
+           <div id="gnbWrap">
+            <h1 id="logo" class="me_link"><a href="index.html" title="메인으로">로고</a></h1>
+            <ul id="gnb_menu" class="me_link">
+                <li class="menu_01"><a href="#" title="지자체지원">지자체지원</a></li>
+                <li class="menu_02"><a href="#" title="시즌여행">시즌여행</a></li>
+                <li class="menu_03"><a href="#" title="버스여행">버스여행</a></li>
+                <li class="menu_04"><a href="#" title="기차여행">기차여행</a></li>
+                <li class="menu_05"><a href="#" title="섬여행">섬여행</a></li>
+                <li class="menu_06"><a href="#" title="지방출발">지방출발</a></li>
+                <li class="menu_07"><a href="#" title="제주도여행"><i class="fa fa-heart" aria-hidden="true"></i>제주도여행</a></li>
+            </ul>        
+            </div><!--// #gnbWrap-->
+            <div id="gnb_nav">
+              <ul class="nav01"><!--지자체 지원-->
+                <li><a href="./sublist.html">강원권 지원</a></li>
+                <li><a href="./sublist.html">충청권 지원</a></li>
+                <li><a href="./sublist.html">경상권 지원</a></li>
+                <li><a href="./sublist.html">전라권 지원</a></li>
+                <li><a href="./sublist.html">수도권 지원</a></li>
+              </ul>
+              <ul class="nav02"><!-- 시즌여행 -->
+                <li><a href="./sublist.html">강원권 여행</a></li>
+                <li><a href="./sublist.html">충청권 여행</a></li>
+                <li><a href="./sublist.html">경상권 여행</a></li>
+                <li><a href="./sublist.html">전라권 여행</a></li>
+                <li><a href="./sublist.html">수도권 여행</a></li>
+              </ul>
+              <ul class="nav03"><!-- 버스여행 -->
+                <li><a href="#">이달의 베스트</a></li>
+                <li><a href="#">축제여행</a></li>
+                <li><a href="#">연중 출발(스테디셀러)</a></li>
+                <li><a href="#">주중출발</a></li>
+              </ul>
+             <ul class="nav04"><!--기차여행 -->
+                <li><a href="#">당일 기차여행</a></li>
+                <li><a href="#">무박 기차여행</a></li>
+                <li><a href="#">숙박 기차여행</a></li>
+                <li><a href="#">O/V/S TRAIN</a></li>
+              </ul>
+              <ul class="nav05"><!-- 섬여행 -->
+                <li><a href="#">울릉도/독도</a></li>
+                <li><a href="#">홍도/흑산도</a></li>
+                <li><a href="#">거문도/백도</a></li>
+                <li><a href="#">백령도/대청도</a></li>
+              </ul>
+              <ul class="nav06"><!-- 지방출발 -->
+                <li><a href="#">부산/울산 출발</a></li>
+                <li><a href="#">광주/전주 출발</a></li>
+                <li><a href="#">대전 출발</a></li>
+                <li><a href="#">대구 출발</a></li>
+              </ul>
+            </div>
+            </div><!--// #gnb-->
+          </div><!--// #h_top_wrap-->
+   <nav id="sidenav">
+      <ul class="me_link">
+         <li><a href=""><span>호텔예약</span></a></li>
+         <li><a href=""><span>펜션예약</span></a></li>
+         <li><a href=""><span>할인티켓</span></a></li>
+         <li><a href="#"><span>맨 위로 가기</span></a></li>
+      </ul>
+   </nav>
+        </header><!--// #header-->
+    <section id="join">
+    <h2>회원가입 이미지</h2>
+     <div class="joinimg">
+       <ul>
+         <li><strong class="red">여행스케치</strong>와 함께 즐거운 여행을 떠나보세요</li>
+         <li>회원가입을 하시면 사이트내에서 제공하는 모든 정보 및 서비스를 이용하실 수 있습니다.</li>
+         <li>고객님의 정보는 절대 다른용도로 이용되거나 제 3자에게 제공되지 않습니다.</li>
+       </ul>
+     </div>
+     <div class="joinbar">
+        <ul>
+           <li>Step01. 이용약관 및 개인정보취급방침 동의</li>
+           <li>Step02. 회원가입정보입력</li>
+           <li>Step03. 회원가입완료</li>
+        </ul>
+     </div>
+     <form id="joinbox" action="*" method="post">
+      <fieldset class="joinsec">
+        <legend class="join_title">⊙ 회원정보입력</legend>
+        <dl>
+          <dt class="point"><label for="id">아이디</label></dt>
+          <dd>
+            <label for="id">사용하실 아이디를 입력해주세요.</label>
+            <input type="text" id="id" name="id" required />
+            <label for="idCheck">다른 사용자와 아이디가 중복되는지 확인해 주세요.</label>
+            <button type="button" id="idCheck" name="id">중복확인</button>
+          </dd>
+          <dt class="point"><label for="pwd">비밀번호</label></dt>
+          <dd>
+            <label for="pwd">여덟에서 열 여섯자리 사이의 영문, 숫자, 특수문자 조합으로 사용하실 비밀번호를 입력해 주세요. </label>
+            <input type="password" id="pwd" name="pwd" required /><span>8~16자리 사이의 영문, 숫자, 특수문자 조합으로 입력해주세요.</span>
+          </dd>
+          <dt class="point"><label for="pwdCheck">비밀번호 확인</label></dt>
+          <dd>
+            <label for="pwdCheck">비밀번호를 한 번 더 입력해 주세요.</label>
+            <input type="password" id="pwdCheck" name="pwdCheck" required />
+            <span>비밀번호를 한 번 더 입력해 주세요.</span>
+          </dd>
+          <dt class="point"><label for="name">성 명</label></dt>
+          <dd>
+            <label for="name">이름을 입력해 주세요.</label>
+            <input type="text" id="name" name="name" required />
+          </dd>
+          <dt class="point"><label for="telFir">전화번호</label></dt>
+          <dd class="telnum">
+            <label for="telFir">전화번호 앞자리를 선택해 주세요.</label>
+            <select name="telFir" id="telFir">
+               <option value="02">02</option>
+               <option value="031">031</option>
+               <option value="032">032</option>
+               <option value="033">033</option>
+               <option value="041">041</option>
+               <option value="042">042</option>
+               <option value="043">043</option>
+               <option value="044">044</option>
+               <option value="051">051</option>
+               <option value="052">052</option>
+               <option value="053">053</option>
+               <option value="054">054</option>
+               <option value="055">055</option>
+               <option value="061">061</option>
+               <option value="062">062</option>
+               <option value="063">063</option>
+               <option value="064">064</option>
+            </select>
+            <span class="num_bar"><!--넘버 중간 바--></span>
+            <label for="telMid">전화번호 중간 네자리를 입력해 주세요.</label>
+            <input type="tel" id="telMid" name="tel" maxlength="4" required />
+            <span class="num_bar"><!--넘버 중간 바--></span>
+            <label for="telLast">전화번호 끝 네자리를 입력해 주세요.</label>
+            <input type="tel" id="telLast" name="tel" maxlength="4" required />
+          </dd>
+          <dt class="point"><label for="celFir">휴대폰번호</label></dt>
+          <dd class="telnum">
+            <label for="celFir">휴대폰번호 앞자리를 선택해 주세요.</label>
+            <select name="celFir" id="celFir">
+               <option value="010">010</option>
+               <option value="011">011</option>
+               <option value="016">016</option>
+               <option value="017">017</option>
+               <option value="018">018</option>
+               <option value="019">019</option>
+            </select>
+            <span class="num_bar"><!--넘버 중간 바--></span>
+            <label for="celMid">휴대폰번호 중간 셋에서 네자리를 입력해 주세요.</label>
+            <input type="tel" id="celMid" name="cel" maxlength="4" required />
+            <span class="num_bar"><!--넘버 중간 바--></span>
+            <label for="celLast">휴대폰번호 끝 네자리를 입력해 주세요.</label>
+            <input type="tel" id="celLast" name="cel" maxlength="4" required />
+          </dd>
+          <dt class="point"><label for="email">이메일주소</label></dt>
+          <dd>
+            <label for="email">이메일 주소를 입력해 주세요.</label>
+            <input type="email" id="email" name="email" required />
+            </dd>
+          <dt><label for="add">주 소</label></dt>
+          <dd class="address">
+            <label for="add">우편번호를 입력해 주세요.</label>
+            <input type="text" id="add" name="add" />
+            <label for="addSearch">우편번호를 검색합니다.</label>
+            <button type="button" id="addSearch" name="addSearch" value="">우편번호 찾기</button><br />
+            <label for="addlong">상세 주소를 입력해주세요.</label>
+            <input type="text" id="addlong" name="add" />
+          </dd>
+          <dt class="point"><label for="emailY">이메일 수신여부</label></dt>
+          <dd class="email_check">
+            <label for="emailY"><input type="radio" id="emailY" name="emailCheck" value="수신에 동의합니다." checked />수신에 동의합니다.</label>
+            <label for="emailN"><input type="radio" id="emailN" name="emailCheck" value="수신에 동의하지 않습니다." />수신에 동의하지 않습니다.</label>
+          </dd>
+        </dl>
+      </fieldset>
+      <fieldset class="joincheck">
+        <legend>가입 확인</legend>
+        <button type="submit" id="submit" name="submit"><i class="fa fa-check-square-o" aria-hidden="true"></i>가입완료</button>
+        <button type="reset" id="reset" name="reset">취소하기</button>
+      </fieldset>
+     </form>
+      
+    </section>
+<!--    푸터   -->
+<footer id="footer">
+        <h3>회사정보</h3>
+    <div id="ftWrapBar">
+        <div id="ftBar">
+            <ul id="ftmenu">
+                <li class="ftmenu_01"><a href="#">회사소개</a></li>
+                <li class="ftmenu_bar"><span><!--구분바--></span></li>
+                <li class="ftmenu_02"><a href="#">찾아오시는길</a></li>
+                <li class="ftmenu_bar"><span><!--구분바--></span></li>
+                <li class="ftmenu_03"><a href="#">출발장소</a></li>
+                <li class="ftmenu_bar"><span><!--구분바--></span></li>
+                <li class="ftmenu_04"><a href="#">여행약관</a></li>
+                <li class="ftmenu_bar"><span><!--구분바--></span></li>
+                <li class="ftmenu_05"><a href="#">개인정보취급방침</a></li>
+                <li class="ftmenu_bar"><span><!--구분바--></span></li>
+                <li class="ftmenu_06 lastbox"><a href="#">이용약관</a></li>
+            </ul>
+            <span><a href="#">사업자정보확인</a></span>
+        </div>
+        </div><!--// #ftWrapBar-->
+            <div id="ftFooterWrap">
+                <ul id="ft_footer">
+                    <li class="ft_add">
+                    <address>서울특별시 용산구 원효로 259-1 (원효로1가,화일빌딩4층) <strong>(주)여행스케치여행사</strong><br />
+                    대표전화 : (02)701-2506 , 팩스번호 : (02)701-2508 , E-mail : tourno1@toursketch.co.kr , 대표이사 : 박영규<br />
+                    사업자등록번호 : 106-86-83583 , 법인등록번호 : 110111-4760636 , 통신판매업신고 : 제 2012-서울용산-0042호<br />
+                    개인정보책임담당자 : 지근종</address>
+                    </li>
+                    <li class="copy">
+                    Copyrightⓒ2005-2010 (주)여행스케치여행사. All rights Reserved.
+                    </li>
+                </ul>
+                <ul id="ft_sns">
+                    <li class="blog"><a href="http://blog.naver.com/toursketch__" target="_blank" title="네이버 블로그"><span>네이버 블로그</span></a></li>
+                    <li class="kakao"><a href="http://www.toursketch.co.kr/comty01.html?bmode=read&bid=notice&id_no=108974&l=1" target="_blank" title="카카오톡"><span>카카오톡</span></a></li>
+                    <li class="kas"><a href="https://story.kakao.com/ch/toursketch" target="_blank" title="카카오스토리"><span>카카오스토리</span></a></li>
+                </ul>
+            </div>
+    </footer><!--// #footer-->
+  </body>
+</html>

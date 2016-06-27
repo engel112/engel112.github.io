@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="favicon.png" />
+    <link rel="stylesheet" href="./css/lib/reset.css" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css" />
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/data_all.css" />
+    <link rel="stylesheet" href="./css/s_nav.css" />
+    
+    <!--[if lte IE 9]>
+    <script src="./js/dist/html5shiv.min.js"></script>
+    <script src="./js/dist/ie9.min.js"></script>
+    <script src="./js/dist/PIE.js"></script>
+    <script src="./js/dist/responsive.min.js"></script>
+        <![endif]-->
+
+    <script src="./js/jquery/jquery-1.12.3.min.js"></script>
+    <script src="./js/jquery/jquery-migrate-1.3.0.min.js"></script>
+    <script src="./js/jquery/jquery-ui.min.js"></script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/sidenav.js"></script>
+    <script src="./js/hoverdiv.js"></script>
+    <script src="./js/btnchange.js"></script>
+    <script src="./js/gallery.js"></script>
+    <script src="./js/fullimage.js"></script>
+    
+
+    <title>창덕궁 - 세계문화유산</title>
+    <style>
+        @import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+    </style>
+        <script>
+        $(function(){
+          nav();
+          sidenav();
+          hoverdiv();         
+          btnchange($('.btn_box'), $('.table_wrap'));
+          gallery();         
+          fullimage();         
+
+          
+
+//발간자료 높이맞추기
+          var guide_h = $('#article03_1').height(),
+              download_h = $('#article03_2'),
+              abox = download_h.find('a'),
+              abox_h = abox.height();
+          download_h.css({'height':guide_h});
+          abox.css({'margin-top':(guide_h / 2) - (abox_h / 2) - 50});
+        });
+          
+    </script>
+</head>
+<body>
+    <div id="container">
+<!-- header -->
+     <div id="headerWrap">
+        <header id="header">
+        <h1 class="me_link"><a href="index.html" title="창덕궁"><span>문화재청 창덕궁</span></a></h1>
+        <nav id="gnb">
+           <h2>메인 메뉴</h2>
+            <ul>
+                <li><a href="story.html" target="_self">창덕궁 이야기</a></li>
+                <li><a href="info.html" target="_self">관람 안내</a></li>
+                <li><a href="reservation.html" target="_self">관람 예약</a></li>
+                <li><a href="community.html" target="_self">참여 공간</a></li>
+                <li><a href="data.html" target="_self">자료실</a></li>
+            </ul>
+        </nav>
+            <div id="menu"><a href="#" class="fa fa-bars" aria-hidden="true"><span>메뉴버튼</span></a></div>
+        </header>
+<!--클릭시 나오는 메뉴-->
+            <div id="submenuWrap">
+               <div id="submenu">
+                <dl>
+                   <dt>창덕궁 이야기</dt>
+                    <dd><span><!--구분바--></span></dd>
+                    <dd><a href="story.html#article01Wrap">창덕궁 인사말</a></dd>
+                    <dd><a href="story.html#article02Wrap">세계유산 창덕궁</a></dd>
+                    <dd><a href="story.html#article03Wrap">창덕궁 소개</a></dd>
+                    <dd><a href="story.html#article04Wrap">창덕궁 역사</a></dd>
+                    <dd><a href="story.html#article05Wrap">창덕궁 위치</a></dd>
+                </dl>
+                <dl>
+                   <dt>관람 안내</dt>
+                    <dd><span><!--구분바--></span></dd>
+                    <dd><a href="info.html#article01Wrap" target="_self">관람 코스</a></dd>
+                    <dd><a href="info.html#article02Wrap">창덕궁 사계</a></dd>
+                    <dd><a href="info.html#article03Wrap">관람 시간 및 요금</a></dd>
+                    <dd><a href="info.html#article04Wrap">관람객 권리·협조사항</a></dd>
+                    <dd><a href="info.html#article05Wrap">편의시설 안내</a></dd>
+                </dl>
+                <dl>
+                   <dt>관람 예약</dt>
+                    <dd><span><!--구분바--></span></dd>
+                    <dd><a href="reservation.html">후원관람예약</a></dd>
+                    <dd><a href="reservation.html">청소년 단체관람 신청</a></dd>
+                    <dd><a href="reservation.html">장소사용 및 촬영허가</a></dd>
+                    <dd><a href="reservation.html">청소년 문화학교</a></dd>
+                    <dd><a href="reservation.html">달빛기행</a></dd>
+                </dl>
+                <dl>
+                   <dt>참여 공간</dt>
+                    <dd><span><!--구분바--></span></dd>
+                    <dd><a href="community.html">공지사항</a></dd>
+                    <dd><a href="community.html">자주묻는 질문</a></dd>
+                    <dd><a href="community.html">교육행사 이모저모</a></dd>
+                    <dd><a href="community.html">전자민원</a></dd>
+                </dl>
+                <dl>
+                   <dt>자료실</dt>
+                    <dd><span><!--구분바--></span></dd>
+                    <dd><a href="data.html#article01Wrap">궁궐소개</a></dd>
+                    <dd><a href="data.html#article02Wrap">사진 및 동영상</a></dd>
+                    <dd><a href="data.html#article03Wrap">가이드북 다운로드</a></dd>
+                    <dd><a href="data.html#article03Wrap">발간자료</a></dd>
+                    <dd><a href="data.html#article04Wrap">행정정보</a></dd>
+                    <dd><a href="data.html#article05Wrap">조직 및 연락처</a></dd>
+                </dl>
+                </div><!--// #submenu-->
+            </div><!--// #submenuWrap-->
+        </div><!--// #headerWrap-->
+        
+<!-- section -->
+         <div id="side_button">
+        <ul>
+
+        </ul>
+    </div><!--// #side_button-->
+    
+    
+     
+<section id="sectionWrap">
+   <h2>자료실</h2>
+<!--궁궐소개/유물소개/수목소개-->
+    <article id="article01Wrap">
+    <div id="article01" class="clearfix">
+       <h2>궁궐 소개</h2>
+        <span class="subject">궁궐 소개</span>
+        <span class="bar"></span>
+        <form action="*" method="get" class="btn_box">
+           <fieldset>
+               <legend>궁궐 소개</legend>
+                <button class="art01_btn01" name="view_btn1">궁궐 소개</button>
+                <button class="art01_btn02" name="view_btn2">유물 소개</button>
+                <button class="art01_btn03" name="view_btn3">수목 소개</button>
+            </fieldset>
+            </form>
+  <!--궁궐소개-->
+    <section class="table_wrap">
+       <h2>궁궐소개</h2>
+        <table class="heritage data_table">
+            <caption class="heritage_table">
+                <span class="bullet"><!--문양--></span>궁궐 소개
+            </caption>
+          <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+            </tr>
+          </thead>
+          <tbody>
+                <tr>
+                    <td>10</td>
+                    <td><a href="#">조선 시대 궁궐의 역사</a></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td><a href="#">단청</a></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td><a href="#">잡상</a></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><a href="#">관람코스별 안내설명</a></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><a href="#">신선원전(新璿源殿)</a></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><a href="#">1800년대 궁중의 日常食</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><a href="#">조선왕조실록 일람표</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><a href="#">낙선재 마지막 황실 가족 이야기</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="#">조선시대 전문직 여성인 궁녀</a></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a href="#">조선시대 궐외각사</a></td>
+                </tr>
+          </tbody>                    
+        </table>
+        <form action="*" method="get" class="search">
+          <fieldset>
+            <legend>검색</legend>
+            <label for="heri1_search"><input type="text" id="heri1_search" name ="search" placeholder="검색어" value=""/></label>
+            <button type="button" class="fa fa-search" aria-hidden="true"><!--검색--></button>
+          </fieldset>
+        </form>
+      </section>
+
+<!--유물소개-->
+    <section class="table_wrap table_hide">
+       <h2>유물소개</h2>
+        <table class="heritage data_table">
+            <caption class="heritage_table">
+                <span class="bullet"><!--문양--></span>유물 소개
+            </caption>
+          <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+            </tr>
+          </thead>
+          <tbody>
+                <tr>
+                    <td>3</td>
+                    <td><a href="#">국가 지정 문화재 현황 - 2012.3.2</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="#">국가 지정 문화재 현황</a></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a href="#">국가지정문화재 현황-2012.8.16</a></td>
+                </tr>
+          </tbody>                    
+        </table>
+        <form action="*" method="get" class="search">
+          <fieldset>
+            <legend>검색</legend>
+             <label for="heri2_search"><input type="text" id="heri2_search" name ="search" placeholder="검색어" value="" /></label>
+            <button type="button" class="fa fa-search" aria-hidden="true"><!--검색--></button>
+          </fieldset>
+        </form>
+    </section>
+        
+<!--수목소개-->
+      <section class="table_wrap table_hide">
+        <h2>수목소개</h2>
+         <table class="heritage data_table">
+            <caption class="heritage_table">
+                <span class="bullet"><!--문양--></span>수목 소개
+            </caption>
+          <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+            </tr>
+          </thead>
+          <tbody>
+                <tr>
+                    <td>6</td>
+                    <td><a href="#">창덕궁 나무 그리고 봄 (1)</a></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><a href="#">창덕궁 나무 그리고 봄 (2)</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><a href="#">창덕궁 나무 그리고 봄 (3)</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><a href="#">창덕궁 나무 그리고 봄 (4)</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="#">창덕궁 나무 그리고 봄 (5)</a></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a href="#">창덕궁 나무 그리고 가을 (1)</a></td>
+                </tr>
+          </tbody>                    
+        </table>
+        <form action="*" method="get" class="search">
+          <fieldset>
+            <legend>검색</legend>
+             <label for="heri3_search"><input type="text" id="heri3_search" name ="search" placeholder="검색어" value=""/></label>
+            <button type="button" class="fa fa-search" aria-hidden="true"><!--검색--></button>
+          </fieldset>
+        </form>
+        </section>
+    </div><!--// #article01-->
+    </article>
+            
+            
+<!--사진 및 동영상-->
+            <article id="article02Wrap">
+            <div id="article02" class="clearfix">
+            <h2>사진 및 동영상</h2>
+                <span class="subject">사진 및 동영상</span>
+                <span class="bar"></span>
+                <div>
+                    <a href="#"><span class="photo_img">궐내각사</span><span class="photo_nar">궐내각사</span></a>
+                </div>
+                <div>
+                    <a href="#"><span class="photo_img">낙선재의 꽃담</span><span class="photo_nar">낙선재의 꽃담</span></a>
+                </div>
+                <div>
+                    <a href="#"><span class="photo_img">낙선재 창살의 문양</span><span class="photo_nar">낙선재 창살의 문양</span></a>
+                </div>
+                <div>
+                    <a href="#"><span class="photo_img">창덕궁의 겨울</span><span class="photo_nar">창덕궁의 겨울</span></a>
+                </div>
+                <div>
+                    <a href="#"><span class="photo_img">창덕궁의 가을</span><span class="photo_nar">창덕궁의 가을</span></a>
+                </div>
+                <div>
+                    <a href="#"><span class="photo_img">창덕궁의 여름</span><span class="photo_nar">창덕궁의 여름</span></a>
+                </div>
+                <div>
+                    <a href="#"><span class="photo_img">창덕궁의 봄</span><span class="photo_nar">창덕궁의 봄</span></a>
+                </div>
+                <div>
+                    <a href="#"><span class="photo_img">2013.입춘설경</span><span class="photo_nar">2013.입춘설경</span></a>
+                </div>
+
+            </div><!--// #article02-->
+            </article>
+            
+            <div id="full_image">
+               <div class="fullbox"><!--풀사이즈 이미지--></div>
+               <div class="thumnail full01">
+            		<ul>
+            			<li class="imb_1"><a href="#" data-img="./img/section/data/gwal1.jpg" ><span>궐내각사 1번째</span></a></li>
+            			<li class="imb_2"><a href="#" data-img="./img/section/data/gwal2.jpg"><span>궐내각사 2번째</span></a></li>
+            		</ul>
+               </div><!--// .full01-->
+               <div class="thumnail full02">
+            		<ul>
+            			<li class="imb_1"><a href="#" data-img="./img/section/data/nak1.jpg" ><span>낙선재의 꽃담 1번째</span></a></li>
+            			<li class="imb_2"><a href="#" data-img="./img/section/data/nak2.jpg"><span>낙선재의 꽃담 2번째</span></a></li>
+            			<li class="imb_3"><a href="#" data-img="./img/section/data/nak3.jpg"><span>낙선재의 꽃담 3번째</span></a></li>
+            			<li class="imb_4"><a href="#" data-img="./img/section/data/nak4.jpg"><span>낙선재의 꽃담 4번째</span></a></li>
+            			<li class="imb_5"><a href="#" data-img="./img/section/data/nak5.jpg"><span>낙선재의 꽃담 5번째</span></a></li>
+            			<li class="imb_6"><a href="#" data-img="./img/section/data/nak6.jpg"><span>낙선재의 꽃담 6번째</span></a></li>
+            			<li class="imb_7"><a href="#" data-img="./img/section/data/nak7.jpg"><span>낙선재의 꽃담 7번째</span></a></li>
+            			<li class="imb_8"><a href="#" data-img="./img/section/data/nak8.jpg"><span>낙선재의 꽃담 8번째</span></a></li>
+            			<li class="imb_9"><a href="#" data-img="./img/section/data/nak9.jpg"><span>낙선재의 꽃담 9번째</span></a></li>
+            			<li class="imb_10"><a href="#" data-img="./img/section/data/nak10.jpg"><span>낙선재의 꽃담 10번째</span></a></li>
+            		</ul>
+               </div><!--// .full02-->
+               <div class="thumnail full03">
+            		<ul>
+            			<li class="imb_1"><a href="#" data-img="./img/section/data/chang1.jpg"><span>낙선재 창살의 문양 1번째</span></a></li>
+            			<li class="imb_2"><a href="#" data-img="./img/section/data/chang2.jpg"><span>낙선재 창살의 문양 2번째</span></a></li>
+            			<li class="imb_3"><a href="#" data-img="./img/section/data/chang3.jpg"><span>낙선재 창살의 문양 3번째</span></a></li>
+            			<li class="imb_4"><a href="#" data-img="./img/section/data/chang4.jpg"><span>낙선재 창살의 문양 4번째</span></a></li>
+            			<li class="imb_5"><a href="#" data-img="./img/section/data/chang5.jpg"><span>낙선재 창살의 문양 5번째</span></a></li>
+            			<li class="imb_6"><a href="#" data-img="./img/section/data/chang6.jpg"><span>낙선재 창살의 문양 6번째</span></a></li>
+            			<li class="imb_7"><a href="#" data-img="./img/section/data/chang7.jpg"><span>낙선재 창살의 문양 7번째</span></a></li>
+            			<li class="imb_8"><a href="#" data-img="./img/section/data/chang8.jpg"><span>낙선재 창살의 문양 8번째</span></a></li>
+            			<li class="imb_9"><a href="#" data-img="./img/section/data/chang9.jpg"><span>낙선재 창살의 문양 9번째</span></a></li>
+            			<li class="imb_10"><a href="#" data-img="./img/section/data/chang10.jpg"><span>낙선재 창살의 문양 10번째</span></a></li>
+            		</ul>
+               </div><!--// .full03-->
+               <div class="thumnail full04">
+            		<ul>
+            			<li class="imb_1"><a href="#" data-img="./img/section/info/winter/01.jpg" ><span>창덕궁의 겨울 1번째</span></a></li>
+            			<li class="imb_2"><a href="#" data-img="./img/section/info/winter/02.jpg"><span>창덕궁의 겨울 2번째</span></a></li>
+            			<li class="imb_3"><a href="#" data-img="./img/section/info/winter/03.jpg"><span>창덕궁의 겨울 3번째</span></a></li>
+            			<li class="imb_4"><a href="#" data-img="./img/section/info/winter/04.jpg"><span>창덕궁의 겨울 4번째</span></a></li>
+            			<li class="imb_5"><a href="#" data-img="./img/section/info/winter/05.jpg"><span>창덕궁의 겨울 5번째</span></a></li>
+            		</ul>
+               </div><!--// .full04-->
+               <div class="thumnail full05">
+            		<ul>
+            			<li class="imb_1"><a href="#" data-img="./img/section/info/autumn/01.jpg"><span>창덕궁의 가을 1번째</span></a></li>
+            			<li class="imb_2"><a href="#" data-img="./img/section/info/autumn/02.jpg"><span>창덕궁의 가을 2번째</span></a></li>
+            			<li class="imb_3"><a href="#" data-img="./img/section/info/autumn/03.jpg"><span>창덕궁의 가을 3번째</span></a></li>
+            			<li class="imb_4"><a href="#" data-img="./img/section/info/autumn/04.jpg"><span>창덕궁의 가을 4번째</span></a></li>
+            			<li class="imb_5"><a href="#" data-img="./img/section/info/autumn/05.jpg"><span>창덕궁의 가을 5번째</span></a></li>
+            			<li class="imb_6"><a href="#" data-img="./img/section/info/autumn/06.jpg"><span>창덕궁의 가을 6번째</span></a></li>
+            			<li class="imb_7"><a href="#" data-img="./img/section/info/autumn/07.jpg"><span>창덕궁의 가을 7번째</span></a></li>
+            			<li class="imb_8"><a href="#" data-img="./img/section/info/autumn/08.jpg"><span>창덕궁의 가을 8번째</span></a></li>
+            			<li class="imb_9"><a href="#" data-img="./img/section/info/autumn/09.jpg"><span>창덕궁의 가을 9번째</span></a></li>
+            			<li class="imb_10"><a href="#" data-img="./img/section/info/autumn/10.jpg"><span>창덕궁의 가을 10번째</span></a></li>
+            		</ul>
+               </div><!--// .full05-->
+               <div class="thumnail full06">
+            		<ul>
+            			<li class="imb_1"><a href="#" data-img="./img/section/info/summer/01.jpg"><span>창덕궁의 여름 1번째</span></a></li>
+            			<li class="imb_2"><a href="#" data-img="./img/section/info/summer/02.jpg"><span>창덕궁의 여름 2번째</span></a></li>
+            			<li class="imb_3"><a href="#" data-img="./img/section/info/summer/03.jpg"><span>창덕궁의 여름 3번째</span></a></li>
+            			<li class="imb_4"><a href="#" data-img="./img/section/info/summer/04.jpg"><span>창덕궁의 여름 4번째</span></a></li>
+            			<li class="imb_5"><a href="#" data-img="./img/section/info/summer/05.jpg"><span>창덕궁의 여름 5번째</span></a></li>
+            			<li class="imb_6"><a href="#" data-img="./img/section/info/summer/06.jpg"><span>창덕궁의 여름 6번째</span></a></li>
+            			<li class="imb_7"><a href="#" data-img="./img/section/info/summer/07.jpg"><span>창덕궁의 여름 7번째</span></a></li>
+            			<li class="imb_8"><a href="#" data-img="./img/section/info/summer/08.jpg"><span>창덕궁의 여름 8번째</span></a></li>
+            			<li class="imb_9"><a href="#" data-img="./img/section/info/summer/09.jpg"><span>창덕궁의 여름 9번째</span></a></li>
+            			<li class="imb_10"><a href="#" data-img="./img/section/info/summer/10.jpg"><span>창덕궁의 여름 10번째</span></a></li>
+            		</ul>
+               </div><!--// .full06-->
+               <div class="thumnail full07">
+            		<ul>
+            			<li class="imb_1"><a href="#" data-img="./img/section/info/spring/01.jpg"><span>창덕궁의 봄 1번째</span></a></li>
+            			<li class="imb_2"><a href="#" data-img="./img/section/info/spring/02.jpg"><span>창덕궁의 봄 2번째</span></a></li>
+            			<li class="imb_3"><a href="#" data-img="./img/section/info/spring/03.jpg"><span>창덕궁의 봄 3번째</span></a></li>
+            			<li class="imb_4"><a href="#" data-img="./img/section/info/spring/04.jpg"><span>창덕궁의 봄 4번째</span></a></li>
+            			<li class="imb_5"><a href="#" data-img="./img/section/info/spring/05.jpg"><span>창덕궁의 봄 5번째</span></a></li>
+            			<li class="imb_6"><a href="#" data-img="./img/section/info/spring/06.jpg"><span>창덕궁의 봄 6번째</span></a></li>
+            			<li class="imb_7"><a href="#" data-img="./img/section/info/spring/07.jpg"><span>창덕궁의 봄 7번째</span></a></li>
+
+            		</ul>
+               </div><!--// .full07-->
+               <div class="thumnail full08">
+            		<ul>
+            			<li class="imb_1"><a href="#" data-img="./img/section/data/seol1.jpg" ><span>입춘설경 1번째</span></a></li>
+            			<li class="imb_2"><a href="#" data-img="./img/section/data/seol2.jpg"><span>입춘설경 2번째</span></a></li>
+            		</ul>
+               </div><!--// .full08-->
+
+            </div><!--// #full_image-->
+
+           
+           
+<!--발간 자료-->
+            <article id="article03Wrap">
+            <div id="article03" class="clearfix">
+              <div id="article03_1">
+                <h2>가이드 북 다운로드</h2>
+                <span class="subject">가이드 북 다운로드</span>
+                <span class="bar"></span>
+    <div class="book_wrap">
+        <ul class="guidebook">
+          <li class="bookimg"><a href="http://www.cdg.go.kr/Upload/cdg_guide_book_ko.zip" target="_blank">
+          <span>한국어 가이드 <i class="fa fa-download" aria-hidden="true"></i></span></a></li>
+        </ul>
+        <ul class="guidebook">
+          <li class="bookimg"><a href="http://www.cdg.go.kr/Upload/cdg_guide_book_eng.zip" target="_blank"><span>English Guide <i class="fa fa-download" aria-hidden="true"></i></span></a></li>
+        </ul>
+        <ul class="guidebook">
+          <li class="bookimg"><a href="http://www.cdg.go.kr/Upload/cdg_guide_book_jp.zip" target="_blank"><span>Japanese Guide <i class="fa fa-download" aria-hidden="true"></i></span></a></li>
+        </ul>
+        <ul class="guidebook">
+          <li class="bookimg"><a href="http://www.cdg.go.kr/Upload/cdg_guide_book_ch.zip" target="_blank"><span>Chinese Guide <i class="fa fa-download" aria-hidden="true"></i></span></a></li>
+        </ul>
+    </div>
+            </div><!--// #article03_1-->
+              <div id="article03_2">
+                <h2>발간 자료</h2>
+                <span class="subject">발간 자료</span>
+                <span class="bar"></span>
+                <div><a href="http://www.cha.go.kr/cop/bbs/selectBoardList.do?bbsId=BBSMSTR_1021&searchUseYn=Y&mn=NS_03_07_01&pageUnit=10&viewType=&schDirect=&searchCnd=title&searchWrd=%EC%B0%BD%EB%8D%95%EA%B6%81&ctgryLrcls=&ntcStartDt=&ntcEndDt=&searchYear=&x=0&y=0" target="_blank">발간자료 <i class="fa fa-angle-right" aria-hidden="true"><!--화살표--></i></a></div>
+            </div><!--// #article03_2-->
+            </div>
+            </article>
+
+  
+           
+
+<!--행정 정보-->
+  <article id="article04Wrap">
+    <div id="article04">
+   <h2>행정 정보</h2>
+                <span class="subject">행정 정보</span>
+                <span class="bar"></span>
+        <table class="officedata">
+            <caption>행정 정보</caption>
+          <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>등록일</th>
+            </tr>
+          </thead>
+          <tbody>
+                <tr>
+                    <td>25</td>
+                    <td><a href="#">2016년 4월 업무추진비 사용내역</a></td>
+                    <td>2016-04-30</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td><a href="#">2016년 3월 업무추진비 사용 내역</a></td>
+                    <td>2016-04-30</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td><a href="#">2016년 1월 업무추진비 사용내역</a></td>
+                    <td>2016-04-30</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td><a href="#">관람코스별 안내설명</a></td>
+                    <td>2016-04-30</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td><a href="#">신선원전(新璿源殿)</a></td>
+                    <td>2016-04-30</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td><a href="#">1800년대 궁중의 日常食</a></td>
+                    <td>2016-04-30</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td><a href="#">조선왕조실록 일람표</a></td>
+                    <td>2016-04-30</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td><a href="#">낙선재 마지막 황실 가족 이야기</a></td>
+                    <td>2016-04-30</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td><a href="#">조선시대 전문직 여성인 궁녀</a></td>
+                    <td>2016-04-30</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td><a href="#">조선시대 궐외각사</a></td>
+                    <td>2016-04-30</td>
+                </tr>
+          </tbody>                    
+        </table>
+        <div class="page">
+         <button class="firstpage">처음 페이지</button>
+          <ul>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+          </ul>
+         <button class="nextpage">다음 페이지</button>
+        </div>
+    </div><!--// #article04-->
+  </article><!--// #article04Wrap-->
+  
+  
+<!--조직 및 연락처-->
+  <article id="article05Wrap">
+    <div id="article05">
+       <h2>조직 및 연락처</h2>
+                <span class="subject">조직 및 연락처</span>
+                <span class="bar"></span>
+        <table class="data_table">
+            <caption class="heritage_table">조직 및 연락처</caption>
+          <thead>
+            <tr>
+                <th>구분</th>
+                <th>성명</th>
+                <th>담당업무</th>
+                <th>전화번호</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>소장</td>
+              <td>이유범</td>
+              <td class="l_align">- 관리소 업무 총괄</td>
+              <td>02-3668-2331</td>
+            </tr>
+            <tr>
+              <td>과장</td>
+                <td>조규형</td>
+                <td class="l_align">- 궁궐관리 및 관람운영 총괄</td>
+                <td>02-3668-2333</td>
+            </tr>
+            
+  <!--운영관리-->
+            <tr>
+              <td rowspan="7">운영관리</td>
+                <td>김종필</td>
+                <td class="l_align">
+                  - 조직관리<br />
+                  - 인사, 민원 및 정보공개<br />
+                  - 성과관리 및 행사 관리·운영 <br />
+                  - 주요업무 현황 및 통계자료 작성
+                </td>
+                <td>02-3668-2333</td>
+            </tr>
+            <tr>
+                <td>김진숙</td>
+                <td class="l_align">
+                  - 문화재 해설 운영 및 VIP 의전<br />
+                  - 홍보 업무 및 행사 운영<br />
+                  - 궁궐 자료실 관리
+                </td>
+                <td>02-3668-2334</td>
+            </tr>
+            <tr>
+                <td>조인순</td>
+                <td class="l_align">
+                  - 회계업무 총괄<br />
+                  - 세출예산 관리·운영 및 세부사업담당<br />
+                  - 예산편성, 결산업무<br />
+                  - 반부패·청렴업무
+                </td>
+                <td>02-3668-2336</td>
+            </tr>
+            <tr>
+                <td>전회윤</td>
+                <td class="l_align">
+                  - 관서운영경비출납<br />
+                  - 직원 연금 및 보험 업무<br />
+                  - 물품출납관리
+                </td>
+                <td>02-3668-2337</td>
+            </tr>
+            <tr>
+                <td>홍계영</td>
+                <td class="l_align">
+                  - 매수표 관리 및 세입업무<br />
+                  - 장소사용 및 촬영 허가<br />
+                  - 개인정보보호<br />
+                  - 홈페이지 관리
+                </td>
+                <td>02-3668-2338</td>
+            </tr>
+            <tr>
+                <td>이윤정</td>
+                <td class="l_align">
+                  - 서무, 교육, 보안, 복무관리<br />
+                  - 기록물 관리
+                </td>
+                <td>02-3668-2335</td>
+            </tr>
+            <tr>
+                <td>백지현</td>
+                <td class="l_align">
+                  - 온라인(SNS) 홍보<br />
+                  - 청소년 단체관람 접수 및 관리<br />
+                  - 행정지원
+                </td>
+                <td>02-3668-2339</td>
+            </tr>
+  <!--시설관리-->
+            <tr>
+              <td rowspan="4">시설관리</td>
+              <td>노영석</td>
+              <td class="l_align">
+                - 조경 및 시설물 활용 및 정비계획 수립<br />
+                - 천연기념물 및 .국유재산 관리<br />
+                - 한문화재 한지킴이 사업 지원 관리
+              </td>
+              <td>02-3668-2342</td>
+            </tr>
+            <tr>
+              <td>정영백</td>
+              <td class="l_align">
+                - 시설 관리반 운영 및 시설물 경상관리<br />
+                - 조경 및 수질관리<br />
+                - 자원봉사자 관리운영<br />
+                - 자체 주관행사 지원업무
+              </td>
+              <td>02-3668-2343</td>
+            </tr>
+            <tr>
+              <td>심종헌</td>
+              <td class="l_align">
+                - 고건물 및 시설물 유지 보수<br />
+                - 유물관리 및 보수<br />
+                - 편의시설 관리 및 정비
+              </td>
+              <td>02-3668-2344</td>
+            </tr>
+            <tr>
+              <td>정규철</td>
+              <td class="l_align">
+                - 전기·통신 및 종합경비시스템(CCTV)유지관리<br />
+                - 소방시설 관리 및 에너지 관리<br />
+                - 경내 야간행사 지원
+              </td>
+              <td>02-3668-2345</td>
+            </tr>
+  <!--안전관리-->
+            <tr>
+              <td rowspan="3">안전관리</td>
+              <td>이상기</td>
+              <td rowspan="3" class="l_align">
+                - 안전관리, 순찰 및 관람서비스 지원<br />
+                - 관람편의시설 관리(유모차, 휠체어, 물품대여소 등)<br />
+                - 촬영 등 경내행사 현장수행<br />
+                - 차량 및 출입자 통제 업무
+              </td>
+              <td rowspan="3">02-3668-2350~1</td>
+            </tr>
+            <tr>
+              <td>
+                장영길<br />
+                윤성일<br />
+                안대섭<br />
+                박기갑<br />
+                김형우
+              </td>
+            </tr>
+            <tr>
+              <td>
+                오성훈<br />
+                임성현<br />
+                김근용<br />
+                고 훈<br />
+                정안수<br />
+                김주환<br />
+                고재철<br />
+                기민욱
+              </td>
+            </tr>
+            <tr>
+              <td>영어 해설</td>
+              <td>
+                윤옥경<br />
+                조준식<br />
+                김지완<br />
+                김상희<br />
+                이현준<br />
+                김유정<br />
+                홍은종
+              </td>
+              <td rowspan="3" class="l_align">- 문화재 해설 및 안내, 외국어 통·번역</td>
+              <td>
+                02-3668-2315<br />
+                02-3668-2317<br />
+                02-3668-2317<br />
+                02-3668-2318<br />
+                02-3668-2320<br />
+                02-3668-2323<br />
+                02-3668-2324
+              </td>
+            </tr>
+            <tr>
+              <td>일본어 해설</td>
+              <td>
+                김민정<br />
+                정화영<br />
+                성현희<br />
+                강은정<br />
+                김해란
+              </td>
+              <td>
+                02-3668-2313<br />
+                02-3668-2318<br />
+                02-3668-2320<br />
+                02-3668-2321<br />
+                02-3668-2323
+              </td>
+            </tr>
+            <tr>
+              <td>중국어 해설</td>
+              <td>
+                천대중<br />
+                방시레<br />
+                이지연
+              </td>
+              <td>
+                02-3668-2311<br />
+                02-3668-2312<br />
+                02-3668-2313
+              </td>
+            </tr>
+          </tbody>                    
+        </table>
+    </div><!--// #article05-->
+  </article><!--// #article05Wrap-->
+            
+        </section>
+      
+<!-- footer -->
+      <div id="footerWrap">
+        <footer id="footer">
+            <h2>창덕궁 정보</h2>
+            <div id="footerMenubarWrap">
+            <div class="footer_menubar">
+            <h3>개인정보처리방침 및 침해신고센터</h3>
+            <ul class="footer_menu">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><span class="menu_sidebar"><!-- sidebar --></span></li>
+                <li><a href="#">개인정보침해신고센터</a></li>
+            </ul>
+            <form action="*" method="get">
+                <fieldset class="family">
+                    <legend>패밀리사이트</legend>
+                   <label for="familysite"> <select name="familysite" id="familysite">
+                        <option value="http://www.cha.go.kr/">문화재청</option>
+                        <option value="http://m.epeople.go.kr/main/main.jsp">국민신문고</option>
+                        <option value="http://www.heritagechannel.tv/">문화유산채널</option>
+                    </select></label>
+                    <button type="button" name="go" value="go">GO</button>
+                </fieldset>
+            </form>
+            </div>
+            </div>
+            <div class="footer_etc">
+            <h3>창덕궁 위치</h3>
+            <ul class="footer_logo">
+                <li class="cdg_logo"><span class="me_hidden">문화재청 창덕궁</span></li>
+                <li class="unesco"><span class="me_hidden">세계문화유산</span></li>
+            </ul>
+            <ul class="address">
+                <li class="add">
+                (우)03072 서울특별시 종로구 율곡로 99번지<br />
+                TEL. 02-3668-2300	FAX. 02-762-2070</li>
+                <li class="copy">COPYRIGHT 2004-2016 문화재청 창덕궁 관리소. ALL RIGHTS RESERVED.</li>
+            </ul>
+              <div class="foot_link">
+              <ul class="link_btn">
+                  <li><a href="https://www.e-minwon.go.kr/webs/menu.jsp?menu_id=civl02" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i><span class="me_hidden">mail</span></a></li>
+                  <li><a href="https://twitter.com/changdeok11" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><span class="me_hidden">twitter</span></a></li>
+              </ul>
+              <form action="*" method="get">
+                  <fieldset class="language">
+                      <legend>language</legend>
+                          <label for="language_select"><select class="language_select" name="language_select" id="language_select">
+                              <option value="Language">Language</option>
+                              <option value="English">English</option>
+                              <option value="한국어">한국어</option>
+                              <option value="일본어">日本語</option>
+                          </select></label>
+                          <button type="button" name="go" value="go">GO</button>
+                  </fieldset>
+              </form>
+              </div>
+            </div>            
+        </footer>
+      </div><!--// #footerWrap-->
+    </div><!--// #container-->
+
+</body>
+</html>

@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>여행스케치 :: </title>
+    <!--[if lte IE 9]>
+        
+    <![endif]-->
+    <link rel="stylesheet" href="./css/lib/reset.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <script src="./js/jquery/jquery-1.12.3.min.js"></script>
+    <script src="./js/jquery/jquery-migrate-1.3.0.min.js"></script>
+    <script src="./js/jquery/jquery-ui.min.js"></script>
+    <script src="./js/topPopup.js"></script>
+    <script src="./js/indi.js"></script>
+    <script src="./js/autoslide.js"></script>
+    <script src="./js/autoslide2.js"></script>
+    <script src="./js/slidebanner.js"></script>
+    <style></style>
+    <script>
+      $(document).ready(function(){
+        topPopup();
+        indi( $('.indi'), $('.recommend_box') );
+        autoslide( $('#bannerWrap') , '#bannerWrap', 'li');
+        autoslide2( $('#bannerListWrap') , '#bannerListWrap', 'ul');
+        slidebanner( $('.jehyubox') );
+//메뉴 펼치기
+        var gnb = $('#gnb'),
+            gnbNav = $('#gnbWrap').find('li');
+        var navMenu = $('#gnb_nav');
+        gnbNav.on('mouseenter',function(){
+          navMenu.stop().slideDown();
+          });
+        gnb.on('mouseleave',function(){
+          navMenu.stop().slideUp();
+        });
+// indi버튼색
+          var $info_btn = $('.indi').find('li');
+              $info_btn.on('click', function(e){
+                e.preventDefault();
+                var $this = $(this),
+                    index_i = $(this).index();
+                    $this.addClass('select_box').siblings().removeClass('select_box');
+          });
+
+      });
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <header id="header">
+      <div id="h_top_wrap">
+           <div id="h_top">
+            <div id="h_banner" class="me_link">
+              <a href="#"><span class="me_link">happy 700 평창 행복여행 (올림픽시장 상품권, 장바구니 제공)</span></a>
+            </div>
+              <button type="button" aria-label="닫기">×</button>        
+          </div><!--// #h_top-->
+        </div><!--// #h_top_wrap-->
+        <div id="h_menu">
+        <div id="h_menuWrap">
+            <h3>좌측메뉴</h3>
+            <ul id="h_menu_left" class="me_link">
+                <li class="h_menu01"><a href="./index.html" ><i class="fa fa-home" aria-hidden="true"></i>메인으로</a></li>
+                <li class="h_menu_bar"><span><!--메뉴구분바--></span></li>
+                <li class="h_menu02"><a href="#"><i class="fa fa-comments" aria-hidden="true"></i>커뮤니티</a></li>
+                <li class="h_menu_bar"><span><!--메뉴구분바--></span></li>
+                <li class="h_menu03"><a href="#"><i class="fa fa-camera-retro" aria-hidden="true"></i>기획전모음</a></li>
+            </ul>
+            <h3>우측메뉴</h3>
+            <ul id="h_menu_right" class="me_link">
+                <li class="h_menu04"><a href=",">로그인</a></li>
+                <li class="h_menu_bar"><span><!--메뉴구분바--></span></li>
+                <li class="h_menu05"><a href="./join1.html">회원가입</a></li>
+                <li class="h_menu_bar"><span><!--메뉴구분바--></span></li>
+                <li class="h_menu06"><a href="#">예약결제</a></li>
+                <li class="h_menu_bar"><span><!--메뉴구분바--></span></li>
+                <li class="h_menu07 lastbox"><a href="#">고객센터</a></li>
+            </ul>
+        </div><!--// #h_menuWrap-->
+        </div><!--// #h_menu-->
+        <div id="gnb">
+           <h2>메인메뉴</h2>
+           <div id="gnbWrap">
+            <h1 id="logo" class="me_link"><a href="index.html" title="메인으로">로고</a></h1>
+            <ul id="gnb_menu" class="me_link">
+                <li class="menu_01"><a href="#" title="지자체지원">지자체지원</a></li>
+                <li class="menu_02"><a href="#" title="시즌여행">시즌여행</a></li>
+                <li class="menu_03"><a href="#" title="버스여행">버스여행</a></li>
+                <li class="menu_04"><a href="#" title="기차여행">기차여행</a></li>
+                <li class="menu_05"><a href="#" title="섬여행">섬여행</a></li>
+                <li class="menu_06"><a href="#" title="지방출발">지방출발</a></li>
+                <li class="menu_07"><a href="#" title="제주도여행"><i class="fa fa-heart" aria-hidden="true"></i>제주도여행</a></li>
+            </ul>        
+            </div><!--// #gnbWrap-->
+            <div id="gnb_nav">
+              <ul class="nav01"><!--지자체 지원-->
+                <li><a href="./sublist.html">강원권 지원</a></li>
+                <li><a href="./sublist.html">충청권 지원</a></li>
+                <li><a href="./sublist.html">경상권 지원</a></li>
+                <li><a href="./sublist.html">전라권 지원</a></li>
+                <li><a href="./sublist.html">수도권 지원</a></li>
+              </ul>
+              <ul class="nav02"><!-- 시즌여행 -->
+                <li><a href="./sublist.html">강원권 여행</a></li>
+                <li><a href="./sublist.html">충청권 여행</a></li>
+                <li><a href="./sublist.html">경상권 여행</a></li>
+                <li><a href="./sublist.html">전라권 여행</a></li>
+                <li><a href="./sublist.html">수도권 여행</a></li>
+              </ul>
+              <ul class="nav03"><!-- 버스여행 -->
+                <li><a href="#">이달의 베스트</a></li>
+                <li><a href="#">축제여행</a></li>
+                <li><a href="#">연중 출발(스테디셀러)</a></li>
+                <li><a href="#">주중출발</a></li>
+              </ul>
+             <ul class="nav04"><!--기차여행 -->
+                <li><a href="#">당일 기차여행</a></li>
+                <li><a href="#">무박 기차여행</a></li>
+                <li><a href="#">숙박 기차여행</a></li>
+                <li><a href="#">O/V/S TRAIN</a></li>
+              </ul>
+              <ul class="nav05"><!-- 섬여행 -->
+                <li><a href="#">울릉도/독도</a></li>
+                <li><a href="#">홍도/흑산도</a></li>
+                <li><a href="#">거문도/백도</a></li>
+                <li><a href="#">백령도/대청도</a></li>
+              </ul>
+              <ul class="nav06"><!-- 지방출발 -->
+                <li><a href="#">부산/울산 출발</a></li>
+                <li><a href="#">광주/전주 출발</a></li>
+                <li><a href="#">대전 출발</a></li>
+                <li><a href="#">대구 출발</a></li>
+              </ul>
+            </div>
+            </div><!--// #gnb-->
+        </header><!--// #header-->
+   <nav id="sidenav">
+      <ul class="me_link">
+         <li><a href=""><span>호텔예약</span></a></li>
+         <li><a href=""><span>펜션예약</span></a></li>
+         <li><a href=""><span>할인티켓</span></a></li>
+         <li><a href="#"><span>맨 위로 가기</span></a></li>
+      </ul>
+   </nav>
+    
+<!--    배너 -->
+    <section id="banner">
+       <h2>배너 버튼</h2>
+        <div class="nav_btn l_btn">
+            <a href role="button"><span>왼쪽버튼</span></a>
+        </div>
+        <div class="nav_btn r_btn">
+            <a href role="button"><span>오른쪽버튼</span></a>
+        </div>
+        <ul id="bannerWrap">
+        <li class="banner1">#온가족 행복여행</li>
+        <li class="banner2">#베스트 인기여행!</li>
+        <li class="banner3">#여행은 먹방여행</li>
+        </ul><!--// #bannerWrap-->
+        <div id="bannerBar">
+           <article id="bannerListWrap">
+           <h2>배너 리스트</h2>
+            <ul class="banner_list1">
+                <li><a href="./reservation.html">묵호
+                   <span class="text">
+                   <strong>[묵호]</strong><br />
+                   묵호항 &amp; 안목커피거리 기차여행<br />
+                   <strong class="redbig">65,000원~</strong>
+                   </span>
+                </a></li>
+                <li><a href="./reservation.html">전주
+                   <span class="text">
+                   <strong>[전주]</strong><br />
+                   G-Train타고 떠나는 군산 &amp; 전주 한옥마을<br />
+                   <strong class="redbig">69,000원~</strong>
+                   </span>
+                </a></li>
+                <li><a href="./reservation.html">강원
+                   <span class="text">
+                   <strong>[강원 BIG3]</strong><br />
+                   오대산, 설악산 &amp; 동해바다열차 &amp; 양떼목장<br />
+                   <strong class="redbig">167,000원~</strong>
+                   </span>
+                </a></li>
+                <li><a href="./reservation.html">해운대
+                   <span class="text">
+                   <strong>[해운대]</strong><br />
+                   해운대 &amp; 태종대 &amp; 용궁사<br />
+                   <strong class="redbig">173,000원~</strong>
+                   </span>
+                </a></li>
+                <li><a href="./reservation.html">완도
+                   <span class="text">
+                   <strong>[완도]</strong><br />
+                   시인의 섬 완도 보길도 &amp; 해남땅끝<br />
+                   <strong class="redbig">213,000원~</strong>
+                   </span>
+                </a></li>
+             </ul>
+            <ul class="banner_list2">
+                <li><a href="./reservation.html">삼척
+                   <span class="text">
+                   <strong>[삼척]</strong><br />
+                   장호항 스노클링체험<br />
+                   <strong class="redbig">19,900원~</strong>
+                   </span>
+                </a></li>
+                <li><a href="./reservation.html">양양
+                   <span class="text">
+                   <strong>[양양]</strong><br />
+                   양양~속초~인제 1박2일<br />
+                   <strong class="redbig">89,000원~</strong>
+                   </span>
+                </a></li>
+                <li><a href="./reservation.html">강화
+                   <span class="text">
+                   <strong>[강화]</strong><br />
+                   전등사 &amp; 동막 해수욕장<br />
+                   <strong class="redbig">28,900원</strong>
+                   </span>
+                </a></li>
+                <li><a href="./reservation.html">부여
+                   <span class="text">
+                   <strong>[부여]</strong><br />
+                   서동연꽃축제<br />
+                   <strong class="redbig">24,900원</strong>
+                   </span>
+                </a></li>
+                <li><a href="./reservation.html">영동
+                   <span class="text">
+                   <strong>[영동]</strong><br />
+                   포도축제<br />
+                   <strong class="redbig">14,900원</strong>
+                   </span>
+                </a></li>
+             </ul>
+            <ul class="banner_list3">
+                <li><a href="./reservation.html">충북
+                   <span class="text">
+                   <strong>[충북]</strong><br />
+                   한방버섯전골 &amp; 산채백반 &amp; 농가식<br />
+                   <strong class="redbig">139,900원~</strong>
+                   </span>
+                </a></li>
+                <li><a href="./reservation.html">충남
+                   <span class="text">
+                   <strong>[충남]</strong><br />
+                   산채/회정식 &amp; 해물뚝배기 &amp; 농가식<br />
+                   <strong class="redbig">139,000원~</strong>
+                   </span>
+                </a></li>
+                <li><a href="./reservation.html">강원
+                   <span class="text">
+                   <strong>[강원]</strong><br />
+                   메밀국수 &amp; 해물탕 &amp; 초당순두부백반<br />
+                   <strong class="redbig">159,000원~</strong>
+                   </span>
+                </a></li>
+                <li><a href="./reservation.html">경북
+                   <span class="text">
+                   <strong>[경북]</strong><br />
+                   안동찜닭 &amp; 달기백숙 &amp; 산채백반 &amp; 영덕대게정식<br />
+                   <strong class="redbig">159,000원~</strong>
+                   </span>
+                </a></li>
+                <li><a href="./reservation.html">경남
+                   <span class="text">
+                   <strong>[경남]</strong><br />
+                   비빔밥 &amp; 활어회 &amp; 영양돌솥정식<br />
+                   <strong class="redbig">159,000원~</strong>
+                   </span>
+                </a></li>
+             </ul>
+            </article>
+        </div>
+    </section><!--// #banner-->
+    
+    
+<!--    본문 -->
+<section id="article">
+    <div id="articleWrap" class="me_link">
+           <div id="article_01">
+           <h3>특가여행, 추천여행</h3>
+             <div class="sale"><a href="#">
+             <span>여행스케치와 떠나는 여름여행 베스트 모음</span>
+             </a></div>
+            <div class="recommend">
+              <ul class="recommend_box">
+                <li><a href="#">
+                <strong class="redbox">횡성</strong><br />
+                횡성 당일여행<br />
+                <strong class="green">병지방계곡 &amp; 청태산</strong>
+                </a></li>
+                <li><a href="#">
+                <strong class="redbox">대전</strong><br />
+                계족산 황톳길<br />
+                <strong class="green">대전 전통시장 &amp; 체험여행</strong>
+                </a></li>
+                <li><a href="#">
+                <strong class="redbox">상주★초특가</strong><br />
+                상주 그린투어!<br />
+                <strong class="green">이색체험 &amp; 지역별미 4식</strong>
+                </a></li>
+              </ul>
+              <ul class="indi">
+               <li class="select_box"><a href="#"><!--indigator--></a></li>
+               <li><a href="#"><!--indigator--></a></li>
+               <li><a href="#"><!--indigator--></a></li>
+              </ul>
+            </div>
+       </div>
+       
+       <div id="article_02">
+           <h3>본문2</h3>
+              <div id="art02Wrap" class="me_link">
+                  <span class="subtitle">이달의 <strong class="red">추천여행</strong></span>
+               <ul id="art02_top" class="graybd">
+                   <li class="art02_top1"><a href="./reservation.html">
+                      <span class="covertext">강력추천</span>
+                      <span class="covernar">한국의 <strong class="red">알프스!</strong> 평창 당일여행</span>
+                      <span class="text">
+                      <strong class="redbox">강력추천</strong>
+                      <br />
+                      한국의 알프스! 평창 당일여행
+                      <br />
+                      <strong>5천원 상품권 제공</strong>
+                      <br />
+                      <strong class="redbig">19,900원</strong>
+                      </span>
+                   </a></li>
+                   <li class="art02_top2"><a href="./reservation.html">
+                      <span class="covernar"><strong class="red">담양</strong> 대나무숲 죽녹원</span>
+                      <span class="text">
+                      <strong class="redbox">담양</strong>
+                      <br />
+                      대나무숲 죽녹원과 메타쇄쿼이아길 여행
+                      <br />
+                      <strong>&amp; 한과 만들기 체험</strong>
+                      <br />
+                      <strong class="redbig">35,900원</strong>
+                      </span>
+                   </a></li>
+                   <li class="art02_top3 lastbox"><a href="./reservation.html">
+                      <span class="covernar"><strong class="red">괴산</strong> 산막이옛길 산책원</span>
+                      <span class="text">
+                      <strong class="redbox">괴산</strong>
+                      <br />
+                      산막이옛길 산책과 진천 농다리, 종 박물관 관람
+                      <br />
+                      <strong>&amp; 노루궁뎅이 버섯 체험</strong>
+                      <br />
+                      <strong class="redbig">19,900원</strong>
+                      </span>
+                   </a></li>
+               </ul>
+               <ul id="art02_bottom" class="graybd">
+                   <li class="art02_bottom1"><a href="./reservation.html">
+                      <span class="covernar">작은 유럽 <strong class="red">제이드가든</strong> 산책</span>
+                      <span class="text">
+                      <strong class="redbox">제이드가든</strong>
+                      <br />
+                      작은 유럽 제이드가든 산책과 닭갈비골목 점심
+                      <br />
+                      <strong>&amp; 포도 따기 체험</strong>
+                      <br />
+                      <strong class="redbig">26,900원</strong>
+                      </span>
+                      </a></li>
+                   <li class="art02_bottom2"><a href="./reservation.html">
+                      <span class="covernar"><strong class="red">허브아일랜드</strong>와 산정호수</span>
+                      <span class="text">
+                      <strong class="redbox">포천</strong>
+                      <br />
+                       허브아일랜드와 산정호수 데이트
+                      <br />
+                      <strong>&amp; 한과 만들기 체험</strong>
+                      <br />
+                      <strong class="redbig">26,900원</strong>
+                      </span>
+                   </a></li>
+                   <li class="art02_bottom3 lastbox"><a href="./reservation.html">
+                   <span class="covertext">체험여행</span>
+                      <span class="covernar">시원한 바람과 멋스러움의 절정! <strong class="red">제천힐링!</strong></span>
+                   <span class="text"><strong class="redbox">제천힐링!</strong><br />
+                     월악산 송계계곡, 의림지, 엑스포공원
+                      <br /><strong>&amp; 티테라피체험</strong>
+                      <br />
+                      <strong class="redbig">12,000원</strong>
+                   </span>
+                   </a></li>
+               </ul>
+           </div><!--// #art02Wrap-->
+       </div><!--// #article_02-->
+       <div id="article_03">
+               <h3>본문3</h3>
+           <div id="art03Wrap">
+               <div id="art03_l" class="me_link">
+                  <h4>지자체여행, 시즌여행</h4>
+                  <span class="subtitle">지자체 <strong class="red">지원여행</strong></span>
+                   <ul id="art03_01">
+                       <li class="art03_01">
+                       <a href="./reservation.html">
+                          <span class="textwrap">
+                            <span class="text_title">대전</span>
+                             <small>
+                             계족산 황토길 에코 트레킹과 대전 전통시장 맛 여행
+                             </small><br />
+                             <strong>18,900원</strong>
+                          </span>
+                        </a>
+                       </li>
+                       <li class="art03_02"><a href="./reservation.html">
+                          <span class="textwrap">
+                            <span class="text_title">인제</span>
+                             <small>아름다운 인제 자작나무 숲길과 홍천 수타사 산소길 여행</small><br />
+                             <strong>25,900원</strong>
+                          </span>
+                       </a></li>
+                       <li class="art03_03"><a href="./reservation.html">
+                          <span class="textwrap">
+                            <span class="text_title">설악산</span>
+                             <small>시원한 설악산 주전골계곡과 탁트인 낙산해변 &amp; 속초</small><br />
+                             <strong>25,900원</strong>
+                          </span>
+                       </a></li>
+                       <li class="art03_04"><a href="./reservation.html">
+                          <span class="textwrap">
+                            <span class="text_title">지리산</span>
+                             <small>지리산 뱀사골 休힐링 걷기여행과 실상사 관람</small><br />
+                             <strong>25,900원</strong>
+                          </span>
+                       </a></li>
+                       <li class="art03_05"><a href="./reservation.html">
+                          <span class="textwrap">
+                            <span class="text_title">문경새재</span>
+                             <small>'달빛사랑' 이벤트 &amp; '별이 진다네' 가수 여행스케치 공연</small><br />
+                             <strong>29,900원</strong>
+                          </span>
+                       </a>
+                       </li>
+                   </ul>
+                   <span class="subtitle">계절별 <strong class="green">시즌여행</strong></span>
+                   <ul id="art03_02">
+                       <li class="art03_06"><a href="./reservation.html">
+                          <span class="textwrap">
+                            <span class="text_title">보령</span>
+                             <small>
+                             2016 보령 머드축제와 대천해수욕장 해수욕 즐기기
+                             </small><br />
+                             <strong>14,900원</strong>
+                          </span>
+                          </a></li>
+                       <li class="art03_07"><a href="./reservation.html">
+                          <span class="textwrap">
+                            <span class="text_title">영동</span>
+                             <small>메이빌 영동 포도축제 &amp; 포도 따기, 국악기 배우기 체험</small><br />
+                             <strong>14,900원</strong>
+                          </span>
+                          </a></li>
+                       <li class="art03_08"><a href="./reservation.html">
+                          <span class="textwrap">
+                            <span class="text_title">장호항</span>
+                             <small>장호항 스노클링, 투명카누, 바다 래프팅 &amp; 해수욕</small><br />
+                             <strong>19,900원</strong>
+                          </span>
+                          </a></li>
+                       <li class="art03_09"><a href="./reservation.html">
+                          <span class="textwrap">
+                            <span class="text_title">삼척~동해</span>
+                             <small>삼척~동해로 떠나는 즐거운 여름 바캉스여행</small><br />
+                             <strong>89,000원~</strong>
+                          </span>
+                          </a></li>
+                       <li class="art03_10"><a href="./reservation.html">
+                          <span class="textwrap">
+                            <span class="text_title">포항</span>
+                             <small>포항 국제불빛축제와 즐거운 대구, 영동 이야기 여행</small><br />
+                             <strong>59,000원</strong>
+                          </span>
+                          </a></li>
+                   </ul>
+               </div><!--// #art03_l-->
+               <div id="art03_r">
+                  <h4>광고배너</h4>
+                   <ul id="art03_03" class="graybd">
+                       <li class="art03_bn1"><a href="#">
+                       <span class="up">
+                       SUMMER VACATION
+                       </span>
+                       <span class="down">
+                       여름여행<br />베스트 모음<br />기획전
+                       </span>
+                       </a></li>
+                       <li class="art03_bn2 lastbox"><a href="#">
+                       <span class="up">
+                       지자체 지원으로<br />알찬 여행을
+                       </span>
+                       <span class="down">
+                       알짜배기<br />지원특가 기획전
+                       </span>
+                       </a></li>
+                   </ul>
+               </div><!--// #art03_r-->
+           </div><!--// #art03Wrap-->
+       </div><!--// #article_03-->
+       <div id="article_04">
+           <h3>본문4</h3>
+       <div id="art04Wrap" class="me_link">
+               <dl id="art04_01">
+                   <dt class="subtitle"><strong class="red">공지</strong>사항</dt>
+                   <dd><a href="#">★ 5월 구두이벤트 당첨자 발표 ★</a></dd>
+                   <dd><a href="#">★ 5/6(금) 임시공휴일 휴무안내 ★</a></dd>
+                   <dd><a href="#">4/13(수) 선거일 휴무안내</a></dd>
+                   <dd><a href="#">	2016 개화 예보 소식</a></dd>
+                   <dd><a href="#">[채용] 참신한 국내여행 가이드를 채용합니다.</a></dd>
+                   <dd><a href="#">2/6(토)~2/14(일) 설연휴기간 외 근무가 없는...</a></dd>
+                   <dd><a href="#">2/6(토)~2/14(일) 설연휴기간 외 근무가 없는...</a></dd>
+                   <dd class="last_dd"><a href="#">[신년 해맞이 행사 출발시간 안내]</a></dd>
+               </dl>
+           <ul id="art04_02">
+               <li class="art04_box2_img graybd">
+               <a href="#"><span>여행후기</span></a></li>
+               <li class="art04_box2_txt"><a href="#"><span class="art04_box2_title">진행부엉이 진해벚꽃 축제 잘다녀왔어요!</span>
+               <span class="aftertxt">안녕하세요~~ 7/7 진행 부엉이(6시 30분 부평역 출발)진해벚꽃축제후기 올립니다 전 티몬을 통해서 여행 다녀왔어요~~ 2년 전에 한번 다녀오고나서 간적이 없었는데 그때보다 더 많은 추억을 쌓고 돌아갑니다아아아아아아아아아아아아아아아아아ㅏ아아아아아...</span></a></li>
+           </ul>
+           <ul id="art04_03" class="graybd">
+               <li class="art04_box3_1"><a href="#"><span class="g_text">영화/드라마 촬영소</span><span class="icon"><!--icon--></span></a></li>
+               <li class="art04_box3_2"><a href="#"><span class="g_text">가이드의 여행수첩</span><span class="icon"><!--icon--></span></a></li>
+               <li class="art04_box3_3"><a href="#"><span class="g_text">가이드 소개</span><span class="icon"><!--icon--></span></a></li>
+           </ul>
+        </div><!--// #art04Wrap-->
+       </div><!--// #article_04-->
+       <div id="article_05">
+           <h3>본문5</h3>
+        <div id="art05Wrap" class="me_link">
+           <ul id="art05_01">
+               <li class="art05_01"><i class="fa fa-phone" aria-hidden="true"></i>고객상담센터</li>
+               <li class="art05_02"><span class="tel">02-701-2506</span></li>
+               <li class="art05_03">평일</li>
+               <li class="art05_04">09시~18시 (주말, 공휴일 휴무)</li>
+           </ul>
+           <ul id="art05_02">
+               <li class="art05_01"><i class="fa fa-credit-card" aria-hidden="true"></i>입금계좌</li>
+               <li class="art05_02"><span class="money">123456-12-123456</span></li>
+               <li class="art05_03">KB 국민은행</li>
+               <li class="art05_04">㈜여행스케치여행사</li>
+           </ul>
+           <ul id="art05_03">
+               <li class="art05_05"><a href="#"><i class="fa fa-calendar-check-o" aria-hidden="true"></i><span>예약확인</span></a></li>
+               <li class="art05_06"><a href="#"><i class="fa fa-credit-card" aria-hidden="true"></i><span>환불규정</span></a></li>
+               <li class="art05_07"><a href="#"><i class="fa fa-book" aria-hidden="true"></i><span>여행자보험</span></a></li>
+           </ul>
+        </div><!--// #art05Wrap-->
+       </div><!--// #article_05-->
+       <div id="article_06">
+       <div id="art06Wrap">
+           <h3>본문6</h3>
+           <span>여행스케치 제휴사</span>
+           <div class="jehyu_btn_left jehyu_btn"><button aria-label="제휴사 왼버튼">&lt;</button></div>
+            <div class="jehyubox">
+             <ul id="jehyuImg">
+                 <li class="jehyu_01"><a href="#"><span>제휴사</span></a></li>
+                 <li class="jehyu_02"><a href="#"><span>제휴사</span></a></li>
+                 <li class="jehyu_03"><a href="#"><span>전라북도</span></a></li>
+                 <li class="jehyu_04"><a href="#"><span>충청북도</span></a></li>
+                 <li class="jehyu_05"><a href="#"><span>KB국민은행</span></a></li>
+                 <li class="jehyu_06"><a href="#"><span>KEB은행</span></a></li>
+                 <li class="jehyu_07"><a href="#"><span>삼성</span></a></li>
+             </ul>
+            </div>
+           <div class="jehyu_btn_right jehyu_btn"><button aria-label="제휴사 오른버튼">&gt;</button></div>
+       </div><!--// #art06Wrap-->
+       </div><!--// #article_06-->
+    </div><!--// #articleWrap-->
+    </section><!--// #article-->
+       
+<!--    푸터   -->
+<footer id="footer">
+        <h3>회사정보</h3>
+    <div id="ftWrapBar">
+        <div id="ftBar">
+            <ul id="ftmenu">
+                <li class="ftmenu_01"><a href="#">회사소개</a></li>
+                <li class="ftmenu_bar"><span><!--구분바--></span></li>
+                <li class="ftmenu_02"><a href="#">찾아오시는길</a></li>
+                <li class="ftmenu_bar"><span><!--구분바--></span></li>
+                <li class="ftmenu_03"><a href="#">출발장소</a></li>
+                <li class="ftmenu_bar"><span><!--구분바--></span></li>
+                <li class="ftmenu_04"><a href="#">여행약관</a></li>
+                <li class="ftmenu_bar"><span><!--구분바--></span></li>
+                <li class="ftmenu_05"><a href="#">개인정보취급방침</a></li>
+                <li class="ftmenu_bar"><span><!--구분바--></span></li>
+                <li class="ftmenu_06 lastbox"><a href="#">이용약관</a></li>
+            </ul>
+            <span><a href="#">사업자정보확인</a></span>
+        </div>
+        </div><!--// #ftWrapBar-->
+            <div id="ftFooterWrap">
+                <ul id="ft_footer">
+                    <li class="ft_add">
+                    <address>서울특별시 용산구 원효로 259-1 (원효로1가,화일빌딩4층) <strong>(주)여행스케치여행사</strong><br />
+                    대표전화 : (02)701-2506 , 팩스번호 : (02)701-2508 , E-mail : tourno1@toursketch.co.kr , 대표이사 : 박영규<br />
+                    사업자등록번호 : 106-86-83583 , 법인등록번호 : 110111-4760636 , 통신판매업신고 : 제 2012-서울용산-0042호<br />
+                    개인정보책임담당자 : 지근종</address>
+                    </li>
+                    <li class="copy">
+                    Copyrightⓒ2005-2010 (주)여행스케치여행사. All rights Reserved.
+                    </li>
+                </ul>
+                <ul id="ft_sns">
+                    <li class="blog"><a href="http://blog.naver.com/toursketch__" target="_blank" title="네이버 블로그"><span>네이버 블로그</span></a></li>
+                    <li class="kakao"><a href="http://www.toursketch.co.kr/comty01.html?bmode=read&bid=notice&id_no=108974&l=1" target="_blank" title="카카오톡"><span>카카오톡</span></a></li>
+                    <li class="kas"><a href="https://story.kakao.com/ch/toursketch" target="_blank" title="카카오스토리"><span>카카오스토리</span></a></li>
+                </ul>
+            </div>
+    </footer><!--// #footer-->
+</div><!--// #wrap-->
+</body>
+</html>

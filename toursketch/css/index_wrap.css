@@ -1,0 +1,9 @@
+/* index_wrap.css */
+
+#wrap{width: 100%; height: auto;}
+header,section{margin: 0 auto;}
+
+div>ul>li.lastbox{margin-right: 0;}
+strong.red{color:#e40; font-weight:bold;}
+strong.green{color:#090; font-weight:bold;}
+span.subtitle{width: 100%; height: 100%; font-size:1.3rem; font-weight: bold;}

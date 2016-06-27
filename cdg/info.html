@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="favicon.png" />
+    <link rel="stylesheet" href="./css/lib/reset.css" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css" />
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/info_all.css" />
+    <link rel="stylesheet" href="./css/s_nav.css" />
+    
+    <!--[if lte IE 9]>
+    <script src="./js/dist/html5shiv.min.js"></script>
+    <script src="./js/dist/ie9.min.js"></script>
+    <script src="./js/dist/PIE.js"></script>
+    <script src="./js/dist/responsive.min.js"></script>
+        <![endif]-->
+
+    <script src="./js/jquery/jquery-1.12.3.min.js"></script>
+    <script src="./js/jquery/jquery-migrate-1.3.0.min.js"></script>
+    <script src="./js/jquery/jquery-ui.min.js"></script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/sidenav.js"></script>
+    <script src="./js/season.js"></script>
+    <script src="./js/btnchange.js"></script>
+
+   
+    <title>창덕궁 - 세계문화유산</title>
+    <style>
+        @import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+    </style>
+        <script>
+        $(function(){
+          nav();
+          sidenav();
+          season();
+          btnchange($('.btn_box'), $('.table_wrap'));
+
+// 관람코스 메모 효과
+            var memo = $('#memo'),
+                up_btn = memo.find('.fa'),
+                $this = $(this);
+            up_btn.on('click', function(e){
+                e.preventDefault();
+                memo.toggleClass('long');
+                memo.find('a').toggleClass('fa-angle-down')
+            });
+
+            var mapBtn = $('.minimap_nav').find('a');
+            
+            mapBtn.on('click', function(e){
+                e.preventDefault();
+            var memo_title = $('.memo_nav').children('span'),
+                memo_content = $('.memo_nav').next('p'),
+                bgimg = $(this).attr('data-img');
+                
+                $('.course_bg').css({'background-image': bgimg});
+                memo_title.text($(this).attr('data-title'));
+                memo_content.text($(this).attr('data-txt'));
+                memo.removeClass('long');
+                memo.find('a').removeClass('fa-angle-down');
+            });
+    var winW1 = $(window).width();
+    $(window).on('resize', function(){
+      if(winW1 != $(window).width()){
+      location.reload(); //새로고침
+      };
+    });
+        });
+    </script>
+</head>
+<body>
+
+    <div id="container">
+<!-- header -->
+     <div id="headerWrap">
+        <header id="header">
+        <h1 class="me_link"><a href="index.html" title="창덕궁"><span>문화재청 창덕궁</span></a></h1>
+        <nav id="gnb">
+           <h2>메인 메뉴</h2>
+            <ul>
+                <li><a href="story.html" target="_self">창덕궁 이야기</a></li>
+                <li><a href="info.html" target="_self">관람 안내</a></li>
+                <li><a href="reservation.html" target="_self">관람 예약</a></li>
+                <li><a href="community.html" target="_self">참여 공간</a></li>
+                <li><a href="data.html" target="_self">자료실</a></li>
+            </ul>
+        </nav>
+            <div id="menu"><a href="#" class="fa fa-bars" aria-hidden="true"><span>메뉴버튼</span></a></div>
+        </header>
+<!--클릭시 나오는 메뉴-->
+            <div id="submenuWrap">
+               <div id="submenu">
+                <dl>
+                   <dt>창덕궁 이야기</dt>
+                    <dd><span><!--구분바--></span></dd>
+                    <dd><a href="story.html#article01Wrap">창덕궁 인사말</a></dd>
+                    <dd><a href="story.html#article02Wrap">세계유산 창덕궁</a></dd>
+                    <dd><a href="story.html#article03Wrap">창덕궁 소개</a></dd>
+                    <dd><a href="story.html#article04Wrap">창덕궁 역사</a></dd>
+                    <dd><a href="story.html#article05Wrap">창덕궁 위치</a></dd>
+                </dl>
+                <dl>
+                   <dt>관람 안내</dt>
+                    <dd><span><!--구분바--></span></dd>
+                    <dd><a href="info.html#article01Wrap" target="_self">관람 코스</a></dd>
+                    <dd><a href="info.html#article02Wrap">창덕궁 사계</a></dd>
+                    <dd><a href="info.html#article03Wrap">관람 시간 및 요금</a></dd>
+                    <dd><a href="info.html#article04Wrap">관람객 권리·협조사항</a></dd>
+                    <dd><a href="info.html#article05Wrap">편의시설 안내</a></dd>
+                </dl>
+                <dl>
+                   <dt>관람 예약</dt>
+                    <dd><span><!--구분바--></span></dd>
+                    <dd><a href="reservation.html">후원관람예약</a></dd>
+                    <dd><a href="reservation.html">청소년 단체관람 신청</a></dd>
+                    <dd><a href="reservation.html">장소사용 및 촬영허가</a></dd>
+                    <dd><a href="reservation.html">청소년 문화학교</a></dd>
+                    <dd><a href="reservation.html">달빛기행</a></dd>
+                </dl>
+                <dl>
+                   <dt>참여 공간</dt>
+                    <dd><span><!--구분바--></span></dd>
+                    <dd><a href="community.html">공지사항</a></dd>
+                    <dd><a href="community.html">자주묻는 질문</a></dd>
+                    <dd><a href="community.html">교육행사 이모저모</a></dd>
+                    <dd><a href="community.html">전자민원</a></dd>
+                </dl>
+                <dl>
+                   <dt>자료실</dt>
+                    <dd><span><!--구분바--></span></dd>
+                    <dd><a href="data.html#article01Wrap">궁궐소개</a></dd>
+                    <dd><a href="data.html#article02Wrap">사진 및 동영상</a></dd>
+                    <dd><a href="data.html#article03Wrap">가이드북 다운로드</a></dd>
+                    <dd><a href="data.html#article03Wrap">발간자료</a></dd>
+                    <dd><a href="data.html#article04Wrap">행정정보</a></dd>
+                    <dd><a href="data.html#article05Wrap">조직 및 연락처</a></dd>
+                </dl>
+                </div><!--// #submenu-->
+            </div><!--// #submenuWrap-->
+        </div><!--// #headerWrap-->
+        
+    <div id="side_button">
+        <ul>
+
+        </ul>
+    </div><!--// #side_button-->
+    
+    
+<section id="sectionWrap">
+<h2>창덕궁 소개</h2>
+<article id="article01Wrap">
+    <div class="course_bg">
+<div id="article01">
+  <h2>관람 코스</h2>    
+    <div id="memo">
+       <div class="memo_nav">
+        <span>돈화문 (敦化門)</span>
+        <ul>
+            <li><a href="#" class="fa fa-angle-up"><!--위로--></a></li>
+        </ul>
+    </div>
+        <p>창덕궁의 정문인 돈화문은 1412년(태종 12)에 건립되었다. 창건 당시 창덕궁 앞에는 종묘가 자리 잡고 있어 궁의 진입로를 궁궐의 서쪽에 세웠다. 2층 누각형 목조건물로 궁궐 대문 가운데 가장 큰 규모이며, 앞에 넓은 월대를 두어 궁궐 정문의 위엄을 갖추었다.
+돈화문은 왕의 행차와 같은 의례가 있을 때 출입문으로 사용했고, 신하들은 서쪽의 금호문으로 드나들었다. 원래 돈화문 2층 누각에는 종과 북을 매달아 통행 금지 시간에는 종을 울리고 해제 시간에는 북을 쳤다고 한다. 돈화문은 임진왜란 때 전소되었다가 광해군이 즉위한 이듬해인 1609년에 재건되었으며, 보물 제383호로 지정되어 있다.</p>    
+    </div>
+    <div id="minimap"><!--미니맵-->
+      <ul class="minimap_nav">
+        <li class="m_nav_01"><a href="#" 
+        data-title="돈화문 (敦化門)" 
+        data-img="url(./img/section/01_don.jpg)" 
+        data-txt="창덕궁의 정문인 돈화문은 1412년(태종 12)에 건립되었다. 창건 당시 창덕궁 앞에는 종묘가 자리 잡고 있어 궁의 진입로를 궁궐의 서쪽에 세웠다. 2층 누각형 목조건물로 궁궐 대문 가운데 가장 큰 규모이며, 앞에 넓은 월대를 두어 궁궐 정문의 위엄을 갖추었다.
+돈화문은 왕의 행차와 같은 의례가 있을 때 출입문으로 사용했고, 신하들은 서쪽의 금호문으로 드나들었다. 원래 돈화문 2층 누각에는 종과 북을 매달아 통행 금지 시간에는 종을 울리고 해제 시간에는 북을 쳤다고 한다. 돈화문은 임진왜란 때 전소되었다가 광해군이 즉위한 이듬해인 1609년에 재건되었으며, 보물 제383호로 지정되어 있다.">1</a></li>
+        <li class="m_nav_02"><a href="#" 
+        data-title="궐내각사 (闕內各司)" 
+        data-img="url(./img/section/02_gwolnae.jpg)"
+        data-txt="궐내각사는 궁궐 안의 관아라는 뜻으로 대신들이 궁에 들어와서 일하던 관청지역이다. 관청은 대부분 궐 바깥에 있었지만, 왕을 가까이에서 보좌하기 위해 특별히 궁궐 안에 세운 관청들을 뜻한다. 인정전 서쪽 지역에는 가운데로 흐르는 금천을 경계로 동편에는 건강을 보살피는 약방, 왕의 자문역할을 담당했던 옥당 혹은 홍문관, 왕의 칙령과 교서를 보관하든 예문관이 있다. 금천의 서편에는 학문을 관장하는 규장각, 임금이 제사를 지내기 전 몸과 마음을 깨끗이 하기 위해 머물렀던 공간인 대유재, 소유재 등이 있다. 궐내각사는 인정전의 서쪽뿐만 아니라 인정전의 남쪽 동쪽에도 각각 궐내각사가 있었으나 거의 남아있는 흔적이 없고 현재는 2000년대에 복원된 서편 궐내각사만 남아있다.">2</a></li>
+        <li class="m_nav_03"><a href="#"
+        data-title="금천교 (錦川橋)"
+        data-img="url(./img/section/03_keum.jpg)"
+        data-txt="예로부터 궁궐을 조성할 때에는 궐 안으로 들어가기 전에 명당수를 건너게 하였다. 이 물은 궁궐의 안과 밖을 구별해주는 경계 역할을 하므로 금천(禁川)이라고 하며, 창덕궁의 금천은 북쪽에서 남쪽으로 흘러 돈화문 동쪽 궐 밖으로 빠져 나간다. 1411년(태종11) 금천에 다리를 놓았는데, 비단처럼 아름다운 물이 흐르는 개울에 놓인 다리라 하여 ‘금천교(錦川橋)’라 불렀고, 현재 궁궐에 남아있는 가장 오래된 돌다리로서 2012년 보물 제 1762호로 지정되었다.">3</a></li>
+        <li class="m_nav_04"><a href="#"
+        data-title="인정전 (仁政殿)"
+        data-img="url(./img/section/04_in_2.jpg)"
+        data-txt="인정전은 창덕궁의 정전(正殿)으로서 왕의 즉위식, 신하들의 하례, 외국 사신의 접견 등 중요한 국가적 의식을 치르던 곳이다. 앞쪽으로 의식을 치르는 마당인 조정(朝廷)이 펼쳐져 있고, 뒤편에는 뒷산인 응봉으로 이어져 있다. 2단의 월대 위에 웅장한 중층 전각으로 세워져 당당해 보이는데, 월대의
+높이가 낮고 난간도 달지 않아 경복궁의 근정전에 비하면 소박한 모습이다. 인정전은 겉보기에는 2층이지만 실제로는 통층 건물로 화려하고 높은 천장을 볼 수 있다. 바닥에는 원래 흙을 구워 만든 전돌이 깔려 있었으나, 지금은 마루로 되어있다. 전등, 커튼, 유리 창문 등과 함께 1908년에 서양식으로 개조한 것이다. 인정문 밖 외행각(外行閣)에는 호위청과 상서원 등 여러 관청들을 두었다. 1405년(태종 5)에 창덕궁 창건과 함께 건립되었으나 1418년(태종 18) 박자청에 의해 다시 지어졌고, 임진왜란 때 소실된 것을 1610년(광해 2)에 재건, 1803년(순조 3)에 소실된 것을 이듬해에 복원해 현재에 이른다. 외행각 일원은 1991년 이후에 복원했다. 인정전은 국보 제225호로 지정되어 있다.">4</a></li>
+        <li class="m_nav_05"><a href="#"
+        data-title="선정전 (宣政殿)"
+        data-img="url(./img/section/05_sun.jpg)"
+        data-txt="왕이 고위직 신하들과 함께 일상 업무를 보던 공식 집무실인 편전(便殿)으로, 지형에 맞추어 정전인 인정전 동쪽에 세워졌다. 아침의 조정회의, 업무보고, 국정 세미나인 경연 등 각종 회의가 이곳에서 매일 열렸다. 창건 당시에는 조계청이라 불렀는데, 1461년(세조 7)에 ‘정치는 베풀어야 한다’는 뜻의 선정전으로 이름을 바꾸었다. 임진왜란과 인조반정 등의 화재로 소실되었다가 1647년(인조 25)에 인왕산 기슭에 있던 인경궁을 헐어 그 재목으로 재건하였다. 주위를 둘러싼 행각들을 비서실, 부속실로 이용했으나 전체적으로 비좁았다. 현재 궁궐에 남아 있는 유일한 청기와 건물이다. 뒤편의 희정당으로 편전 기능이 옮겨 가면서 순조 이후에는 이곳을 혼전(魂殿, 죽은 왕과 왕비의 신주를 모시는 곳)으로 사용하기도 했다. 현재 보물 제 814호로 지정되어 있다.">5</a></li>
+        <li class="m_nav_06"><a href="#"
+        data-title="희정당 (熙政堂)"
+        data-img="url(./img/section/06_hee.jpg)"
+        data-txt="인정전이 창덕궁의 상징적인 으뜸 전각이라면 희정당은 왕이 가장 많이 머물렀던 실질적인 중심 건물이라고 할 수 있다. 원래 이름은 숭문당이었으나 1496년(연산2)에 희정당으로 이름을 바꾸었다. 원래의 편전인 선정전이 비좁고 종종 국장을 위한 혼전으로 쓰이면서, 침전이었던 희정당이 편전의 기능을 대신하게 되었다. 지금의 희정당은 1917년 화재로 소실된 것을 1920년에 복구하면서 경복궁에 있던 강녕전을 옮겨 지은 것이다. <동궐도>에 그려진 원래의 희정당은 여러 개의 돌기둥 위에 세운 아담한 집이었고 마당에 연못도 있었다. 지금의 희정당은 이 모습과 완전히 다르고, 원래의 강녕전과도 다르다. 재건된 희정당 내부는 쪽마루와 카펫, 유리 창문, 천장에 샹들리에 등을 설치하여 서양식으로 꾸며졌다. 보물 제815호로 지정되어 있다.">6</a></li>
+        <li class="m_nav_07"><a href="#"
+        data-title="대조전 (大造殿)"
+        data-img="url(./img/section/07_dae.jpg)"
+        data-txt="대조전은 창덕궁의 정식 침전(寢殿)으로 왕비의 생활공간이다. 원래는 대조전 주변을 수많은 부속건물들이 에워싸고 있었는데, 그 가운데 흥복헌(興福軒)은 1910년 마지막 어전회의를 열어 경술국치가 결정되었던 비극의 현장이다. 1917년 불타 없어진 터에 1920년에 경복궁의 침전인 교태전을 옮겨 지어 현재의 대조전이 되었다. 이건하면서 창덕궁의 상황에 맞추어 재구성했는데, 대조전을 중심으로 양 옆 날개채와 뒤편의 경훈각 등이 내부에서 서로 통하도록 복도와 행각으로 연결했다. 원래 궁궐의 복합적인 구성을 잘 보여 주는 거의 유일한 부분이다. 희정당과 마찬가지로 내부는 서양식으로 개조하였으며, 왕실생활의 마지막 모습이 비교적 잘 보존되어 있다. 보물 제816호로 지정되어 있다.">7</a></li>
+        <li class="m_nav_08"><a href="#"
+        data-title="낙선재 (樂善齋)"
+        data-img="url(./img/section/08_nak.jpg)"
+         data-txt="조선 24대 임금인 헌종은 김재청의 딸을 경빈(慶嬪)으로 맞이하여 1847년(헌종13)에 낙선재를, 이듬해에 석복헌(錫福軒) 등을 지어 수강재(壽康齋)와 나란히 두었다. 낙선재는 헌종의 서재 겸 사랑채였고, 석복헌은 경빈의 처소였으며, 수강재는 당시 대왕대비인 순원왕후(23대 순조의 왕비)를 위한 집이었다. 후궁을 위해 궁궐 안에 건물을 새로 마련한 것은 매우 이례적인 일이다. 헌종은 평소 검소하면서도 선진 문물에 관심이 많았다. 그 면모가 느껴지는 낙선재는 단청을 하지 않은 소박한 모습을 지녔으며, 석복헌에서는 순종의 비 순정효황후가 1966년까지 기거하였고, 낙선재에서는 영왕의 비 이방자 여사가 1989년까지 생활하였다. 이 영역은 2012년 보물 제 1764호로 지정되었다.">8</a></li>
+      </ul>
+    </div>
+</div>
+</div>
+</article><!--// #article01Wrap-->
+
+<article id="article02Wrap">
+    <h2>창덕궁 사계</h2>
+    <div class="season">
+        <div class="season_Box">
+          <a href="#">
+          <span>봄</span>
+          <span class="graybar"><!--bar--></span>
+        </a>
+          <ul class="season_img_box spring">
+            <li><a href="#" data-img="./img/section/info/spring/01.jpg">봄_01</a></li>
+            <li><a href="#" data-img="./img/section/info/spring/02.jpg">봄_02</a></li>
+            <li><a href="#" data-img="./img/section/info/spring/03.jpg">봄_03</a></li>
+            <li><a href="#" data-img="./img/section/info/spring/04.jpg">봄_04</a></li>
+            <li><a href="#" data-img="./img/section/info/spring/05.jpg">봄_05</a></li>
+            <li><a href="#" data-img="./img/section/info/spring/06.jpg">봄_06</a></li>
+            <li><a href="#" data-img="./img/section/info/spring/07.jpg">봄_07</a></li>
+          </ul>
+        </div>
+        <div class="season_Box">
+          <a href="#">
+          <span>여름</span>
+          <span class="graybar"><!--bar--></span>
+            </a>
+          <ul class="season_img_box summer">
+            <li><a href="#" data-img="./img/section/info/summer/01.jpg">여름_01</a></li>
+            <li><a href="#" data-img="./img/section/info/summer/02.jpg">여름_02</a></li>
+            <li><a href="#" data-img="./img/section/info/summer/03.jpg">여름_03</a></li>
+            <li><a href="#" data-img="./img/section/info/summer/04.jpg">여름_04</a></li>
+            <li><a href="#" data-img="./img/section/info/summer/05.jpg">여름_05</a></li>
+            <li><a href="#" data-img="./img/section/info/summer/06.jpg">여름_06</a></li>
+            <li><a href="#" data-img="./img/section/info/summer/07.jpg">여름_07</a></li>
+            <li><a href="#" data-img="./img/section/info/summer/08.jpg">여름_08</a></li>
+            <li><a href="#" data-img="./img/section/info/summer/09.jpg">여름_09</a></li>
+            <li><a href="#" data-img="./img/section/info/summer/10.jpg">여름_10</a></li>
+          </ul>
+        </div>
+        <div class="season_Box">
+          <a href="#">
+          <span>가을</span>
+          <span class="graybar"><!--bar--></span>
+        </a>
+          <ul class="season_img_box autumn">
+            <li><a href="#" data-img="./img/section/info/autumn/01.jpg">가을_01</a></li>
+            <li><a href="#" data-img="./img/section/info/autumn/02.jpg">가을_02</a></li>
+            <li><a href="#" data-img="./img/section/info/autumn/03.jpg">가을_03</a></li>
+            <li><a href="#" data-img="./img/section/info/autumn/04.jpg">가을_04</a></li>
+            <li><a href="#" data-img="./img/section/info/autumn/05.jpg">가을_05</a></li>
+            <li><a href="#" data-img="./img/section/info/autumn/06.jpg">가을_06</a></li>
+            <li><a href="#" data-img="./img/section/info/autumn/07.jpg">가을_07</a></li>
+            <li><a href="#" data-img="./img/section/info/autumn/08.jpg">가을_08</a></li>
+            <li><a href="#" data-img="./img/section/info/autumn/09.jpg">가을_09</a></li>
+            <li><a href="#" data-img="./img/section/info/autumn/10.jpg">가을_10</a></li>
+          </ul>
+        </div>
+        <div class="season_Box">
+          <a href="#">
+          <span>겨울</span>
+          <span class="graybar"><!--bar--></span>
+        </a>
+          <ul class="season_img_box winter">
+            <li><a href="#" data-img="./img/section/info/winter/01.jpg">겨울_01</a></li>
+            <li><a href="#" data-img="./img/section/info/winter/02.jpg">겨울_02</a></li>
+            <li><a href="#" data-img="./img/section/info/winter/03.jpg">겨울_03</a></li>
+            <li><a href="#" data-img="./img/section/info/winter/04.jpg">겨울_04</a></li>
+            <li><a href="#" data-img="./img/section/info/winter/05.jpg">겨울_05</a></li>
+          </ul>
+        </div>
+        <section class="season_fullbox">
+           <h3>버튼</h3>
+            <button type="button" aria-label="이전 이미지 보기" class="s_l_btn">&lt;</button>
+            <button type="button" aria-label="다음 이미지 보기" class="s_r_btn">&gt;</button>
+        </section>
+    </div>
+</article><!--// #article02Wrap-->
+
+<article id="article03Wrap">
+<div id="article03">
+<h2>관람 시간 및 요금</h2>
+<span class="subject">관람 시간 및 요금</span>
+                <span class="bar"></span>
+          <div class="btn_box">
+                   <form action="*" method="get">
+                   <fieldset>
+                       <legend>관람시간 및 요금 버튼</legend>
+                        <button class="art04_btn01" name="view_btn">일반 관람</button>
+                        <button class="art04_btn02" name="view_btn2">후원특별 관람</button>
+                    </fieldset>
+                    </form>
+          </div>
+      <!--일반관람-->
+        <section class="table_wrap">
+                 <h3>일반 관람 안내</h3>
+                  <span class="addnotice">* 매주 월요일은 <strong class="red">휴궁일(休宮日)</strong>입니다.</span>
+                  <table class="timetable">
+                      <caption class="tabletitle">
+                          <span class="bullet"><!--문양--></span>관람 시간
+                      </caption>
+                      <thead></thead>
+                      <tr>
+                          <th>관람 시간</th>
+                          <th>매표 시간</th>
+                          <th>관람 시간</th>
+                      </tr>
+                      <tbody>
+                          <tr>
+                              <td>2월 ~ 5월 / 9월 ~ 10월</td>
+                              <td>09:00 ~ 17:00</td>
+                              <td>09:00 ~ 18:00</td>
+                          </tr>
+                          <tr>
+                              <td>6월 ~ 8월</td>
+                              <td>09:00 ~ 17:30</td>
+                              <td>09:00 ~ 16:00</td>
+                          </tr>
+                          <tr>
+                              <td>11월 ~ 1월</td>
+                              <td>09:00 ~ 17:00</td>
+                              <td>09:00 ~ 17:30</td>
+                          </tr>
+                      </tbody>                    
+                  </table>
+                  <table class="infotime">
+                  <caption class="tabletitle">
+                      <span class="bullet"></span>안내 해설 시간
+                  </caption>
+                  <thead>
+                      <tr>
+                          <th class="lang">언어</th>
+                          <th>시간</th>
+                          <th>횟수</th>
+                          <th>관람동선</th>
+                          <th>소요시간 및 시작장소</th>
+                          <th>비고</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                         <td class="lang">한국어<br />(3월~10월)</td>
+                         <td>09:30<br />
+                              11:30<br />
+                              13:30<br />
+                              15:30<br />
+                              16:30</td>
+                         <td>5회</td>
+                         <td rowspan="5">돈화문<br />
+                              ↓<br />
+                              인정전<br />
+                              ↓<br />
+                              선정전<br />
+                              ↓<br />
+                              희정당<br />
+                              ↓<br />
+                              대조전<br />
+                              ↓<br />
+                              성정각<br />
+                              ↓<br />
+                              낙선재</td>
+                         <td rowspan="5">60분 소요,<br />
+                              돈화문<br />
+                              (창덕궁 정문)<br />
+                              안쪽, <br />
+                              안내 지도판 앞</td>
+                         <td rowspan="5">개별 자유관람이<br />
+                              가능하며,<br />
+                              무료 안내 해설은<br />
+                              인원 제한이 없으므로<br />
+                              별도의 예약이<br />
+                              필요 없습니다.<br />
+                              (단, 외국어 안내해설<br />
+                              시간에는 내국인은<br />
+                              참여가 불가능하며, <br />
+                              외국인 동반자가 있는<br />
+                              경우 내국인 2명까지<br />
+                              동반 참여 가능)</td>
+                      </tr>
+                      <tr>
+                          <td class="lang">한국어<br />(11월~2월)</td>
+                          <td>09:30<br />
+                              11:30<br />
+                              13:30<br /></td>
+                          <td>4회</td>
+                      </tr>
+                      <tr>
+                          <td class="lang">영어</td>
+                          <td>00:30<br />
+                              14:30</td>
+                          <td>2회</td>
+                      </tr>
+                      <tr>
+                          <td class="lang">일본어</td>
+                          <td>12:30</td>
+                          <td>1회</td>
+                      </tr>
+                      <tr>
+                          <td class="lang">중국어</td>
+                          <td>10:00<br />
+                              16:00</td>
+                          <td>2회</td>
+                      </tr>
+                  </tbody>
+                  </table>
+                  <table class="price">
+                      <caption class="tabletitle">
+                      <span class="bullet"></span>관람요금
+                      </caption>
+                      <tr>
+                          <th>대인 (만 25세 ~ 만 64세)</th>
+                          <td>3,000원</td>
+                      </tr>
+                      <tr>
+                          <th>소인 (만 24세 이하)</th>
+                          <td>무료 (외국인 제외)</td>
+                      </tr>
+                      <tr>
+                          <th>단체 (10명 이상)</th>
+                          <td>무료대상자를 제외하고 10명 이상일 경우에 전각 요금 20% 할인</td>
+                      </tr>
+                      <tr>
+                          <th>상시관람권<br />(일반관람만 가능)</th>
+                          <td>30,000원<br />구매일로 부터 1개월간 사용<br />사진 1매 제출</td>
+                      </tr>
+                      <tr>
+                          <th>점심시간관람권<br />(일반관람만 가능)</th>
+                          <td>
+                          5,000원 / 12:00~13:00 이용가능<br />
+                      구매일로 부터 3개월간 10회 사용<br />
+                      (인근 직장인 및 주민 대상)
+                          </td>
+                      </tr>
+                      <tr>
+                          <th>궁궐통합관람권</th>
+                          <td>
+                          ☞문화재청은 4대궁 및 종묘를 대상으로, 관람객들의 관람 편의 제공을 위해
+                          통합관람 제도를 시행하고 있습니다.<br />
+                          *통합관람 대상 : 4대궁 (경복궁, 창덕궁, 창경궁, 덕수궁) 및 종묘<br />
+                          *통합관람 요금 : 10,000원(각각의 관람권 개별 구입 시 14,000원)<br />
+                          *통합관람권 구입처 : 4대궁 및 종묘의 매표소<br />
+                          *유효기간 : 구입일로부터 3개월 간 사용<br /><br />
+                          
+                          ☞단, 창덕궁 후원 특별관람의 경우,<br />
+                          *입장 인원이 제한되어 있으므로 통합관람권을 구매하였어도 인터넷 후원 예약을
+                          하거나 현장 구매표로 선착순 교환해야 합니다.<br />
+                          *전각관람권과 후원관람권은 한날 같이 사용하는 것이 좋습니다. 만약 전각관람권을
+                          먼저 사용할 경우, 다음 번 후원관람일에 전각관람권을 또 추가 구매해야 합니다.<br />
+                          (후원 입구는 전각을 거쳐서 가기 때문에 항상 전각관람권을 필요로 합니다.)
+                          </td>
+                      </tr>
+                      <tr>
+                          <th>감면</th>
+                          <td>
+                          종로구민 50% 일반관람료 할인. (2015.1.29부터 시행)<br />
+                          ※ 감면 대상자는 주민등록증, 청소년증, 주민등록등본 및 신분증 등 증빙 제시
+                          </td>
+                      </tr>
+                      <tr>
+                          <th>무료</th>
+                          <td>
+                          ※ 무료관람에 해당되시는 분은 신분증(주민등록증, 운전면허증, 여권, 공무원증등), 
+                            국가유공자증, 복지카드 등을 제시하여 주시고 무료입장권을 발권 받아
+                            입장하셔야 합니다.<br /><br />
+                        
+                        - 만6세 이하 어린이 (외국인 포함)<br />
+                        - 만7세∼만24세 이하 및 만65세 이상 국민, 만65세 이상 외국인<br />
+                        - 국빈 및 그 수행자<br />
+                        - 외교사절단 및 그 수행자<br />
+                        - 국·공립기관에서 정양 중에 있는 상이군경<br />
+                        - 공무수행을 위하여 출입하는 자<br />
+                        - 학생인솔 등 교육활동을 위해 입장하는 초·중·고 교원<br />
+                          (유치원 및 보육시설 교사를 포함한다)<br />
+                        - 한복을 착용한 자<br />
+                        -「장애인복지법」,「국가유공자 등 예우 및 지원에 관한 법률」,
+                          「5.18 민주유공자 예우에 관한 법률」,「참전 유공자 예우에 관한 법률」 및
+                          기타 개별법령에 의하여 입장료가 감면된 자<br />
+                        -「관광진흥법」제38조에 따른 관광통역안내사 자격증 및 동법 제2조제12호에 의한 
+                          문화관광해설사 자격증을 패용하고 단체관람객 인 솔·안내를 위해 입장하는 자<br />
+                        -「효행 장려 및 지원법」제10조에 따른 효행우수자<br />
+                        -「국민기초생활보장법」제2조에 의한 기초생활수급자 및 동법 제2조제11호에 따른 
+                            차상위계층 중 자활급여, 건강보험료 경감대상, 장애수당, 한부모 가정 중
+                          하나 이상의 급여를 받고 있는 자 및 기타 보건복지부장관이 인정한 차상위계층<br />
+                        - 병무청 발급 병역명문가증 소지자 (본인에 한함)<br />
+                        - 중요무형문화재 보유자 및 전수교육조교<br />
+                        - 기타 문화재청장 또는 해당 유적관리기관의 장이 인정하는 자<br />
+                        - 매월 마지막 주 수요일 '문화가 있는 날': 4대궁(후원 제외), 종묘, 조선왕릉 무료 관람<br />
+                        - 문화유산국민신탁 회원<br />
+                        - 군복을 입은 현역군인 (2015.8.1부터 시행)<br />
+                        - 문화재위원 및 전문위원 (2015.8.1부터 시행)
+                          </td>
+                      </tr>
+                  </table>
+      </section>
+      <!-- // 일반 관람 끝-->
+      
+      <!--후원 특별 관람-->
+        <section class="table_wrap table_hide huwon">
+               <h3>후원 특별 관람 안내</h3>
+                <table class="timetable">
+                    <caption class="tabletitle">
+                        <span class="bullet"><!--문양--></span>관람 시간
+                    </caption>
+                    <thead></thead>
+                    <tr>
+                        <th>관람 시간</th>
+                        <th>매표 시간</th>
+                        <th>관람 시간</th>
+                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>3월 ~ 5월 / 9월 ~ 10월</td>
+                            <td>09:00 ~ 16:00</td>
+                            <td>10:00 ~ 17:30</td>
+                        </tr>
+                        <tr>
+                            <td>6월 ~ 8월</td>
+                            <td>09:00 ~ 16:30</td>
+                            <td>10:00 ~ 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>11월 ~ 1월</td>
+                            <td>09:00 ~ 15:00</td>
+                            <td>10:00 ~ 16:30</td>
+                        </tr>
+                        <tr>
+                            <td>2월</td>
+                            <td>09:00 ~ 15:30</td>
+                            <td>10:00 ~ 17:00</td>
+                        </tr>
+                    </tbody>                    
+                </table>
+                <table class="infotime">
+                <caption class="tabletitle">
+                    <span class="bullet"></span>안내 해설 시간
+                </caption>
+                <thead>
+                    <tr>
+                        <th class="lang">언어</th>
+                        <th>월</th>
+                        <th>시간</th>
+                        <th>횟수</th>
+                        <th>관람동선</th>
+                        <th>소요시간 및 시작장소</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                       <td rowspan="8" class="lang">한국어</td>
+                       <td>1월~2월</td>
+                       <td>10:00, 11:00, 12:00, 13:00, 14:00, 15:00</td>
+                       <td>6회</td>
+                       <td rowspan="12">함양문<br />
+                            ↓<br />
+                            부용지<br />
+                            ↓<br />
+                            불로문, 애련지<br />
+                            ↓<br />
+                            존덕정권역<br />
+                            ↓<br />
+                            옥류천<br />
+                            ↓<br />
+                            연경당<br />
+                            ↓<br />
+                            돈화문</td>
+                       <td rowspan="12">90분 소요,<br />
+                            함양문<br />
+                            (창덕궁 정문에서<br />
+                            약10분 소요)</td>
+                       <td rowspan="12">※후원특별관람은 안내원의 안내에 따라 관람하는 제한관람입니다. (상단의 ‘관람예약’→   ‘후원 관람예약’에서  예약하시기 바랍니다.)  
+                        ※마지막 관람 시간은 일몰 시간에 따라 변경될 수 있습니다.</td>
+                    </tr>
+                    <tr>
+                        <td>3월</td>
+                        <td>10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00</td>
+                        <td>7회</td>
+                    </tr>
+                    <tr>
+                        <td>4월~5월</td>
+                        <td>10:00, 11:00, 12:00, 13:00, 13:45, 14:00, 14:45, 15:00, 16:00</td>
+                        <td>9회</td>
+                    </tr>
+                    <tr>
+                        <td>6월</td>
+                        <td>10:00, 11:00, 12:00, 13:00, 13:45, 14:00, 14:45, 15:00, 16:00, 16:30</td>
+                        <td>10회</td>
+                    </tr>
+                    <tr>
+                        <td>7월~8월</td>
+                        <td>10:00, 11:00, 12:00, 13:00,
+                          14:00, 15:00, 16:00, 16:30</td>
+                        <td>8회</td>
+                    </tr>
+                    <tr>
+                        <td>9월~10월</td>
+                        <td>10:00, 11:00, 12:00, 13:00,
+                            13:45, 14:00, 14:45, 15:00,
+                            16:00</td>
+                        <td>9회</td>
+                    </tr>
+                    <tr>
+                        <td>11월</td>
+                        <td>10:00, 11:00, 12:00, 13:00,
+                            13:45, 14:00, 14:45, 15:00</td>
+                        <td>8회</td>
+                    </tr>
+                    <tr>
+                        <td>12월</td>
+                        <td>10:00, 11:00, 12:00, 13:00,
+                            14:00, 15:00</td>
+                        <td>6회</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" class="lang">영어</td>
+                        <td>2월~10월</td>
+                        <td>11:30, 13:30, 14:30, 15:30</td>
+                        <td>4회</td>
+                    </tr>
+                    <tr>
+                        <td>11월~1월</td>
+                        <td>11:30, 13:30, 14:30</td>
+                        <td>3회</td>
+                    </tr>
+                    <tr>
+                        <td class="lang">일어</td>
+                        <td>1월~12월</td>
+                        <td>10:30</td>
+                        <td>1회</td>
+                    </tr>
+                    <tr>
+                        <td class="lang">중국어</td>
+                        <td>1월~12월</td>
+                        <td>12:30</td>
+                        <td>1회</td>
+                    </tr>
+                </tbody>
+                </table>
+                <table class="price">
+                    <caption class="tabletitle">
+                    <span class="bullet"></span>관람요금
+                    </caption>
+                    <tr>
+                        <th rowspan="2">대인 (만 19세 이상)</th>
+                        <td>8,000원</td>
+                    </tr>
+                    <tr>
+                        <td>※후원특별관람 요금은 일반관람권(3,000원)이 포함된 요금입니다.</td>
+                    </tr>
+                    <tr>
+                        <th>소인 (만7세~만18세)</th>
+                        <td>2,500원</td>
+                    </tr>
+                    <tr>
+                        <th>무 료</th>
+                        <td>
+                        ※무료 및 감면 대상자는 유공자증, 장애인등록증, 주민등록증, 청소년증 등 증빙 제시<br />
+                        <br />
+                        - 만 6세 이하 어린이<br />
+                        - 장애인 및 장애인 보호자(1~3급, 증빙카드 제시)<br />
+                        - 국가유공자 본인 및 배우자<br />
+                        - 국가유공자 중 애국지사와 상이등급 1급에 해당하는 자의 활동을 보조하는자 1명
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>감면</th>
+                        <td>
+                        종로구민 50% 할인(2015년 1월 29일 시행)<br />
+                        ※ 감면 대상자는 주민등록증, 청소년증, 주민등록등본 및 신분증 등 증빙 제시
+                        </td>
+                    </tr>
+                </table>
+                <span class="addnotice">※ 경로 우대·단체 할인은 없습니다.</span>
+          </section>
+      <!-- // 후원 특별 관람 끝-->
+       </div><!--//#article03-->         
+</article><!--// #article03Wrap-->
+
+<article id="article04Wrap">
+<div id="article04">
+<h2>관람객 권리와 협조 사항</h2>
+<span class="subject">관람객 권리와 협조사항</span>
+                <span class="bar"></span>
+<div class="pressbox">
+   <span class="art04_subtitle">관람객 권리사항</span>
+   <div class="press_content">
+    <dl>
+        <dt>관람객 권리사항</dt>
+            <dd>· 문화재와 자연환경을 관리보호하고 관람 고객에게 최상의 서비스를 제공하는 사적지가 되기 위하여 최선을 다하겠습니다.</dd>
+        </dl>
+        <dl>
+        <dt>알찬 창덕궁이 되기 위하여</dt>
+            <dd>· 안내제도와 시간제관람의 안내판을 설치하고, 문의에 성실히 응답하겠습니다.</dd>
+            <dd>· 창덕궁 안내 리플렛을 매표소에서 500원에 판매하고 있습니다.</dd>
+            <dd>· 정해진 입장시간을 준수하여 관람에 착오가 없도록 하겠습니다.</dd>
+        </dl>
+        <dl>
+        <dt>보기 편한 창덕궁이 되기 위하여</dt>
+            <dd>· 장애인 및 노약자를 위한 휠체어를 항상 대기하도록 하겠습니다.</dd>
+            <dd>· 수용능력(38대)내에서 주차장은 무료이며 이용에 불편이 없도록 하겠습니다.</dd>
+            <dd>· 궁궐 안팎을 항상 청결히 유지하여 쾌적한 환경을 조성하겠습니다.</dd>
+        </dl>
+       <dl>
+        <dt>친절한 창덕궁이 되기 위하여</dt>
+            <dd>· 고객을 맨 처음 맞이하는 직원부터 배웅하는 직원까지 친절히 모시겠습니다.</dd>
+            <dd>· 문의 전화를 신속히 그리고 친절하게 받겠습니다.</dd>
+            <dd>· 홈페이지에는 창덕궁에 대한 정보를 충실히 제공하고, 변동되는 사항은 즉시 공지하여 관람에 착오 없도록 하겠습니다.</dd>
+        </dl>
+        <dl>
+        <dt>열려있는 창덕궁이 되기 위하여</dt>
+            <dd>· 항상 방문, 전화 및 인터넷을 통하여 고객의 의견에 귀 기울이겠습니다.</dd>
+            <dd>· 고객께서 요구하신 사항을 신속히 개선하도록 노력하겠습니다.</dd>
+            <dd>· 단체관람에 동의하지 않은 고객께서 합리적인 사유로 환불을 요구하실 때에는 언제든지 환불이 가능하도록 하겠습니다.</dd>
+    </dl>
+    </div>
+</div>
+<div class="pressbox">
+    <span class="art04_subtitle">관람객 협조사항</span>
+    <div class="press_content">
+    <dl>
+        <dt>관람하시면서 꼭 준수해 주셔야 할 사항입니다.</dt>
+        <dd><strong class="red">궁·능원 및 유적관람 등에 관한 규정 (제 6조)</strong></dd>
+        <dd><strong>· 문화재 보존·관리 등을 위하여 다음 각 호 중 어느 하나의 해당하는 자에 대하여 관람중지, 관련 물품 보관 또는 입장제한 등의 필요한 조치를 취할 수 있습니다.</strong></dd>
+        <dd><!--빈칸--></dd>
+    </dl>
+    <dl>
+       <dt></dt>
+        <dd>· 인화물질 및 무기류 등 위험물 소지자</dd>
+        <dd>· 주류, 각종 야영용품(텐트, 돗자리, 그늘막 등) 및 취사도구 소지자</dd>
+        <dd>· 반려동물과 함께 들어오는 자(다만 장애인복지법 제2조에서 정한 장애인과 함께 들어오는 장애인 보조견은 예외로 한다. 이 · 경우 ‘장애인 보조견’이라 함은 장애인복지법 제40조 제2항의 ‘장애인 보조견 표지’를 붙인 ‘장애인 보조견’을 말한다.)</dd>
+        <dd>· 체육·놀이기구, 악기, 확성기 및 다른 사람의 관람 또는 문화재의 보존·관리에 지장을 줄 우려가 있는 물건 소지자</dd>
+        <dd>· 음주, 복장, 무속행위, 방언(放言), 개별 제사행위, 종교집회 등으로 다른 사람의 관람에 지장을 줄 우려가 있는 자</dd>
+        <dd>· 정당한 사유 없이 관람규정이나 직원 및 안내해설원의 지시에 따르지 않는 자</dd>
+        <dd>· 고성방가, 풍기문란 및 기타 부적절한 행위로 타인의 관람 또는 문화재의 보존·관리에 지장을 줄 우려가 있는 자</dd>
+    </dl>
+    <dl>
+       <dt></dt>
+        <dd>· 관람 도중 기념촬영은 무료입니다. 다만 기념촬영을 제외한 촬영은 관리소의 허가를 받아야 합니다.</dd>
+        <dd>  결혼사진(한복결혼사진 및 웨딩촬영)의 촬영허가는 궁·능원 및 유적관람 규정 제 25조에 따라 창덕궁에서는 허가되지
+      않음을 알려드립니다.</dd>
+        <dd>· 창덕궁 경내 전 지역은 금연구역이며, 흡연자에 대해 관람중지, 퇴장 등 필요한 조치를 취할 수 있습니다.</dd>
+    </dl>
+    <dl>
+       <dt></dt>
+        <dd><strong class="red">· 최근 무자격 관광가이드의 궁궐 내 역사 왜곡 및 흡연, 노상방뇨 등 관람예절 미준수 등의 문제가 지속적으로 발생함에 따라
+              건전하고 올바른 관람문화 정착을 위해 고궁 내 단체관광객 인솔 가이드에 대한 지도 점검을 강화함을 안내드리니
+              단체관광객 가이드께서는 궁궐 내 단체관광객 인솔 시에 반드시 관광통역안내사 자격증을 패용하여 주시기 바랍니다</strong>.</dd>
+    </dl>
+    <dl>
+       <dt></dt>
+        <dd>- 단속내용 : 궁궐 내 단체관광객 인솔 가이드 자격증 유무 및 패용 여부</dd>
+        <dd>- 단속방법 : 궁궐 입장시, 자격증 유무 점검, 궁궐 내 단체관광객 인솔 시 자격증 패용여부 상시 점검</dd>
+        <dd>- 단속시기 : 2015. 8. 1. 부터 시행</dd>
+        <dd>* 단속 시, 가이드 관람 중지</dd>
+    </dl>
+    </div>
+</div>
+<ul></ul>
+
+</div><!--// #article04-->
+</article><!--// #article04Wrap-->
+
+<article id="article05Wrap">
+  <div id="article05">
+  <h2>편의시설 안내</h2>
+  <span class="subject">편의시설 안내</span>
+    <span class="bar"></span>
+    <img src="./img/section/convenience.gif" alt="편의시설 안내 지도" />
+  </div>
+</article>
+</section><!--// #sectionWrap-->
+        
+        
+<!-- footer -->
+      <div id="footerWrap">
+        <footer id="footer">
+            <h2>창덕궁 정보</h2>
+            <div id="footerMenubarWrap">
+            <div class="footer_menubar">
+            <h3>개인정보처리방침 및 침해신고센터</h3>
+            <ul class="footer_menu">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><span class="menu_sidebar"><!-- sidebar --></span></li>
+                <li><a href="#">개인정보침해신고센터</a></li>
+            </ul>
+            <form action="*" method="get">
+                <fieldset class="family">
+                    <legend>패밀리사이트</legend>
+                    <label for="familysite"><select name="familysite" id="familysite">
+                        <option value="http://www.cha.go.kr/">문화재청</option>
+                        <option value="http://m.epeople.go.kr/main/main.jsp">국민신문고</option>
+                        <option value="http://www.heritagechannel.tv/">문화유산채널</option>
+                    </select></label>
+                    <button type="button" name="go" value="go">GO</button>
+                </fieldset>
+            </form>
+            </div>
+            </div>
+            <div class="footer_etc">
+            <h3>창덕궁 위치</h3>
+            <ul class="footer_logo">
+                <li class="cdg_logo"><span class="me_hidden">문화재청 창덕궁</span></li>
+                <li class="unesco"><span class="me_hidden">세계문화유산</span></li>
+            </ul>
+            <ul class="address">
+                <li class="add">
+                (우)03072 서울특별시 종로구 율곡로 99번지<br />
+                TEL. 02-3668-2300	FAX. 02-762-2070</li>
+                <li class="copy">COPYRIGHT 2004-2016 문화재청 창덕궁 관리소. ALL RIGHTS RESERVED.</li>
+            </ul>
+              <div class="foot_link">
+              <ul class="link_btn">
+                  <li><a href="https://www.e-minwon.go.kr/webs/menu.jsp?menu_id=civl02" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i><span class="me_hidden">mail</span></a></li>
+                  <li><a href="https://twitter.com/changdeok11" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><span class="me_hidden">twitter</span></a></li>
+              </ul>
+              <form action="*" method="get">
+                  <fieldset class="language">
+                      <legend>language</legend>
+                          <label for="language_select"><select class="language_select" name="language_select" id="language_select">
+                              <option value="Language">Language</option>
+                              <option value="English">English</option>
+                              <option value="한국어">한국어</option>
+                              <option value="일본어">日本語</option>
+                          </select></label>
+                          <button type="button" name="go" value="go">GO</button>
+                  </fieldset>
+              </form>
+              </div>
+            </div>            
+        </footer>
+    </div><!--// #footerWrap-->
+    </div><!--// #container-->
+
+</body>
+</html>

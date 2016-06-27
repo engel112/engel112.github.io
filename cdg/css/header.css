@@ -1,0 +1,117 @@
+/* header */
+
+header{margin: 0 auto; transition: all .3s;}
+button{background-color: #c5c5c5; color:#335161; cursor: pointer;}
+button:hover{background-color: #933637; color:#f4f4f2;}
+#submenuWrap{overflow: auto; padding-right:50%;}
+
+@media screen and (max-width: 480px){
+  
+#headerWrap{width: 100vw; height: 5rem; background-color: #fff; position: fixed; z-index: 500; box-shadow: 0px 0px 2px 0px #666; top:0; left:0;}
+#header{width: 93.75vw /* 960px * 100 / 1024 */; height: 100%; padding: 0 10px;}
+    h1{width: 182px; height: 100%; margin-right: 60px; float: left;}
+        h1>a{background-image: url(../img/logo.jpg); background-position: center center;}
+    #gnb {height: 100%; float: left; display: none;}
+    #menu {height:100%; float: right; margin-right: 12px;}
+    #menu>a{font-size: 2rem; color:#c5c5c5; line-height: 5rem;}
+    #menu>a:hover{color:#933637;}
+    
+
+#submenuWrap{width: 100vw; height: 100%; background-color: rgba(0,0,0,0.7); position: fixed; z-index: 100; top: 5rem; left: 0; display: block;}
+#submenu{width: 100vw ; height: auto; margin: 0 auto; padding: 60px 0; background-image: url(../img/pattern_b.jpg);}
+#submenu:after{content:""; display: block; width: 0; height: 0; clear: both;}
+    #submenu>dl{width: 100%; height: auto; float: left; text-align: center; margin-bottom: 20px;}
+    #submenu>dl>dt, #submenu>dl>dd>a{width: 100%; color:#f4f4f2;}
+    #submenu>dl>dt{width: 100%; height: 40px; font-size:1.2rem; font-weight: bold; line-height: 40px;}
+    #submenu>dl>dd{width: 100%; height: auto; font-size:0.9rem; line-height: 1rem; padding: 6px 0;}
+    #submenu>dl>dd>span{width: 60px; height: 2px; border-bottom: 2px solid #933637; display: block; margin-left: calc(50% - 30px);}
+    #submenu>dl>dd>a:hover{font-weight: bold;}
+  
+  
+}/*mobile*/
+
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+
+#headerWrap{width: 100vw; height: 5rem; background-color: #fff; position: fixed; z-index: 500; box-shadow: 0px 0px 2px 0px #666; top:0; left:0;}
+#header{width: 93.75vw /* 960px * 100 / 1024 */; height: 100%; padding: 0 10px;}
+    h1{width: 182px; height: 100%; margin-right: 60px; float: left;}
+        h1>a{background-image: url(../img/logo.jpg); background-position: center center;}
+    #gnb {height: 100%; float: left; display: none;}
+    #menu {height:100%; float: right; margin-right: 12px;}
+    #menu>a{font-size: 2rem; color:#c5c5c5; line-height: 5rem;}
+    #menu>a:hover{color:#933637;}
+    
+
+#submenuWrap{width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); position: fixed; z-index: 100; top: 5rem; left: 0;}
+#submenu{width: 74.21875vw /* 760px * 100 / 1024 */; height: 100%; padding: 60px; margin: 0 auto; background-image: url(../img/pattern_b.jpg);}
+#submenu:after{content:""; display: block; width: 0; height: 0; clear: both;}
+    #submenu>dl{width: 33.3333%; height: auto; margin-bottom: 20px; float: left;}
+    #submenu>dl>dt, #submenu>dl>dd>a{width: 100%; color:#f4f4f2;}
+    #submenu>dl>dt{width: 100%; height: 40px; font-size:1.2rem; font-weight: bold; line-height: 40px;}
+    #submenu>dl>dd{width: 100%; height: auto; font-size:0.9rem; line-height: 1rem; padding: 6px 0;}
+    #submenu>dl>dd>a{font-size: 0.9rem; line-height: 1.125rem;}
+    #submenu>dl>dd>span{width: 60px; height: 2px; border-bottom: 2px solid #933637; display: block; margin-bottom: 8px;}
+    #submenu>dl>dd>a:hover{font-weight: bold;}
+  
+  
+}/*tablet*/
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+
+  
+#headerWrap{width: 100vw; height: 5rem; background-color: #fff; position: fixed; z-index: 500; box-shadow: 0px 0px 2px 0px #666; top:0; left:0;}
+#header{width: 93.75vw /* 960px * 100 / 1024 */; height: 100%; padding: 0 10px;}
+    h1{width: 182px; height: 100%; margin-right: 60px; float: left;}
+        h1>a{background-image: url(../img/logo.jpg); background-position: center center;}
+    #gnb {height: 100%; float: left; display: none;}
+    #menu {height:100%; float: right; margin-right: 12px;}
+    #menu>a{font-size: 1.625rem; color:#c5c5c5; line-height: 5rem;}
+    #menu>a:hover{color:#933637;}
+    
+
+#submenuWrap{width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); position: fixed; z-index: 100; top: 5rem; left: 0;}
+#submenu{width: 74.21875vw /* 760px * 100 / 1024 */; height: 100%; padding: 100px; margin: 0 auto; background-image: url(../img/pattern_b.jpg);}
+#submenu:after{content:""; display: block; width: 0; height: 0; clear: both;}
+    #submenu>dl{width: 20%; height: 50%; margin-bottom: 30px; float: left;}
+    #submenu>dl>dt, #submenu>dl>dd>a{width: 100%; color:#f4f4f2;}
+    #submenu>dl>dt{width: 100%; height: 40px; font-size:1.2rem; font-weight: bold; line-height: 40px;}
+    #submenu>dl>dd{width: 100%; height: auto; font-size:0.9rem; line-height: 1rem; padding: 6px 0;}
+    #submenu>dl>dd>span{width: 60px; height: 2px; border-bottom: 2px solid #933637; display: block; margin-bottom: 8px;}
+    #submenu>dl>dd>a:hover{font-weight: bold;}
+
+    
+    
+} /*pc*/
+
+@media screen and (min-width: 1025px){
+  
+
+#headerWrap{width: 100vw; height: 5rem; background-color: #fff; position: fixed; z-index: 500; box-shadow: 0px 0px 2px 0px #666; top:0; left:0;}
+#header{width: 940px; height: 100%; padding: 0 10px;}
+    h1{width: 182px; height: 100%; margin-right: 60px; float: left;}
+        h1>a{background-image: url(../img/logo.jpg); background-position: center center;}
+    #gnb {height: 100%; float: left;}
+        #gnb>ul {width: 100%; height: 100%;}
+        #gnb>ul>li {float: left; margin-right: 46px; margin-top: 31px;}
+            #gnb>ul>li>a{font-size:1rem; font-weight: bold; padding-bottom: 28px;}
+            #gnb>ul>li>a:hover{border-bottom: 3px solid #933637;}
+            #gnb>ul>li:last-child{margin-right: 0;}
+    #menu {height:100%; float: right; margin-right: 12px;}
+    #menu>a{font-size: 1.625rem; color:#c5c5c5; line-height: 5rem;}
+    #menu>a:hover{color:#933637;}
+    
+
+#submenuWrap{width: 100vw; height: 100%; background-color: rgba(0,0,0,0.7); position: fixed; z-index: 100; top: 5rem; left: 0;}
+#submenu{width: 760px; height: 100%; padding: 100px; margin: 0 auto; background-image: url(../img/pattern_b.jpg);}
+    #submenu>dl{width: 20%; height: 50%; margin-bottom: 30px; float: left;}
+    #submenu>dl>dt, #submenu>dl>dd>a{width: 100%; color:#f4f4f2;}
+    #submenu>dl>dt{width: 100%; height: 40px; font-size:1.2rem; font-weight: bold; line-height: 40px;}
+    #submenu>dl>dd{width: 100%; height: auto; font-size:0.9rem; line-height: 1rem; padding: 6px 0;}
+    #submenu>dl>dd>span{width: 60px; height: 2px; border-bottom: 2px solid #933637; display: block; margin-bottom: 8px;}
+    #submenu>dl>dd>a:hover{font-weight: bold;}
+  
+  
+} /*pcFull*/

@@ -1,0 +1,27 @@
+
+/*
+*기본 웹 css형태를 사용할 경우에는 class이름 앞에 me라고 작성 후 _로 구분하여 이름제작
+**/
+*{margin: 0;
+padding: 0;
+border: 0;
+color: #333;
+font:100% /1.2 garamond, arial, "Nanum Myeongjo", "바탕", serif; }
+h1, h2, h3, h4, h5, h6{font-weight: bold;}
+ul,ol,li{list-style: none;}
+table,th,td,tr{border: 1px solid; border-spacing: 0; border-collapse:collapse;}
+a{text-decoration:none; color: #333;}
+
+/* html5 */
+header, article, section, footer, nav, aside, hgroup, figure {display: block;}
+
+
+/* normalize */
+.clearfix::before, .clearfix::after{content:""; display: block; clear: both; zoom: 1;}
+.me_link a{width: 100%; height: 100%; background-repeat: no-repeat; display: block;}
+a>span, .me_hidden, legend{width: 0; height: 0; display: block; overflow: hidden;}
+h2, h3, h4, h5, h6{width: 0; height: 0; overflow: hidden;}
+
+.me_last{margin-right: 0; padding-right: 0; border-right: 0;}
+strong.red{color: #933637; font-weight: bold;}
+strong{font-weight: bold;}

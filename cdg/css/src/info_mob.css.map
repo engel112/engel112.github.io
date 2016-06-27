@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,oCAAmC,GACnC,YAAY,GAAC,OAAO,EAAE,IAAI",
+"sources": ["../../scss/src/info_mob.scss"],
+"names": [],
+"file": "info_mob.css"
+}

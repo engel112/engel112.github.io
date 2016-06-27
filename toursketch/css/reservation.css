@@ -1,0 +1,148 @@
+@charset "UTF-8";
+strong.red { color: #ED4400; font-weight: bold; }
+strong.green { color: #009900; font-weight: bold; }
+
+/* index_wrap.css */
+#wrap { width: 100%; height: auto; }
+
+header, section { margin: 0 auto; }
+
+strong { font-weight: bold; }
+
+.subtitle { width: 100%; height: 2rem; font-size: 1.3rem; font-weight: bold; width: 100%; line-height: 2rem; margin-bottom: 10px; display: block; }
+
+section { width: 100%; height: auto; }
+section > article { width: 900px; height: auto; margin: 0 auto; padding: 0 40px; }
+section > article#schedule { padding: 70px 0; }
+section > article#cal { width: 100%; height: auto; background-color: #fef8da; padding: 0; }
+section > article#cal > #calWrap { width: 900px; margin: 0 auto; padding: 60px 40px; }
+section > article#timetable { padding: 60px 0; border-bottom: 2px solid #ececec; }
+section > article#qna { padding: 60px 0; border-bottom: 2px solid #ececec; }
+section > article#fin { padding: 60px 0; }
+
+/*-------------- 스케쥴 ----------------*/
+#schedule > .sch_title { width: 780px; height: 2rem; font-size: 1.25rem; line-height: 2rem; float: left; margin-bottom: 2rem; letter-spacing: -1px; }
+#schedule > .sch_title > span { width: 3.75rem; height: 100%; display: block; color: #fff; background-color: #ED4400; font-size: 1rem; text-align: center; line-height: 2rem; border-radius: 4px; margin-right: 6px; display: block; float: left; }
+#schedule > .sch_icon { width: 114px; height: 2rem; float: right; }
+#schedule > .sch_icon > li { width: 2rem; height: 100%; background-color: #ececec; border-radius: 4px; float: left; margin-right: 6px; }
+#schedule > .sch_icon > li:last-child { margin-right: 0; }
+#schedule > .sch_icon > li > a { width: 100%; height: 100%; }
+#schedule > .sch_icon > li > a > i { width: 100%; height: 100%; color: #5E5E5E; line-height: 2rem; text-align: center; font-size: 1.2rem; }
+#schedule > .sch_icon > li > a > i:hover { color: #ED4400; }
+#schedule::after { content: ""; clear: both; display: block; }
+
+#sch_pic { width: 448px; height: 390px; float: left; }
+#sch_pic div, #sch_pic li { cursor: pointer; font-size: 0; }
+#sch_pic > div { width: 100%; height: 258px; margin-bottom: 14px; border: 1px solid #ececec; box-sizing: border-box; background-image: url(../img/reservation/sch01.jpg); background-size: 100%; }
+#sch_pic > .sch_img { width: 100%; height: 118px; }
+#sch_pic > .sch_img > li { width: 140px; height: 100%; margin-right: 14px; border: 1px solid #ececec; box-sizing: border-box; float: left; background-size: 150%; }
+#sch_pic > .sch_img > li:nth-of-type(1) { background-image: url(../img/reservation/sch02.jpg); }
+#sch_pic > .sch_img > li:nth-of-type(2) { background-image: url(../img/reservation/sch03.jpg); }
+#sch_pic > .sch_img > li:nth-of-type(3) { background-image: url(../img/reservation/sch04.jpg); }
+#sch_pic > .sch_img > li:last-child { margin-right: 0; }
+
+#sch_form1 { width: 410px; float: right; }
+#sch_form1 > .schedule_table { width: 100%; margin-bottom: 18px; border-top: 1px solid #ececec; }
+#sch_form1 > .schedule_table > dl { width: 100%; height: 100%; font-size: 0.875rem; }
+#sch_form1 > .schedule_table > dl > dt, #sch_form1 > .schedule_table > dl dd { border-bottom: 1px solid #ececec; height: 2.4rem; text-align: center; line-height: 2.4rem; float: left; }
+#sch_form1 > .schedule_table > dl > dt { width: 81px; border-color: 1px solid #ececec; background-color: #ececec; font-weight: bold; }
+#sch_form1 > .schedule_table > dl > dt > label { font-weight: bold; }
+#sch_form1 > .schedule_table > dl > dd { width: 328px; background-color: #fff; }
+#sch_form1 > .schedule_table > dl > dd > select { height: 100%; border: 1px solid #ececec; border-radius: 4px; }
+#sch_form1 > .schedule_table > dl > dd > select#adult { margin-right: 10px; }
+#sch_form1 > .res_btn { width: 100%; height: 50px; }
+#sch_form1 > .res_btn > button { height: 100%; text-align: center; line-height: 50px; float: left; cursor: pointer; background-color: #7F7F7F; color: #fff; margin-right: 10px; border-radius: 4px; font-size: 1.125rem; }
+#sch_form1 > .res_btn > button#ok { width: 150px; background-color: #ED4400; }
+#sch_form1 > .res_btn > button#table_go { width: 120px; }
+#sch_form1 > .res_btn > button#qna_go { width: 120px; margin-right: 0; }
+
+/*-------------- 달력 ----------------*/
+#calWrap > .subtitle { width: 100%; }
+#calWrap > .circle_box { width: 100%; height: 0.875rem; margin-bottom: 3.75rem; }
+#calWrap > .circle_box .circle { float: right; height: 100%; }
+#calWrap > .circle_box .circle > li { float: left; font-size: 0.875rem; line-height: 0.875rem; margin-right: 12px; }
+#calWrap > .circle_box .circle > li:last-child { margin-right: 0; }
+#calWrap > .circle_box .circle > li > span { display: block; width: 14px; height: 14px; border-radius: 14px; margin-right: 2px; background-color: #ED4400; float: left; margin-top: -2px; }
+#calWrap > .circle_box .circle > li > span.rsv_circle { background-color: #009900; }
+#calWrap > .circle_box .circle > li > span.fin_circle { background-color: #7F7F7F; }
+#calWrap::after { content: ""; clear: both; display: block; }
+
+#calWrap > table { float: left; width: 292px; height: 248px; text-align: center; background-color: #fff; border-collapse: collapse; margin-right: 12px; margin-bottom: 14px; }
+#calWrap > table:last-of-type { margin-right: 0; }
+#calWrap > table > caption { width: 100%; height: 38px; font-size: 1.5rem; font-weight: bold; }
+#calWrap > table th, #calWrap > table td { width: calc(100% / 7); height: calc(100% / 6); border: 1px solid #ececec; color: #7F7F7F; }
+#calWrap > table th { background-color: #ececec; height: 30px; color: #333; border-right: 1px solid #fff; }
+#calWrap > table th:last-of-type { border-right: 1px solid #ececec; }
+
+#calWrap .cap { width: 100%; height: 0.875rem; text-align: right; display: block; font-size: 0.875rem; line-height: 0.875rem; float: left; margin-bottom: 36px; }
+
+#calWrap > form { width: 100%; height: 56px; float: left; }
+#calWrap > form button { width: 214px; height: 100%; text-align: center; line-height: 56px; float: left; cursor: pointer; background-color: #ED4400; color: #fff; border-radius: 4px; font-size: 1.25rem; margin-left: calc(50% - 107px); }
+#calWrap > form button:hover { font-weight: bolder; }
+#calWrap > form button > i { font-size: 1.5rem; margin-right: 8px; color: #fff; line-height: 56px; }
+
+/*-------------- 일정표 ----------------*/
+#timetable > img { width: 100%; margin-bottom: 40px; }
+#timetable > ul { width: 100%; height: 48px; }
+#timetable > ul > li { width: 25%; height: 100%; background-color: #5E5E5E; text-align: center; border: 1px solid #ececec; border-right: 0; float: left; box-sizing: border-box; }
+#timetable > ul > li:hover { background-color: #009900; }
+#timetable > ul > li.select_menu { background-color: #009900; }
+#timetable > ul > li > a { width: 100%; height: 100%; display: block; line-height: 48px; font-weight: bold; color: #fff; }
+#timetable > div > div { width: calc(100% - 60px); padding: 30px; border: 1px solid #ececec; }
+#timetable > div > div:nth-of-type(2) { display: none; }
+#timetable > div > div:nth-of-type(3) { display: none; }
+#timetable > div > div:nth-of-type(4) { display: none; }
+#timetable > div > div > table { width: 100%; text-align: center; }
+#timetable > div > div > table:first-child { margin-bottom: 30px; }
+#timetable > div > div > table > caption { width: 100%; height: 46px; background-color: #fef8da; font-size: 1.125rem; line-height: 46px; color: #ED4400; font-weight: bold; border-bottom: 1px solid #fff; }
+#timetable > div > div > table th, #timetable > div > div > table td { border: 1px solid #ececec; line-height: 1rem; font-size: 0.875rem; }
+#timetable > div > div > table th { height: 38px; background-color: #ececec; font-weight: bold; }
+#timetable > div > div > table td dt, #timetable > div > div > table td dd { float: left; margin-bottom: 10px; line-height: 1.5rem; }
+#timetable > div > div > table td dt { width: 7%; border: 1px solid #ececec; text-align: center; margin-right: 10px; }
+#timetable > div > div > table td dd { width: 90%; margin-bottom: 20px; }
+#timetable > div > div > table td:nth-of-type(3) { text-align: left; width: 74%; padding: 20px; }
+
+.notice_table { width: 100%; height: auto; }
+.notice_table > dt, .notice_table dd { width: calc(100% - 20px); height: auto; padding: 10px; border: 1px solid #ececec; border-bottom: none; }
+.notice_table > dt { background-color: #fef8da; color: #ED4400; font-weight: bold; }
+.notice_table > dd { line-height: 1.5rem; font-size: 0.875rem; }
+.notice_table > dd:last-child { border-bottom: 1px solid #ececec; }
+
+#info_t3 .img_table { width: 100%; height: auto; }
+#info_t3 .img_table > li { width: 500px; padding: 10px; height: 240px; float: left; margin-bottom: 20px; background-repeat: no-repeat; margin-left: 169px; }
+#info_t3 .img_table > li:nth-of-type(1) { background-image: url(../img/reservation/sch01.jpg); }
+#info_t3 .img_table > li:nth-of-type(2) { background-image: url(../img/reservation/sch02.jpg); }
+#info_t3 .img_table > li:nth-of-type(3) { background-image: url(../img/reservation/sch03.jpg); }
+#info_t3 .img_table > li:nth-of-type(4) { background-image: url(../img/reservation/sch04.jpg); }
+#info_t3 .img_table > li:last-of-type { margin-bottom: 0; }
+#info_t3 .img_table:after { content: ""; display: block; clear: both; }
+
+/*-------------- 문의 ----------------*/
+#qna > .subtitle { width: 100%; height: 1.3rem; margin-bottom: 1.5rem; display: block; }
+#qna > table { width: 100%; }
+#qna > table tr:hover { background-color: #fef8da; }
+#qna > table th, #qna > table td { height: 28px; line-height: 28px; text-align: center; border: 1px solid #ececec; font-size: 0.875rem; }
+#qna > table th { background-color: #7F7F7F; color: #fff; }
+#qna > table td { width: 14%; }
+#qna > table td > a { font-size: 0.875rem; color: #333; }
+#qna > table td > a:hover { color: #ED4400; }
+#qna > table td:first-of-type { width: 10%; }
+#qna > table td:nth-of-type(2) { text-align: left; text-indent: 10px; width: 62%; }
+
+/*-------------- 추천여행지 ----------------*/
+#fin > .subtitle { width: 100%; height: 1.3rem; margin-bottom: 1.5rem; display: block; }
+#fin > ul { width: 100%; height: 206px; }
+#fin > ul > li { width: 210px; height: 100%; margin-right: 20px; float: left; border: 1px solid #ececec; box-sizing: border-box; position: relative; background-size: 100%; }
+#fin > ul > li:nth-of-type(1) { background-image: url(../img/reservation/rec01.jpg); }
+#fin > ul > li:nth-of-type(2) { background-image: url(../img/reservation/rec02.jpg); }
+#fin > ul > li:nth-of-type(3) { background-image: url(../img/reservation/rec03.jpg); }
+#fin > ul > li:nth-of-type(4) { background-image: url(../img/reservation/rec04.jpg); }
+#fin > ul > li:last-child { margin-right: 0; }
+#fin > ul > li > a { width: 100%; height: 100%; display: block; }
+#fin > ul > li > a > span { width: calc(100% - 20px); padding: 10px; background-color: #fff; font-size: 1rem; line-height: 1.4rem; height: 56px; font-weight: bold; position: absolute; left: 0; bottom: 0; border-top: 1px solid #ececec; }
+#fin > ul > li > a .price { color: #ED4400; font-weight: bold; font-size: 1.25rem; }
+#fin > ul > li:hover { border-color: #ED4400; }
+
+/* rsv_article.css */
+
+/*# sourceMappingURL=reservation.css.map */

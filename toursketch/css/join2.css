@@ -1,0 +1,53 @@
+strong.red { color: #ED4400; font-weight: bold; }
+strong.green { color: #009900; font-weight: bold; }
+
+/* index_wrap.css */
+#wrap { width: 100%; height: auto; }
+
+header, section { margin: 0 auto; }
+
+#join { width: 900px; height: auto; padding: 60px 0; margin: 0 auto; }
+
+.joinimg { width: 100%; height: 180px; background-image: url(../img/join/join_header.png); background-position: 0; background-repeat: no-repeat; margin-bottom: 60px; }
+.joinimg > ul { width: 860px; height: calc(100% - 100px); padding: 50px 20px; }
+.joinimg > ul > li { text-align: right; line-height: 1.3rem; font-size: 0.875rem; }
+.joinimg > ul > li:first-child { font-size: 1.25rem; font-weight: bold; line-height: 2.4rem; }
+
+.joinbar { width: 100%; height: 60px; background-image: url(../img/join/joinbar2.jpg); background-repeat: no-repeat; margin-bottom: 50px; }
+.joinbar > ul { width: 100%; height: 100%; }
+.joinbar > ul > li { width: 33.333333%; height: 100%; text-align: center; line-height: 60px; color: #fff; font-size: 1rem; float: left; }
+
+#joinbox { width: 90%; height: auto; padding: 0 5%; }
+#joinbox .point::before { content: "* "; color: #ED4400; font-weight: bold; }
+#joinbox > fieldset { width: 100%; height: auto; }
+#joinbox > fieldset.joinsec { border-bottom: 2px solid #ececec; }
+#joinbox > fieldset > .join_title { width: 100%; height: 40px; font-size: 1.25rem; font-weight: bold; overflow: visible; margin-bottom: 30px; color: #ED4400; border-bottom: 2px solid #ececec; }
+#joinbox dl { width: 100%; height: auto; }
+#joinbox dl > dt, #joinbox dl dd { padding: 20px 0; float: left; border-bottom: 1px solid #ececec; }
+#joinbox dl > dt { width: 18%; text-indent: 6px; height: 30px; line-height: 30px; }
+#joinbox dl > dd { width: 80%; padding-left: 2%; box-sizing: border-box; }
+#joinbox dl > dd > span { margin-left: 10px; font-size: 0.875rem; line-height: 30px; color: #7F7F7F; }
+#joinbox dl > dd label { width: 0; height: 0; overflow: hidden; }
+#joinbox dl > dd select, #joinbox dl > dd input { background-color: #fef8da; border: 1px solid #ececec; box-sizing: border-box; text-indent: 6px; line-height: 30px; }
+#joinbox dl > dd select:focus, #joinbox dl > dd input:focus { outline: 2px solid #ED4400; box-sizing: padding-box; }
+#joinbox dl > dd input, #joinbox dl > dd button, #joinbox dl > dd select { border-radius: 2px; height: 30px; float: left; }
+#joinbox dl > dd button { padding: 0 10px; margin-left: 6px; background-color: #ED4400; color: #fff; line-height: 30px; }
+#joinbox dl > dd label { line-height: 30px; float: left; }
+#joinbox dl .telnum > select { width: 70px; }
+#joinbox dl .telnum > input { width: 100px; }
+#joinbox dl .telnum > .num_bar { width: 4px; height: 15px; border-bottom: 1px solid #333; box-sizing: border-box; margin: 0 6px; display: block; float: left; }
+#joinbox dl #email { width: 300px; }
+#joinbox dl #addlong { margin-top: 8px; width: 500px; }
+#joinbox dl .email_check > label { width: auto; height: 100%; overflow: visible; }
+#joinbox dl .email_check > label input { margin-right: 4px; }
+#joinbox dl #emailN { margin-left: 10px; }
+
+.joincheck { width: 100%; height: auto; padding: 60px 0; }
+.joincheck > button { width: 140px; height: 50px; border-radius: 4px; color: #fff; font-size: 1.125rem; line-height: 50px; }
+.joincheck > button > i { color: #fff; margin-right: 4px; }
+.joincheck > button#submit { float: left; margin-left: 260px; background-color: #ED4400; font-weight: bold; }
+.joincheck > button#reset { float: right; margin-right: 260px; background-color: #7F7F7F; }
+
+button:focus { outline: 0; }
+
+/*# sourceMappingURL=join2.css.map */

@@ -1,0 +1,89 @@
+@charset "UTF-8";
+strong.red { color: #ED4400; font-weight: bold; }
+strong.green { color: #009900; font-weight: bold; }
+
+/* index_wrap.css */
+#wrap { width: 100%; height: auto; }
+
+header, section { margin: 0 auto; }
+
+strong { font-weight: bold; }
+
+.subtitle { width: 100%; height: 2rem; font-size: 1.3rem; font-weight: bold; width: 100%; line-height: 2rem; margin-bottom: 10px; display: block; }
+
+#section { width: 900px; height: auto; margin: 0 auto; padding: 40px 0; }
+#section:after { content: ""; display: block; clear: both; }
+#section > aside, #section section { height: auto; }
+#section > aside { width: 180px; margin-right: 60px; float: left; }
+#section > section { width: 660px; float: right; }
+#section > section > article { width: 100%; height: auto; margin-bottom: 60px; }
+#section > section > article:last-of-type { margin-bottom: 0; }
+
+/* 좌측영역 */
+#aside > dl, #aside div { margin-bottom: 40px; }
+#aside > dl { width: 100%; }
+#aside > dl > dt, #aside > dl dd { width: 100%; padding: 8px 0; border: 1px solid #ececec; border-bottom: none; text-indent: 8px; }
+#aside > dl > dt { font-weight: bold; background-color: #009900; color: #fff; }
+#aside > dl > dd:last-child { border-bottom: 1px solid #ececec; }
+#aside > dl > dd:hover a, #aside > dl > dd:hover i { color: #ED4400; font-weight: bold; }
+#aside > dl > dd > a { width: 100%; height: 100%; display: block; color: #333; }
+#aside > dl > dd > a > i { margin-right: 4px; color: #333; }
+#aside > div { width: 100%; height: auto; border: 1px solid #ececec; }
+#aside > div > span { width: 100%; display: block; }
+#aside > div > .teltitle { width: 100%; height: auto; padding: 8px 0; font-size: 1rem; font-weight: bold; background-color: #5E5E5E; color: #fff; }
+#aside > div > .teltitle > i { font-size: 1rem; color: #fff; margin-left: 10px; }
+#aside > div > .telnum { padding: 8px 0; font-size: 2.125rem; color: #ED4400; letter-spacing: -2px; text-align: center; }
+#aside > div > ul { width: 100%; height: auto; }
+#aside > div > ul:after { content: ""; display: block; clear: both; }
+#aside > div > ul > li { height: 30px; padding: 4px 0; line-height: 1rem; float: left; font-size: 0.875rem; text-align: center; }
+#aside > div > ul > .day { width: 60px; background-color: #7F7F7F; color: #fff; line-height: 30px; }
+#aside > div > ul > .time { width: 120px; background-color: #ececec; }
+#aside > div > ul > .time > small { font-size: 0.8rem; }
+#aside > .sidebanner { width: 100%; }
+#aside > .sidebanner > li { width: 100%; height: 380px; margin-bottom: 10px; background-color: #a0f; background-repeat: no-repeat; background-position: center; position: relative; border: 1px solid #ececec; }
+#aside > .sidebanner > li:nth-of-type(1) { background-image: url(../img/article/art03_03_bn1.jpg); }
+#aside > .sidebanner > li:nth-of-type(2) { background-image: url(../img/article/art03_03_bn2.jpg); }
+#aside > .sidebanner > li > a { width: 100%; height: 100%; display: block; }
+#aside > .sidebanner > li > a > span { width: 100%; height: auto; display: block; color: #fff; text-shadow: 0 0 10px #000; position: absolute; }
+#aside > .sidebanner > li > a > .up { font-size: 1rem; top: 10px; right: 14px; text-align: right; }
+#aside > .sidebanner > li > a > .down { font-weight: bold; font-size: 1.4rem; bottom: 10px; left: 14px; }
+
+/* 본문영역 */
+#best > div:after { content: ""; display: block; clear: both; }
+#best > div > a { width: 325px; height: 150px; border: 1px solid #ececec; display: block; float: left; position: relative; background-size: 100%; background-position: center; background-repeat: no-repeat; }
+#best > div > a:hover { border: 1px solid #ED4400; }
+#best > div > a > .rank { width: 40px; height: auto; padding: 4px; font-weight: bold; color: #fff; font-size: 0.8rem; background-color: #ED4400; top: 0px; left: 0; z-index: 100; }
+#best > div > a > span { width: 130px; height: 110px; padding: 20px 10px; color: #333; display: block; background-color: #fff; position: absolute; right: 0; top: 0; text-align: center; z-index: 50; }
+#best > div > a > span > .price { color: #ED4400; font-size: 1.25rem; font-weight: bold; line-height: 2rem; }
+#best > div > a.best1 { margin-right: 6px; height: 312px; background-image: url(../img/article/sub1.jpg); background-size: 100%; background-position: top; }
+#best > div > a.best1 > .rank { width: 70px; height: auto; padding: 4px; font-weight: bold; font-size: 1rem; top: 0px; left: 0; z-index: 100; color: #fef8da; }
+#best > div > a.best1 > span { width: 305px; height: 80px; top: 192px; right: 0; font-size: 1.125rem; }
+#best > div > a.best1 > span > .price { font-size: 1.4rem; line-height: 2.25rem; }
+#best > div > a:nth-child(2) { background-image: url(../img/article/sub2.jpg); margin-bottom: 10px; }
+#best > div > a:nth-child(3) { background-image: url(../img/article/sub3.jpg); }
+
+#list > div { width: 100%; border: 1px solid #ececec; box-sizing: border-box; margin-bottom: 16px; }
+#list > div:hover { background-color: #fef8da; }
+#list > div:nth-of-type(1) .list_img { background-position: 0 0; }
+#list > div:nth-of-type(2) .list_img { background-position: 0 -110px; }
+#list > div:nth-of-type(3) .list_img { background-position: 0 -220px; }
+#list > div:nth-of-type(4) .list_img { background-position: 0 -330px; }
+#list > div:nth-of-type(5) .list_img { background-position: 0 -440px; }
+#list > div:nth-of-type(6) .list_img { background-position: 0 -550px; }
+#list > div:after { content: ""; display: block; clear: both; }
+#list > div:last-child { margin-bottom: 0; }
+#list > div > span, #list > div ul { float: left; }
+#list > div > .list_img { width: 148px; height: 100px; background-image: url(../img/article/list.png); display: block; }
+#list > div > .list_img > a { width: 100%; height: 100%; display: block; }
+#list > div > .list_text { width: 500px; height: 100px; padding-left: 10px; }
+#list > div > .list_text > li { width: 160px; float: left; height: 40px; line-height: 40px; font-weight: bold; font-size: 1.125rem; }
+#list > div > .list_text > li.adult { color: #ED4400; }
+#list > div > .list_text > li.young { color: #009900; }
+#list > div > .list_text > li > strong { width: 40px; height: 24px; margin: 8px 10px 8px 0; font-size: 1rem; font-weight: normal; color: #fff; border-radius: 4px; display: block; text-align: center; line-height: 24px; float: left; }
+#list > div > .list_text > li > .redbox { background-color: #ED4400; }
+#list > div > .list_text > li > .greenbox { background-color: #009900; }
+#list > div > .list_text > .list_title { width: 100%; margin-top: 15px; }
+#list > div > .list_text > .list_title > a { font-size: 1rem; line-height: 1rem; color: #333; }
+#list > div > .list_text > .list_title > a:hover { color: #ED4400; }
+
+/*# sourceMappingURL=sublist.css.map */
