@@ -353,7 +353,7 @@
             
         </section>
       
-<!--      footer ------------------------------------------------------------------->
+<!-- footer -->
       <div id="footerWrap">
         <footer id="footer">
             <h2>창덕궁 정보</h2>
@@ -365,14 +365,14 @@
                 <li><span class="menu_sidebar"><!-- sidebar --></span></li>
                 <li><a href="#">개인정보침해신고센터</a></li>
             </ul>
-            <form action="" method="get">
+            <form action="*" method="get">
                 <fieldset class="family">
                     <legend>패밀리사이트</legend>
-                    <select name="familysite" value="패밀리사이트">
+                   <label for="familysite"> <select name="familysite" id="familysite">
                         <option value="http://www.cha.go.kr/">문화재청</option>
                         <option value="http://m.epeople.go.kr/main/main.jsp">국민신문고</option>
                         <option value="http://www.heritagechannel.tv/">문화유산채널</option>
-                    </select>
+                    </select></label>
                     <button type="button" name="go" value="go">GO</button>
                 </fieldset>
             </form>
@@ -395,15 +395,15 @@
                   <li><a href="https://www.e-minwon.go.kr/webs/menu.jsp?menu_id=civl02" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i><span class="me_hidden">mail</span></a></li>
                   <li><a href="https://twitter.com/changdeok11" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><span class="me_hidden">twitter</span></a></li>
               </ul>
-              <form action="" method="get">
+              <form action="*" method="get">
                   <fieldset class="language">
                       <legend>language</legend>
-                          <select class="language_select">
+                          <label for="language_select"><select class="language_select" name="language_select" id="language_select">
                               <option value="Language">Language</option>
                               <option value="English">English</option>
                               <option value="한국어">한국어</option>
                               <option value="일본어">日本語</option>
-                          </select>
+                          </select></label>
                           <button type="button" name="go" value="go">GO</button>
                   </fieldset>
               </form>
