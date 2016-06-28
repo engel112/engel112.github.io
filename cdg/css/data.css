@@ -349,7 +349,7 @@
   section > article { width: 60rem; height: 100%; padding: 80px 0; }
   section > article#article01Wrap { width: 100%; height: auto; background-image: url(../img/pattern_w.jpg); }
   section > article#article01Wrap > #article01 { width: 93.75vw; height: 100%; margin: 0 auto; }
-  section > article#article02Wrap { width: 100%; }
+  section > article#article02Wrap { width: 100%; display: none; }
   section > article#article02Wrap > #article02 { width: 93.75vw; height: 100%; margin: 0 auto; }
   section > article#article03Wrap { width: 100%; background-image: url(../img/pattern_b.jpg); }
   section > article#article03Wrap > #article03 { width: 93.75vw; height: 100%; margin: 0 auto; }
@@ -445,7 +445,7 @@
   section > article { width: 60rem; height: 100%; padding: 80px 0; }
   section > article#article01Wrap { width: 100%; height: auto; background-image: url(../img/pattern_w.jpg); }
   section > article#article01Wrap > #article01 { width: 93.75vw; height: 100%; margin: 0 auto; }
-  section > article#article02Wrap { width: 100%; }
+  section > article#article02Wrap { width: 100%; display: none; }
   section > article#article02Wrap > #article02 { width: 93.75vw; height: 100%; margin: 0 auto; }
   section > article#article03Wrap { width: 100%; background-image: url(../img/pattern_b.jpg); }
   section > article#article03Wrap > #article03 { width: 93.75vw; height: 100%; margin: 0 auto; }
